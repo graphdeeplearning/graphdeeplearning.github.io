@@ -5,12 +5,20 @@
     <link>https://graphdeeplearning.github.io/tags/applications/</link>
       <atom:link href="https://graphdeeplearning.github.io/tags/applications/index.xml" rel="self" type="application/rss+xml" />
     <description>Applications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 17 Sep 2019 22:20:35 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 14 Jan 2020 16:19:27 +0800</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
       <title>Applications</title>
       <link>https://graphdeeplearning.github.io/tags/applications/</link>
     </image>
+    
+    <item>
+      <title>Free-hand Sketches</title>
+      <link>https://graphdeeplearning.github.io/project/sketches/</link>
+      <pubDate>Tue, 14 Jan 2020 16:19:27 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/sketches/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Combinatorial Optimization</title>

@@ -5,12 +5,20 @@
     <link>https://graphdeeplearning.github.io/publication/</link>
       <atom:link href="https://graphdeeplearning.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 24 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
       <title>Publications</title>
       <link>https://graphdeeplearning.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>Multi-Graph Transformer for Free-Hand Sketch Recognition</title>
+      <link>https://graphdeeplearning.github.io/publication/xu-2019-multi/</link>
+      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/xu-2019-multi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Two-Step Graph Convolutional Decoder for Molecule Generation</title>
