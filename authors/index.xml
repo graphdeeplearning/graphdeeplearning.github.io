@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/authors/</link>
+      <atom:link href="https://graphdeeplearning.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>https://graphdeeplearning.github.io/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://graphdeeplearning.github.io/authors/chaitanya.joshi/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/chaitanya.joshi/</guid>
+      <description>&lt;p&gt;Chaitanya Joshi is a Research Assistant under Dr. Xavier Bresson at NTU, Singapore. 
+His current research focuses on the emerging field of Graph Deep Learning and its applications for Operations Research and Combinatorial Optimization.&lt;/p&gt;
+&lt;p&gt;He graduated from NTU in 2019 as the Valedictorian of his cohort with a BEng in Computer Science and a specialization in Artificial Intelligence. 
+He is passionate about building data-driven solutions for real-world problems, and has 3+ years of experience doing the same at companies and research labs in Singapore and Switzerland. 
+He has co-authored 3 US patent applications and 4 research papers at top Machine Learning conferences such as NeurIPS and ICLR.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://graphdeeplearning.github.io/authors/xavier.bresson/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/xavier.bresson/</guid>
+      <description>&lt;p&gt;Xavier Bresson (PhD 2005, EPFL, Switzerland) is Associate Professor in Computer Science at NTU, Singapore. He is a leading researcher in the field of Graph Deep Learning, a new framework that combines graph theory and deep learning techniques to tackle complex data domains in natural language processing, computer vision, combinatorial optimization, quantum chemistry, physics, neuroscience, genetics and social networks. In 2016, he received the highly competitive Singaporean NRF Fellowship of $2.5M to develop these deep learning techniques.  He was also awarded several research grants in the U.S. and Hong Kong. As a leading researcher in the field, he has published more than 60 peer-reviewed papers in the leading journals and conference proceedings in machine learning, including articles in NeurIPS, ICML, ICLR, CVPR, JMLR. He has organized several international workshops and tutorials on AI and deep learning in collaboration with Facebook, NYU and Imperial such as the &lt;a href=&#34;https://bit.ly/2N65idn&#34;&gt;2019&lt;/a&gt; and &lt;a href=&#34;https://bit.ly/2TC0hug&#34;&gt;2018 UCLA workshops&lt;/a&gt;, the &lt;a href=&#34;https://bit.ly/2vJbRa0&#34;&gt;2017 CVPR tutorial&lt;/a&gt; and the &lt;a href=&#34;https://bit.ly/2YsFvOx&#34;&gt;2017 NeurIPS tutorial&lt;/a&gt;. He has been teaching undergraduate, graduate and industrial courses in AI and deep learning since 2014 at EPFL (Switzerland), NTU (Singapore) and &lt;a href=&#34;https://bit.ly/2FuDQAF&#34;&gt;UCLA (U.S.)&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thomas Laurent</title>
+      <link>https://graphdeeplearning.github.io/authors/thomas-laurent/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/thomas-laurent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://graphdeeplearning.github.io/authors/victor.getty/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/victor.getty/</guid>
+      <description>&lt;p&gt;Victor Getty is a Research Assistant under Dr. Xavier Bresson at NTU, Singapore, working on applications of Graph Neural Networks to Quantum Chemistry. He graduated from NTU in 2018 with a BSc in Mathematics.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://graphdeeplearning.github.io/authors/vijay.dwivedi/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/vijay.dwivedi/</guid>
+      <description>&lt;p&gt;Vijay Dwivedi is a first year PhD student in Machine Learning at NTU, Singapore supervised by Dr. Xavier Bresson. 
+His primary interest is developing Deep Learning algorithms on graph-structured data and their applications to domains such as quantum chemistry, social networks, etc.&lt;/p&gt;
+&lt;p&gt;Before starting his PhD, Vijay worked with Dr. Bresson as a Research Assistant in the same lab. He has a background in Computer Science (BTech) from MNNIT Allahabad, where he explored the fields of Natural Language Processing and Multi-Modal Systems.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Yao Yang Leow</title>
+      <link>https://graphdeeplearning.github.io/authors/yao-yang-leow/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/yao-yang-leow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suyash Lakhotia</title>
+      <link>https://graphdeeplearning.github.io/authors/suyash-lakhotia/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/suyash-lakhotia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://graphdeeplearning.github.io/authors/david.low/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/david.low/</guid>
+      <description>&lt;p&gt;David Low is currently a PhD student under School of Computer Science &amp;amp; Engineering, NTU supervised by Associate Professor Xavier Bresson. His current research focuses on Deep Learning and its applications for Natural Language Processing.&lt;/p&gt;
+&lt;p&gt;Before starting his PhD, he cofounded two startups and worked as a data scientist at Infocomm Development Authority, Singapore. In 2016, he represented Singapore and National University of Singapore (NUS) in Data Science Game at France and clinched top spot among teams from Asia and America.&lt;/p&gt;
+&lt;p&gt;Throughout his career, David has engaged in data science projects ranging from banking, telco, e-commerce to insurance industry. Some of his works including sales forecast modeling, mineral deposits prediction and process optimization had won him awards in several machine learning competitions. Earlier in his career, David was involved in research collaborations with Carnegie Mellon University (CMU) and Massachusetts Institute of Technology (MIT) on separate projects funded by National Research Foundation and SMART.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://graphdeeplearning.github.io/authors/peng.xu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/authors/peng.xu/</guid>
+      <description>&lt;p&gt;Peng Xu is a Postdoctoral Scholar working with Dr. Xavier Bresson at NTU, Singapore. 
+His current research focuses on sketch-based human-computer interaction and representation learning for sketches, as well as computer vision. 
+He received his PhD degree from Pattern Recognition and Intelligent System Laboratory (PRIS) in Beijing University of Posts and Telecommunications (BUPT), supervised by Prof. Jun Guo. 
+During his PhD, he was a visiting student in sketchX Lab, Queen Mary University of London (QMUL) and the National Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences (CASIA).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/categories/</link>
+      <atom:link href="https://graphdeeplearning.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 17 Sep 2019 22:20:35 +0800</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <title>Categories</title>
+      <link>https://graphdeeplearning.github.io/categories/</link>
+    </image>
+    
+    <item>
+      <title>Applications</title>
+      <link>https://graphdeeplearning.github.io/categories/applications/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/categories/applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Models</title>
+      <link>https://graphdeeplearning.github.io/categories/models/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/categories/models/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

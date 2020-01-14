@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas Laurent | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/authors/thomas-laurent/</link>
+      <atom:link href="https://graphdeeplearning.github.io/authors/thomas-laurent/index.xml" rel="self" type="application/rss+xml" />
+    <description>Thomas Laurent</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <title>Thomas Laurent</title>
+      <link>https://graphdeeplearning.github.io/authors/thomas-laurent/</link>
+    </image>
+    
+    <item>
+      <title>A Two-Step Graph Convolutional Decoder for Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2019-two/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2019-two/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On Learning Paradigms for the Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/publication/joshi-2019-learning/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/joshi-2019-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Efficient Graph Convolutional Network Technique for the Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/publication/joshi-2019-efficient/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/joshi-2019-efficient/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GraphTSNE: A Visualization Technique for Graph-Structured Data</title>
+      <link>https://graphdeeplearning.github.io/publication/leow-2019-graphtsne/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/leow-2019-graphtsne/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Experimental Study of Neural Networks for Variable Graphs</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2018-experimental/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2018-experimental/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Residual Gated Graph ConvNets</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2017-residual/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2017-residual/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

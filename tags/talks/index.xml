@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/tags/talks/</link>
+      <atom:link href="https://graphdeeplearning.github.io/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    <description>Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 22 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <title>Talks</title>
+      <link>https://graphdeeplearning.github.io/tags/talks/</link>
+    </image>
+    
+    <item>
+      <title>Graph Neural Networks for the Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/talk/informs-oct2019/</link>
+      <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/informs-oct2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Convolutional Neural Networks for Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-sept2019/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-sept2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Convolutional Neural Networks for Molecule Generation and Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-may2019/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-may2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Convolutional Neural Networks on Graphs</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-feb2018/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-feb2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

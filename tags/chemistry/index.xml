@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chemistry | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/tags/chemistry/</link>
+      <atom:link href="https://graphdeeplearning.github.io/tags/chemistry/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chemistry</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <title>Chemistry</title>
+      <link>https://graphdeeplearning.github.io/tags/chemistry/</link>
+    </image>
+    
+    <item>
+      <title>A Two-Step Graph Convolutional Decoder for Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2019-two/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2019-two/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Convolutional Neural Networks for Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-sept2019/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-sept2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantum Chemistry</title>
+      <link>https://graphdeeplearning.github.io/project/chemistry/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/chemistry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Convolutional Neural Networks for Molecule Generation and Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-may2019/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-may2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

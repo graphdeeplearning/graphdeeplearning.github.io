@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Applications | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/tags/applications/</link>
+      <atom:link href="https://graphdeeplearning.github.io/tags/applications/index.xml" rel="self" type="application/rss+xml" />
+    <description>Applications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 17 Sep 2019 22:20:35 +0800</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <title>Applications</title>
+      <link>https://graphdeeplearning.github.io/tags/applications/</link>
+    </image>
+    
+    <item>
+      <title>Combinatorial Optimization</title>
+      <link>https://graphdeeplearning.github.io/project/combinatorial-optimization/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/combinatorial-optimization/</guid>
+      <description>&lt;h2 id=&#34;operations-research-and-combinatorial-problems&#34;&gt;Operations Research and Combinatorial Problems&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Operations_research&#34;&gt;Operations Research (OR)&lt;/a&gt;&lt;/strong&gt; started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions. Nowadays it is widely used in the industry, including but not limited to transportation, supply chain, energy, finance, and scheduling.&lt;/p&gt;
+&lt;p&gt;OR Problems are formulated as integer constrained optimization, &lt;em&gt;i.e.&lt;/em&gt;, with integral or binary variables (called decision variables).
+While not all such problems are hard to solve (&lt;em&gt;e.g.&lt;/em&gt;, finding the shortest path between two locations), we concentrate on &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Combinatorial_optimization&#34;&gt;Combinatorial (NP-Hard) problems&lt;/a&gt;&lt;/strong&gt;. 
+NP-Hard problems are &lt;em&gt;impossible&lt;/em&gt; to solve optimally at large scales as exhaustively searching for their solutions is beyond the limits of modern computers.
+The &lt;a href=&#34;https://en.wikipedia.org/wiki/Travelling_salesman_problem&#34;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt; and the &lt;a href=&#34;https://en.wikipedia.org/wiki/Minimum_spanning_tree&#34;&gt;Minimum Spanning Tree Problem (MST)&lt;/a&gt; are two of the most popular examples for such problems defined using graphs.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tsp-gif.gif&#34; alt=&#34;TSP GIF&#34;&gt;
+&lt;em&gt;TSP asks the following question: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city? Formally, given a graph, one needs to search the space of permutations to find an optimal sequence of nodes, called a tour, with minimal total edge weights (tour length).&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;neural-combinatorial-optimization&#34;&gt;Neural Combinatorial Optimization&lt;/h2&gt;
+&lt;p&gt;Although handcrafted heuristic algorithms are able to solve problems such as TSP with up to a million variables,
+designing good heuristics often requires significant specialized knowledge and years of trial-and-error.
+The state-of-the-art TSP solver, &lt;a href=&#34;http://www.math.uwaterloo.ca/tsp/concorde.html&#34;&gt;Concorde&lt;/a&gt;, leverages &lt;a href=&#34;https://www.youtube.com/watch?v=q8nQTNvCrjE&#34;&gt;over 50 years of research&lt;/a&gt; on linear programming, cutting plane algorithms and branch-and-bound.
+At our lab, we&#39;re working on &lt;strong&gt;automating&lt;/strong&gt; and &lt;strong&gt;augmenting&lt;/strong&gt; such expert intuition through Machine Learning [&lt;a href=&#34;https://arxiv.org/abs/1811.06128&#34;&gt;Bengio &lt;em&gt;et al.&lt;/em&gt;, 2018&lt;/a&gt;].&lt;/p&gt;
+&lt;p&gt;Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, &lt;em&gt;e.g.&lt;/em&gt;, determine the TSP tour one city at a time. 
+Our research uses deep neural networks to parameterize these policies and train them directly from problem instances.
+In particular, &lt;strong&gt;Graph Neural Networks&lt;/strong&gt; are the perfect fit for the task because they naturally operate on the graph structure of these problems.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pipeline.png&#34; alt=&#34;End-to-end pipeline&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quantum Chemistry</title>
+      <link>https://graphdeeplearning.github.io/project/chemistry/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/chemistry/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
