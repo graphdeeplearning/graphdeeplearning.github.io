@@ -628,7 +628,7 @@ $$</p>
 i.e.,\ h_{i}^{\ell+1} = \sum_{j \in \mathcal{S}} w_{ij} \left( V^{\ell} h_{j}^{\ell} \right),
 $$</p>
 <p>$$
-\text{where} ;\ w_{ij} = \text{softmax}_j \left( Q^{\ell} h_{i}^{\ell} \cdot  K^{\ell} h_{j}^{\ell} \right),
+\text{where} \ w_{ij} = \text{softmax}_j \left( Q^{\ell} h_{i}^{\ell} \cdot  K^{\ell} h_{j}^{\ell} \right),
 $$</p>
 <p>where $j \in \mathcal{S}$ denotes the set of words in the sentence and $Q^{\ell}, K^{\ell}, V^{\ell}$ are learnable linear weights (denoting the <strong>Q</strong>uery, <strong>K</strong>ey and <strong>V</strong>alue for the attention computation, respectively).
 The attention mechanism is performed parallelly for each word in the sentence to obtain their updated features in <em>one shot</em>&ndash;another plus point for Transformers over RNNs, which update features word-by-word.</p>
