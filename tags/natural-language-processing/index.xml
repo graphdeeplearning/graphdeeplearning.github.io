@@ -7,7 +7,7 @@
     <description>Natural Language Processing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Wed, 12 Feb 2020 16:08:39 +0800</lastBuildDate>
     <image>
-      <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
+      <url>https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_512x512_fill_lanczos_center_2.png</url>
       <title>Natural Language Processing</title>
       <link>https://graphdeeplearning.github.io/tags/natural-language-processing/</link>
     </image>
@@ -39,12 +39,20 @@ At the end, we get a hidden feature for each word in the sentence, which we pass
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;rnn-transf-nlp.jpg&#34; &gt;
 
-&lt;img src=&#34;rnn-transf-nlp.jpg&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;rnn-transf-nlp.jpg&#34; &gt;
+&lt;img data-src=&#34;rnn-transf-nlp.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -77,12 +85,20 @@ The attention mechanism is performed parallelly for each word in the sentence to
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;attention-block.jpg&#34; &gt;
 
-&lt;img src=&#34;attention-block.jpg&#34; alt=&#34;&#34; width=&#34;50%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;attention-block.jpg&#34; &gt;
+&lt;img data-src=&#34;attention-block.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;50%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -127,12 +143,20 @@ $$&lt;/p&gt;
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;transformer-block.png&#34; &gt;
 
-&lt;img src=&#34;transformer-block.png&#34; alt=&#34;&#34; width=&#34;60%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;transformer-block.png&#34; &gt;
+&lt;img data-src=&#34;transformer-block.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;60%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -150,12 +174,20 @@ Stacking several GNN layers enables the model to propagate each node&amp;rsquo;s
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;gnn-social-network.jpg&#34; &gt;
 
-&lt;img src=&#34;gnn-social-network.jpg&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;gnn-social-network.jpg&#34; &gt;
+&lt;img data-src=&#34;gnn-social-network.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -177,12 +209,20 @@ In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.&lt;/p&gt;
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;gnn-block.jpg&#34; &gt;
 
-&lt;img src=&#34;gnn-block.jpg&#34; alt=&#34;&#34; width=&#34;50%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;gnn-block.jpg&#34; &gt;
+&lt;img data-src=&#34;gnn-block.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;50%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -199,12 +239,20 @@ Now, we can use a GNN to build features for each node (word) in the graph (sente
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;gnn-nlp.jpg&#34; &gt;
 
-&lt;img src=&#34;gnn-nlp.jpg&#34; alt=&#34;&#34; width=&#34;90%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;gnn-nlp.jpg&#34; &gt;
+&lt;img data-src=&#34;gnn-nlp.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;90%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -225,12 +273,20 @@ At the same time, looking at Transformers from a GNN perspective could inspire u
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;syntax-tree.png&#34; &gt;
 
-&lt;img src=&#34;syntax-tree.png&#34; alt=&#34;&#34; width=&#34;40%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;syntax-tree.png&#34; &gt;
+&lt;img data-src=&#34;syntax-tree.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;40%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -248,12 +304,20 @@ are all promising new ideas for better Transformers.&lt;/p&gt;
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;long-term-depend.png&#34; &gt;
 
-&lt;img src=&#34;long-term-depend.png&#34; alt=&#34;&#34; width=&#34;80%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;long-term-depend.png&#34; &gt;
+&lt;img data-src=&#34;long-term-depend.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;80%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -269,12 +333,20 @@ I&amp;rsquo;m &lt;a href=&#34;https://arxiv.org/abs/1909.07913&#34;&gt;not so co
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;attention-heads.png&#34; &gt;
 
-&lt;img src=&#34;attention-heads.png&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;attention-heads.png&#34; &gt;
+&lt;img data-src=&#34;attention-heads.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 
@@ -293,12 +365,20 @@ Transformers, too, might ultimately be doing &lt;a href=&#34;http://jbcordonnier
 
 
 
+
+
+
+
+
+
+
 &lt;figure&gt;
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;attention-conv.png&#34; &gt;
 
-&lt;img src=&#34;attention-conv.png&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;
-&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;attention-conv.png&#34; &gt;
+&lt;img data-src=&#34;attention-conv.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;&lt;/a&gt;
+
+
 
 &lt;/figure&gt;
 

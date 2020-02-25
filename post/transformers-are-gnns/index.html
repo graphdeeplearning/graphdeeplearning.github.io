@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.5.0">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
 
   
 
@@ -47,11 +47,17 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
   
   
   
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -62,16 +68,128 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
     
 
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
     
 
   
@@ -85,22 +203,26 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.3f344b41a854a4e86bdc347bbce3b34a.css">
+  
+  <link rel="stylesheet" href="/css/academic.css">
 
   
 
+
+
+
   
-  
-  
+
 
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon-32.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://graphdeeplearning.github.io/post/transformers-are-gnns/">
 
+  
   
   
   
@@ -143,17 +265,6 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
 
 
 
-  
-
-
-
-
-
-  
-
-
-
-
 
 <script type="application/ld+json">
 {
@@ -182,7 +293,7 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
     "name": "NTU Graph Deep Learning Lab",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://graphdeeplearning.github.io/img/icon-512.png"
+      "url": "img/https://graphdeeplearning.github.io/"
     }
   },
   "description": "Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?\nBesides the obvious ones\u0026ndash;recommendation systems at Pinterest, Alibaba and Twitter\u0026ndash;a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm.\nThrough this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I\u0026rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."
@@ -242,24 +353,36 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
 
 
   
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
+    
+    <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/">NTU Graph Deep Learning Lab</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">NTU Graph Deep Learning Lab</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
-      
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav d-md-inline-flex">
         
 
         
@@ -418,20 +541,22 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
       
 
         
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-
-        
-
       </ul>
-
     </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
   </div>
 </nav>
 
@@ -465,7 +590,6 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
     
 
 
-
 <div class="article-metadata">
 
   
@@ -477,6 +601,7 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
 
 
 
+  
   <span><a href="/authors/chaitanya-joshi/">Chaitanya Joshi</a></span>
 
   </div>
@@ -502,11 +627,6 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
   
 
   
-  
-
-  
-    
-
   
 
 </div>
@@ -601,12 +721,20 @@ At the end, we get a hidden feature for each word in the sentence, which we pass
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="rnn-transf-nlp.jpg" >
 
-<img src="rnn-transf-nlp.jpg" alt="" width="100%" >
-</a>
+  <a data-fancybox="" href="rnn-transf-nlp.jpg" >
+<img data-src="rnn-transf-nlp.jpg" class="lazyload" alt="" width="100%" ></a>
+
+
 
 </figure>
 
@@ -639,12 +767,20 @@ The attention mechanism is performed parallelly for each word in the sentence to
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="attention-block.jpg" >
 
-<img src="attention-block.jpg" alt="" width="50%" >
-</a>
+  <a data-fancybox="" href="attention-block.jpg" >
+<img data-src="attention-block.jpg" class="lazyload" alt="" width="50%" ></a>
+
+
 
 </figure>
 
@@ -689,12 +825,20 @@ $$</p>
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="transformer-block.png" >
 
-<img src="transformer-block.png" alt="" width="60%" >
-</a>
+  <a data-fancybox="" href="transformer-block.png" >
+<img data-src="transformer-block.png" class="lazyload" alt="" width="60%" ></a>
+
+
 
 </figure>
 
@@ -712,12 +856,20 @@ Stacking several GNN layers enables the model to propagate each node&rsquo;s fea
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="gnn-social-network.jpg" >
 
-<img src="gnn-social-network.jpg" alt="" width="100%" >
-</a>
+  <a data-fancybox="" href="gnn-social-network.jpg" >
+<img data-src="gnn-social-network.jpg" class="lazyload" alt="" width="100%" ></a>
+
+
 
 </figure>
 
@@ -739,12 +891,20 @@ In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.</p>
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="gnn-block.jpg" >
 
-<img src="gnn-block.jpg" alt="" width="50%" >
-</a>
+  <a data-fancybox="" href="gnn-block.jpg" >
+<img data-src="gnn-block.jpg" class="lazyload" alt="" width="50%" ></a>
+
+
 
 </figure>
 
@@ -761,12 +921,20 @@ Now, we can use a GNN to build features for each node (word) in the graph (sente
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="gnn-nlp.jpg" >
 
-<img src="gnn-nlp.jpg" alt="" width="90%" >
-</a>
+  <a data-fancybox="" href="gnn-nlp.jpg" >
+<img data-src="gnn-nlp.jpg" class="lazyload" alt="" width="90%" ></a>
+
+
 
 </figure>
 
@@ -787,12 +955,20 @@ At the same time, looking at Transformers from a GNN perspective could inspire u
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="syntax-tree.png" >
 
-<img src="syntax-tree.png" alt="" width="40%" >
-</a>
+  <a data-fancybox="" href="syntax-tree.png" >
+<img data-src="syntax-tree.png" class="lazyload" alt="" width="40%" ></a>
+
+
 
 </figure>
 
@@ -810,12 +986,20 @@ are all promising new ideas for better Transformers.</p>
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="long-term-depend.png" >
 
-<img src="long-term-depend.png" alt="" width="80%" >
-</a>
+  <a data-fancybox="" href="long-term-depend.png" >
+<img data-src="long-term-depend.png" class="lazyload" alt="" width="80%" ></a>
+
+
 
 </figure>
 
@@ -831,12 +1015,20 @@ I&rsquo;m <a href="https://arxiv.org/abs/1909.07913">not so convinced</a> by thi
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="attention-heads.png" >
 
-<img src="attention-heads.png" alt="" width="100%" >
-</a>
+  <a data-fancybox="" href="attention-heads.png" >
+<img data-src="attention-heads.png" class="lazyload" alt="" width="100%" ></a>
+
+
 
 </figure>
 
@@ -855,12 +1047,20 @@ Transformers, too, might ultimately be doing <a href="http://jbcordonnier.com/po
 
 
 
+
+
+
+
+
+
+
 <figure>
 
-  <a data-fancybox="" href="attention-conv.png" >
 
-<img src="attention-conv.png" alt="" width="100%" >
-</a>
+  <a data-fancybox="" href="attention-conv.png" >
+<img data-src="attention-conv.png" class="lazyload" alt="" width="100%" ></a>
+
+
 
 </figure>
 
@@ -887,7 +1087,8 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
     
 
 
-    
+
+
 
 <div class="article-tags">
   
@@ -903,19 +1104,20 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+  
+  
     
-      
-
-
-
-
-
-
-
-
-  
-  
-    
   
   
 
@@ -928,7 +1130,7 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
   
   
   
-  <div class="media author-card">
+  <div class="media author-card content-widget-hr">
     
       
       <img class="portrait mr-3" src="/authors/chaitanya-joshi/avatar_hua82d079e830c87393317dc595f4db49b_154794_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
@@ -939,153 +1141,155 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
       <h6 class="card-subtitle">Research Assistant</h6>
       <p class="card-text">Chaitanya Joshi is a Research Assistant under Dr. Xavier Bresson at NTU, Singapore, applying Graph Neural Networks to Operations Research and Combinatorial Optimization.</p>
       <ul class="network-icon" aria-hidden="true">
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-          <li>
-            <a href="mailto:chaitanya-joshi@ntu.edu.sg" >
-              <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a href="https://twitter.com/chaitjo" target="_blank" rel="noopener">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a href="https://github.com/chaitjo" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a href="http://linkedin.com/in/chaitjo" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a href="https://medium.com/@chaitjo" target="_blank" rel="noopener">
-              <i class="fab fa-medium"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=cwxVFVgAAAAJ" target="_blank" rel="noopener">
-              <i class="ai ai-google-scholar"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a href="https://chaitjo.github.io/" target="_blank" rel="noopener">
-              <i class="fas fa-globe"></i>
-            </a>
-          </li>
-        
-      </ul>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:chaitanya-joshi@ntu.edu.sg" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/chaitjo" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/chaitjo" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://linkedin.com/in/chaitjo" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://medium.com/@chaitjo" target="_blank" rel="noopener">
+        <i class="fab fa-medium"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=cwxVFVgAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://chaitjo.github.io/" target="_blank" rel="noopener">
+        <i class="fas fa-globe"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
   </div>
 
 
 
-      
-      
-      <div class="article-widget">
-        <div class="hr-light"></div>
-        <h3>Related</h3>
-        <ul>
-          
-          <li><a href="/publication/xu-2019-multi/">Multi-Graph Transformer for Free-Hand Sketch Recognition</a></li>
-          
-          <li><a href="/publication/lakhotia-2018-experimental/">An Experimental Comparison of Text Classification Techniques</a></li>
-          
-          <li><a href="/project/sketches/">Free-hand Sketches</a></li>
-          
-          <li><a href="/talk/ipam-feb2018/">Convolutional Neural Networks on Graphs</a></li>
-          
-          <li><a href="/talk/ipam-sept2019/">Graph Convolutional Neural Networks for Molecule Generation</a></li>
-          
-        </ul>
-      </div>
-      
-    
 
-    
 
-    
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/publication/xu-2019-multi/">Multi-Graph Transformer for Free-Hand Sketch Recognition</a></li>
+      
+      <li><a href="/publication/lakhotia-2018-experimental/">An Experimental Comparison of Text Classification Techniques</a></li>
+      
+      <li><a href="/project/sketches/">Free-hand Sketches</a></li>
+      
+      <li><a href="/talk/ipam-feb2018/">Convolutional Neural Networks on Graphs</a></li>
+      
+      <li><a href="/talk/ipam-sept2019/">Graph Convolutional Neural Networks for Molecule Generation</a></li>
+      
+    </ul>
+  </div>
+  
+
 
 
   </div>
@@ -1096,54 +1300,44 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
     
     
     
-    <script src="/js/mathjax-config.js"></script>
-    
-
-    
-    
-    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
       
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
         
       
 
-      
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
     
 
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>const code_highlighting = true;</script>
     
 
+    
+    
+    
+    
     
     
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
@@ -1197,7 +1391,7 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
     
     
     
-    <script src="/js/academic.min.130521ecfc6f534c52c158217bbff718.js"></script>
+    <script src="/js/academic.min.a0d331bcd05dbe8b31e244f796710f08.js"></script>
 
     
 
@@ -1206,6 +1400,7 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
 
 
 
+  
   
   <div class="container">
     <footer class="site-footer">
@@ -1220,7 +1415,7 @@ For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/
 
     
     <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
+      <a href="#" class="back-to-top">
         <span class="button_icon">
           <i class="fas fa-chevron-up fa-2x"></i>
         </span>
