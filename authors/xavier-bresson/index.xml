@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NTU Graph Deep Learning Lab</title>
-    <link>https://graphdeeplearning.github.io/authors/chaitanya.joshi/</link>
-      <atom:link href="https://graphdeeplearning.github.io/authors/chaitanya.joshi/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://graphdeeplearning.github.io/authors/xavier-bresson/</link>
+      <atom:link href="https://graphdeeplearning.github.io/authors/xavier-bresson/index.xml" rel="self" type="application/rss+xml" />
     <description>NTU Graph Deep Learning Lab</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 14 Jan 2020 16:19:27 +0800</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
       <title>NTU Graph Deep Learning Lab</title>
-      <link>https://graphdeeplearning.github.io/authors/chaitanya.joshi/</link>
+      <link>https://graphdeeplearning.github.io/authors/xavier-bresson/</link>
     </image>
     
     <item>
@@ -20,14 +20,14 @@
       <description>&lt;h2 id=&#34;representation-learning-for-sketches&#34;&gt;Representation Learning for Sketches&lt;/h2&gt;
 &lt;p&gt;Human beings have been creating free-hand sketches, &lt;em&gt;i.e.&lt;/em&gt;, drawings without precise instruments, since &lt;a href=&#34;https://en.wikipedia.org/wiki/Cave_painting&#34;&gt;time immemorial&lt;/a&gt;.
 Due to the popularity of touchscreen interfaces, machine learning using sketches has emerged as an interesting problem with a myriad of applications:
-If we consider sketches as 2D images, We can throw them into off-the-shelf &lt;a href=&#34;https://arxiv.org/abs/1501.07873&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt;.
+If we consider sketches as 2D images, we can throw them into off-the-shelf &lt;a href=&#34;https://arxiv.org/abs/1501.07873&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt;.
 While CNNs are designed for &lt;em&gt;static&lt;/em&gt; collections of pixels with &lt;em&gt;dense&lt;/em&gt; colors and textures,
 sketches are usually an extremely &lt;em&gt;sparse&lt;/em&gt; sequences of strokes which capture high-level abstractions and ideas. &lt;a href=&#34;https://ai.googleblog.com/2017/04/teaching-machines-to-draw.html&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; stick out as a natural architecture for capturing this temporal nature of sketches.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Structure vs. temporal order: can we have the best of both worlds?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;sketches-as-graphs&#34;&gt;Sketches as Graphs&lt;/h2&gt;
-&lt;p&gt;We are working on a novel representation of free-hand sketches as &lt;strong&gt;sparsely-connected graphs&lt;/strong&gt;. 
+&lt;p&gt;We are working on a novel representation of free-hand sketches as &lt;strong&gt;sparsely-connected graphs&lt;/strong&gt;.
 We assume that sketches are sets of curves and strokes, which are discretized by a set of points representing the graph nodes.
 Each node encodes spatial, temporal and semantic information.
 Thus, representing sketches with graphs offers a universal representation that can make use of both the sketch structure (like images) as well as temporal information (like stroke sequences).
@@ -44,6 +44,14 @@ To exploit these graph structures, we are developing &lt;strong&gt;Graph Neural 
     </item>
     
     <item>
+      <title>A Two-Step Graph Convolutional Decoder for Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2019-two/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2019-two/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>On Learning Paradigms for the Travelling Salesman Problem</title>
       <link>https://graphdeeplearning.github.io/publication/joshi-2019-learning/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
@@ -52,10 +60,10 @@ To exploit these graph structures, we are developing &lt;strong&gt;Graph Neural 
     </item>
     
     <item>
-      <title>Graph Neural Networks for the Travelling Salesman Problem</title>
-      <link>https://graphdeeplearning.github.io/talk/informs-oct2019/</link>
-      <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://graphdeeplearning.github.io/talk/informs-oct2019/</guid>
+      <title>Graph Convolutional Neural Networks for Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-sept2019/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-sept2019/</guid>
       <description></description>
     </item>
     
@@ -67,7 +75,7 @@ To exploit these graph structures, we are developing &lt;strong&gt;Graph Neural 
       <description>&lt;h2 id=&#34;operations-research-and-combinatorial-problems&#34;&gt;Operations Research and Combinatorial Problems&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Operations_research&#34;&gt;Operations Research (OR)&lt;/a&gt;&lt;/strong&gt; started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions. Nowadays it is widely used in the industry, including but not limited to transportation, supply chain, energy, finance, and scheduling.&lt;/p&gt;
 &lt;p&gt;OR Problems are formulated as integer constrained optimization, &lt;em&gt;i.e.&lt;/em&gt;, with integral or binary variables (called decision variables).
-While not all such problems are hard to solve (&lt;em&gt;e.g.&lt;/em&gt;, finding the shortest path between two locations), we concentrate on &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Combinatorial_optimization&#34;&gt;Combinatorial (NP-Hard) problems&lt;/a&gt;&lt;/strong&gt;. 
+While not all such problems are hard to solve (&lt;em&gt;e.g.&lt;/em&gt;, finding the shortest path between two locations), we concentrate on &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Combinatorial_optimization&#34;&gt;Combinatorial (NP-Hard) problems&lt;/a&gt;&lt;/strong&gt;.
 NP-Hard problems are &lt;em&gt;impossible&lt;/em&gt; to solve optimally at large scales as exhaustively searching for their solutions is beyond the limits of modern computers.
 The &lt;a href=&#34;https://en.wikipedia.org/wiki/Travelling_salesman_problem&#34;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt; and the &lt;a href=&#34;https://en.wikipedia.org/wiki/Minimum_spanning_tree&#34;&gt;Minimum Spanning Tree Problem (MST)&lt;/a&gt; are two of the most popular examples for such problems defined using graphs.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tsp-gif.gif&#34; alt=&#34;TSP GIF&#34;&gt;
@@ -77,12 +85,20 @@ The &lt;a href=&#34;https://en.wikipedia.org/wiki/Travelling_salesman_problem&#3
 &lt;p&gt;Although handcrafted heuristic algorithms are able to solve problems such as TSP with up to a million variables,
 designing good heuristics often requires significant specialized knowledge and years of trial-and-error.
 The state-of-the-art TSP solver, &lt;a href=&#34;http://www.math.uwaterloo.ca/tsp/concorde.html&#34;&gt;Concorde&lt;/a&gt;, leverages &lt;a href=&#34;https://www.youtube.com/watch?v=q8nQTNvCrjE&#34;&gt;over 50 years of research&lt;/a&gt; on linear programming, cutting plane algorithms and branch-and-bound.
-At our lab, we&#39;re working on &lt;strong&gt;automating&lt;/strong&gt; and &lt;strong&gt;augmenting&lt;/strong&gt; such expert intuition through Machine Learning [&lt;a href=&#34;https://arxiv.org/abs/1811.06128&#34;&gt;Bengio &lt;em&gt;et al.&lt;/em&gt;, 2018&lt;/a&gt;].&lt;/p&gt;
-&lt;p&gt;Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, &lt;em&gt;e.g.&lt;/em&gt;, determine the TSP tour one city at a time. 
+At our lab, we&amp;rsquo;re working on &lt;strong&gt;automating&lt;/strong&gt; and &lt;strong&gt;augmenting&lt;/strong&gt; such expert intuition through Machine Learning [&lt;a href=&#34;https://arxiv.org/abs/1811.06128&#34;&gt;Bengio &lt;em&gt;et al.&lt;/em&gt;, 2018&lt;/a&gt;].&lt;/p&gt;
+&lt;p&gt;Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, &lt;em&gt;e.g.&lt;/em&gt;, determine the TSP tour one city at a time.
 Our research uses deep neural networks to parameterize these policies and train them directly from problem instances.
 In particular, &lt;strong&gt;Graph Neural Networks&lt;/strong&gt; are the perfect fit for the task because they naturally operate on the graph structure of these problems.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;pipeline.png&#34; alt=&#34;End-to-end pipeline&#34;&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Quantum Chemistry</title>
+      <link>https://graphdeeplearning.github.io/project/chemistry/</link>
+      <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/chemistry/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -98,7 +114,7 @@ Examples include chemical graphs, computer graphics, social networks, genetics, 
 &lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;graph-neural-networks&#34;&gt;Graph Neural Networks&lt;/h2&gt;
-&lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications. 
+&lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
 However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
 We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve generic graph problems, such as vertex classification, graph classification, graph regression, and graph generation.
@@ -109,10 +125,58 @@ These Graph Neural Network (GNN) architectures are used as backbones for challen
     </item>
     
     <item>
+      <title>Graph Convolutional Neural Networks for Molecule Generation and Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-may2019/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-may2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>An Efficient Graph Convolutional Network Technique for the Travelling Salesman Problem</title>
       <link>https://graphdeeplearning.github.io/publication/joshi-2019-efficient/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       <guid>https://graphdeeplearning.github.io/publication/joshi-2019-efficient/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GraphTSNE: A Visualization Technique for Graph-Structured Data</title>
+      <link>https://graphdeeplearning.github.io/publication/leow-2019-graphtsne/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/leow-2019-graphtsne/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Convolutional Neural Networks on Graphs</title>
+      <link>https://graphdeeplearning.github.io/talk/ipam-feb2018/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/talk/ipam-feb2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Experimental Comparison of Text Classification Techniques</title>
+      <link>https://graphdeeplearning.github.io/publication/lakhotia-2018-experimental/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/lakhotia-2018-experimental/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Experimental Study of Neural Networks for Variable Graphs</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2018-experimental/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2018-experimental/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Residual Gated Graph ConvNets</title>
+      <link>https://graphdeeplearning.github.io/publication/bresson-2017-residual/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/bresson-2017-residual/</guid>
       <description></description>
     </item>
     

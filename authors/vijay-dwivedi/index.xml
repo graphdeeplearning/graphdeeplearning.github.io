@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NTU Graph Deep Learning Lab</title>
-    <link>https://graphdeeplearning.github.io/authors/vijay.dwivedi/</link>
-      <atom:link href="https://graphdeeplearning.github.io/authors/vijay.dwivedi/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://graphdeeplearning.github.io/authors/vijay-dwivedi/</link>
+      <atom:link href="https://graphdeeplearning.github.io/authors/vijay-dwivedi/index.xml" rel="self" type="application/rss+xml" />
     <description>NTU Graph Deep Learning Lab</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 17 Sep 2019 22:20:35 +0800</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
       <title>NTU Graph Deep Learning Lab</title>
-      <link>https://graphdeeplearning.github.io/authors/vijay.dwivedi/</link>
+      <link>https://graphdeeplearning.github.io/authors/vijay-dwivedi/</link>
     </image>
     
     <item>
@@ -25,7 +25,7 @@ Examples include chemical graphs, computer graphics, social networks, genetics, 
 &lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;graph-neural-networks&#34;&gt;Graph Neural Networks&lt;/h2&gt;
-&lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications. 
+&lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
 However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
 We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve generic graph problems, such as vertex classification, graph classification, graph regression, and graph generation.

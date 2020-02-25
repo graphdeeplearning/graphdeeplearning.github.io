@@ -3,22 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/chaitanya.joshi/</loc>
+    <loc>https://graphdeeplearning.github.io/authors/chaitanya-joshi/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/graph-neural-networks/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/natural-language-processing/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/post/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/transformer/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/post/transformers-are-gnns/</loc>
+    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/peng-xu/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/peng.xu/</loc>
-    <lastmod>2020-01-14T16:19:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/authors/xavier.bresson/</loc>
-    <lastmod>2020-01-14T16:19:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/categories/applications/</loc>
+    <loc>https://graphdeeplearning.github.io/authors/xavier-bresson/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
@@ -28,7 +63,7 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/</loc>
+    <loc>https://graphdeeplearning.github.io/categories/applications/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
@@ -43,22 +78,7 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/tags/deep-learning/</loc>
-    <lastmod>2020-01-14T16:19:27+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://graphdeeplearning.github.io/project/sketches/</loc>
-    <lastmod>2020-01-14T16:19:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/tags/graph-neural-networks/</loc>
-    <lastmod>2020-01-14T16:19:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
@@ -69,11 +89,6 @@
   
   <url>
     <loc>https://graphdeeplearning.github.io/tags/sketches/</loc>
-    <lastmod>2020-01-14T16:19:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/tags/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
@@ -94,11 +109,6 @@
   
   <url>
     <loc>https://graphdeeplearning.github.io/publication/</loc>
-    <lastmod>2019-12-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/tags/transformer/</loc>
     <lastmod>2019-12-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -163,12 +173,12 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/victor.getty/</loc>
+    <loc>https://graphdeeplearning.github.io/authors/victor-getty/</loc>
     <lastmod>2019-09-17T22:20:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/vijay.dwivedi/</loc>
+    <loc>https://graphdeeplearning.github.io/authors/vijay-dwivedi/</loc>
     <lastmod>2019-09-17T22:20:35+08:00</lastmod>
   </url>
   
@@ -228,6 +238,11 @@
   </url>
   
   <url>
+    <loc>https://graphdeeplearning.github.io/</loc>
+    <lastmod>2018-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://graphdeeplearning.github.io/reading-group/</loc>
     <lastmod>2018-06-28T00:00:00+00:00</lastmod>
   </url>
@@ -258,11 +273,6 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/tags/natural-language-processing/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://graphdeeplearning.github.io/authors/suyash-lakhotia/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -278,11 +288,7 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/david.low/</loc>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/post/</loc>
+    <loc>https://graphdeeplearning.github.io/authors/david-low/</loc>
   </url>
   
 </urlset>

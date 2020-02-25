@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NTU Graph Deep Learning Lab</title>
-    <link>https://graphdeeplearning.github.io/authors/david.low/</link>
-      <atom:link href="https://graphdeeplearning.github.io/authors/david.low/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://graphdeeplearning.github.io/authors/david-low/</link>
+      <atom:link href="https://graphdeeplearning.github.io/authors/david-low/index.xml" rel="self" type="application/rss+xml" />
     <description>NTU Graph Deep Learning Lab</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright>
     <image>
       <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
       <title>NTU Graph Deep Learning Lab</title>
-      <link>https://graphdeeplearning.github.io/authors/david.low/</link>
+      <link>https://graphdeeplearning.github.io/authors/david-low/</link>
     </image>
     
   </channel>

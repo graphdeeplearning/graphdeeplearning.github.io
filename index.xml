@@ -5,12 +5,20 @@
     <link>https://graphdeeplearning.github.io/</link>
       <atom:link href="https://graphdeeplearning.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>NTU Graph Deep Learning Lab</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 14 Jan 2020 16:19:27 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/img/icon-192.png</url>
       <title>NTU Graph Deep Learning Lab</title>
       <link>https://graphdeeplearning.github.io/</link>
     </image>
+    
+    <item>
+      <title>Research Blog</title>
+      <link>https://graphdeeplearning.github.io/post/</link>
+      <pubDate>Wed, 12 Feb 2020 16:08:39 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/post/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Projects</title>
@@ -45,26 +53,18 @@
 &lt;p&gt;&amp;quot;Being able to articulate and explain ideas is the true test of having learned something.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Starting 2020, the NTU Graph Deep Learning Lab will host a weekly/bi-weekly paper discussion and reading group.
-We&#39;ll cover the latest and greatest papers from the Graph Neural Networks community as well as general machine learning.
+We&amp;rsquo;ll cover the latest and greatest papers from the Graph Neural Networks community as well as general machine learning.
 We plan to keep things simple: talk about the key contributions and results, followed by discussions; no need for beautiful slides or long talks.&lt;/p&gt;
-&lt;p&gt;The primary aim of this reading group is to share ideas, blabber about your favorite papers, and get to know others with common interests. 
+&lt;p&gt;The primary aim of this reading group is to share ideas, blabber about your favorite papers, and get to know others with common interests.
 Its also an opportunity for lab members to keep each other up-to-date and get early feedback on their projects.&lt;/p&gt;
 &lt;p&gt;We may have snacks/coffee! ;)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;When&lt;/strong&gt;: Weekly/bi-weekly, &lt;a href=&#34;mailto:chaitanya.joshi@ntu.edu.sg?subject=%5BGDL%20Reading%20Group%5D&#34;&gt;join the mailing list&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;When&lt;/strong&gt;: Weekly/bi-weekly, &lt;a href=&#34;mailto:chaitanya-joshi@ntu.edu.sg?subject=%5BGDL%20Reading%20Group%5D&#34;&gt;join the mailing list&lt;/a&gt;&lt;br&gt;
 &lt;strong&gt;Where&lt;/strong&gt;: MICL Lab Meeting Room, Block N4, N4-B1C-17, SCSE, NTU&lt;br&gt;
 &lt;strong&gt;Duration&lt;/strong&gt;: Usually 30-45 minutes&lt;br&gt;
-&lt;strong&gt;Contact&lt;/strong&gt;: &lt;a href=&#34;https://graphdeeplearning.github.io/authors/chaitanya.joshi/&#34;&gt;Chaitanya Joshi&lt;/a&gt;&lt;/p&gt;
+&lt;strong&gt;Contact&lt;/strong&gt;: &lt;a href=&#34;https://graphdeeplearning.github.io/authors/chaitanya-joshi/&#34;&gt;Chaitanya Joshi&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;(This page will be regularly updated with content from past sessions.)&lt;/em&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Posts</title>
-      <link>https://graphdeeplearning.github.io/post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://graphdeeplearning.github.io/post/</guid>
-      <description></description>
     </item>
     
   </channel>
