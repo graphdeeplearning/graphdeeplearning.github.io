@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Benchmark | NTU Graph Deep Learning Lab</title>
+    <link>https://graphdeeplearning.github.io/tags/benchmark/</link>
+      <atom:link href="https://graphdeeplearning.github.io/tags/benchmark/index.xml" rel="self" type="application/rss+xml" />
+    <description>Benchmark</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 03 Mar 2020 22:20:35 +0800</lastBuildDate>
+    <image>
+      <url>https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_512x512_fill_lanczos_center_2.png</url>
+      <title>Benchmark</title>
+      <link>https://graphdeeplearning.github.io/tags/benchmark/</link>
+    </image>
+    
+    <item>
+      <title>Benchmarking Graph Neural Networks</title>
+      <link>https://graphdeeplearning.github.io/project/benchmark/</link>
+      <pubDate>Tue, 03 Mar 2020 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benchmarking Graph Neural Networks</title>
+      <link>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

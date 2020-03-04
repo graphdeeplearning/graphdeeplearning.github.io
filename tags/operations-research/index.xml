@@ -5,12 +5,20 @@
     <link>https://graphdeeplearning.github.io/tags/operations-research/</link>
       <atom:link href="https://graphdeeplearning.github.io/tags/operations-research/index.xml" rel="self" type="application/rss+xml" />
     <description>Operations Research</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_512x512_fill_lanczos_center_2.png</url>
       <title>Operations Research</title>
       <link>https://graphdeeplearning.github.io/tags/operations-research/</link>
     </image>
+    
+    <item>
+      <title>Benchmarking Graph Neural Networks</title>
+      <link>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>On Learning Paradigms for the Travelling Salesman Problem</title>

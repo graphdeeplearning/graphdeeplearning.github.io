@@ -5,12 +5,28 @@
     <link>https://graphdeeplearning.github.io/authors/chaitanya-joshi/</link>
       <atom:link href="https://graphdeeplearning.github.io/authors/chaitanya-joshi/index.xml" rel="self" type="application/rss+xml" />
     <description>NTU Graph Deep Learning Lab</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Wed, 12 Feb 2020 16:08:39 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020</copyright><lastBuildDate>Tue, 03 Mar 2020 22:20:35 +0800</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_512x512_fill_lanczos_center_2.png</url>
       <title>NTU Graph Deep Learning Lab</title>
       <link>https://graphdeeplearning.github.io/authors/chaitanya-joshi/</link>
     </image>
+    
+    <item>
+      <title>Benchmarking Graph Neural Networks</title>
+      <link>https://graphdeeplearning.github.io/project/benchmark/</link>
+      <pubDate>Tue, 03 Mar 2020 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/project/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benchmarking Graph Neural Networks</title>
+      <link>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Transformers are Graph Neural Networks</title>
@@ -19,7 +35,7 @@
       <guid>https://graphdeeplearning.github.io/post/transformers-are-gnns/</guid>
       <description>&lt;p&gt;Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?&lt;/p&gt;
 &lt;p&gt;Besides the obvious ones&amp;ndash;recommendation systems at &lt;a href=&#34;https://medium.com/pinterest-engineering/pinsage-a-new-graph-convolutional-neural-network-for-web-scale-recommender-systems-88795a107f48&#34;&gt;Pinterest&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1902.08730&#34;&gt;Alibaba&lt;/a&gt; and &lt;a href=&#34;https://blog.twitter.com/en_us/topics/company/2019/Twitter-acquires-Fabula-AI.html&#34;&gt;Twitter&lt;/a&gt;&amp;ndash;a slightly nuanced success story is the &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34;&gt;&lt;strong&gt;Transformer architecture&lt;/strong&gt;&lt;/a&gt;, which has &lt;a href=&#34;https://openai.com/blog/better-language-models/&#34;&gt;taken&lt;/a&gt; &lt;a href=&#34;https://www.blog.google/products/search/search-language-understanding-bert/&#34;&gt;the&lt;/a&gt; &lt;a href=&#34;https://www.microsoft.com/en-us/research/project/large-scale-pretraining-for-response-generation/&#34;&gt;NLP&lt;/a&gt; &lt;a href=&#34;https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/&#34;&gt;industry&lt;/a&gt; &lt;a href=&#34;https://blog.einstein.ai/introducing-a-conditional-transformer-language-model-for-controllable-generation/&#34;&gt;by&lt;/a&gt; &lt;a href=&#34;https://nv-adlr.github.io/MegatronLM&#34;&gt;storm&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Through this post, I want to establish links between &lt;a href=&#34;(https://graphdeeplearning.github.io/project/spatial-convnets/)&#34;&gt;Graph Neural Networks (GNNs)&lt;/a&gt; and Transformers.
+&lt;p&gt;Through this post, I want to establish links between &lt;a href=&#34;https://graphdeeplearning.github.io/project/spatial-convnets/&#34;&gt;Graph Neural Networks (GNNs)&lt;/a&gt; and Transformers.
 I&amp;rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s start by talking about the purpose of model architectures&amp;ndash;&lt;em&gt;representation learning&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -133,7 +149,7 @@ h_i^{\ell+1} = \text{LN} \left( \text{MLP} \left( \text{LN} \left( h_i^{\ell+1} 
 $$&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;To be honest, I&amp;rsquo;m not sure what the exact intuition behind the over-parameterized feed-forward sub-layer was and nobody seems to be asking questions about it, too! I suppose LayerNorm and scaled dot-products didn&amp;rsquo;t completely solve the issues highlighted, so the big MLP is a sort of hack to re-scale the feature vectors independently of each other.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;mailto:chaitanya-joshi@ntu.edu.sg&#34;&gt;Email me&lt;/a&gt; if you know more!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:chaitanya.joshi@ntu.edu.sg&#34;&gt;Email me&lt;/a&gt; if you know more!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;The final picture of a Transformer layer looks like this:&lt;/p&gt;
@@ -226,9 +242,11 @@ In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.&lt;/p&gt;
 
 &lt;/figure&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, &lt;em&gt;i.e.&lt;/em&gt;, a weighted sum, we&amp;rsquo;d get the &lt;b&gt;Graph Attention Network&lt;/b&gt; (GAT). Add normalization and the feed-forward MLP, and voila, we have a &lt;b&gt;Graph Transformer&lt;/b&gt;!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, &lt;em&gt;i.e.&lt;/em&gt;, a weighted sum, we&amp;rsquo;d get the &lt;b&gt;Graph Attention Network&lt;/b&gt; (GAT). Add normalization and the feed-forward MLP, and voila, we have a &lt;b&gt;Graph Transformer&lt;/b&gt;!
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;sentences-are-fully-connected-word-graphs&#34;&gt;Sentences are fully-connected word graphs&lt;/h3&gt;
 &lt;p&gt;To make the connection more explicit, consider a sentence as a fully-connected graph, where each word is connected to every other word.
@@ -399,6 +417,11 @@ Similarly, DeepMind&amp;rsquo;s &lt;a href=&#34;https://arxiv.org/abs/1806.01261
 For a code walkthrough, the DGL team has &lt;a href=&#34;https://docs.dgl.ai/en/latest/tutorials/models/4_old_wines/7_transformer.html&#34;&gt;a nice tutorial&lt;/a&gt; on seq2seq as a graph problem and building Transformers as GNNs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;In our next post, we&amp;rsquo;ll be doing the reverse: using GNN architectures as Transformers for NLP (based on the Transformers library by &lt;a href=&#34;https://github.com/huggingface/transformers&#34;&gt;🤗 HuggingFace&lt;/a&gt;).&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Finally, we wrote &lt;a href=&#34;https://graphdeeplearning.github.io/publication/xu-2019-multi/&#34;&gt;a recent paper&lt;/a&gt; applying Transformers to sketch graphs. Do check it out!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;updates&#34;&gt;Updates&lt;/h4&gt;
+&lt;p&gt;The post has also been translated to &lt;a href=&#34;https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g&#34;&gt;Chinese&lt;/a&gt;.
+Do join the discussion on &lt;a href=&#34;https://twitter.com/chaitjo/status/1233220586358181888?s=20&#34;&gt;Twitter&lt;/a&gt; or &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/fb86mo/d_transformers_are_graph_neural_networks_blog/&#34;&gt;Reddit&lt;/a&gt;!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Transformers are a special case of Graph Neural Networks. This may be obvious to some, but the following blog post does a good job at explaining these important concepts. &lt;a href=&#34;https://t.co/H8LT2F7LqC&#34;&gt;https://t.co/H8LT2F7LqC&lt;/a&gt;&lt;/p&gt;&amp;mdash; Oriol Vinyals (@OriolVinyalsML) &lt;a href=&#34;https://twitter.com/OriolVinyalsML/status/1233783593626951681?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -491,10 +514,27 @@ Examples include chemical graphs, computer graphics, social networks, genetics, 
 &lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
 However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
-We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve generic graph problems, such as vertex classification, graph classification, graph regression, and graph generation.
-These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in chemistry, social networks or graphics.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34;&gt;
-&lt;em&gt;GNNs iteratively build representations of graphs through recursive neighborhood aggregation (or message passing), where each graph node gathers features from its neighbors to represent local graph structure.&lt;/em&gt;&lt;/p&gt;
+We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve &lt;em&gt;generic&lt;/em&gt; graph problems, such as vertex classification, graph classification, graph regression, and graph generation.&lt;/p&gt;
+&lt;p&gt;These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in a myriad of domains, including chemistry, social networks, recommendations and computer graphics.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;basic-formalism&#34;&gt;Basic Formalism&lt;/h2&gt;
+&lt;p&gt;Each GNN layer computes $d$-dimensional representations for the nodes/edges of the graph through recursive neighborhood diffusion (or message passing), where each graph node gathers features from its neighbors to represent local graph structure.
+Stacking $L$ GNN layers allows the network to build node representations from the &lt;strong&gt;$L$-hop neighborhood&lt;/strong&gt; of each node.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Let $h_i^{\ell}$ denote the feature vector at layer $\ell$ associated with node $i$.
+The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h_i^{\ell}$ and the feature vectors $h_{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
+This guarantees the transformation to build local reception fields, such as in standard ConvNets for computer vision, and be invariant to both graph size and vertex re-indexing.&lt;/p&gt;
+&lt;p&gt;Thus, the most generic version of a feature vector $h_i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
+\begin{equation}
+h_{i}^{\ell+1} =  f \left( \ h_i^{\ell} \  , \ { h_{j}^{\ell}: j \rightarrow i }  \ \right) ,
+\end{equation}
+where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h_{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
+&lt;p&gt;The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, &lt;em&gt;e.g.&lt;/em&gt;, &lt;a href=&#34;https://arxiv.org/abs/1706.02216&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;GAT&lt;/a&gt;, etc.
+For an illustration, here&amp;rsquo;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
+\begin{equation}
+h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} V^{\ell} h_{j}^{\ell} \Big),
+\end{equation}
+where $U^{\ell}, V^{\ell} \in \mathbb{R}^{d \times d}$ are the learnable parameters.&lt;/p&gt;
 </description>
     </item>
     

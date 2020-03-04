@@ -472,16 +472,9 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
         
         
         
-          
-          
-          
-            
-          
-          
-        
 
         <li class="nav-item">
-          <a class="nav-link " href="/#people"><span>People</span></a>
+          <a class="nav-link " href="/reading-group/"><span>Reading Group</span></a>
         </li>
 
         
@@ -501,9 +494,16 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
         
         
         
+          
+          
+          
+            
+          
+          
+        
 
         <li class="nav-item">
-          <a class="nav-link " href="/reading-group/"><span>Reading Group</span></a>
+          <a class="nav-link " href="/#people"><span>People</span></a>
         </li>
 
         
@@ -701,7 +701,7 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
     <div class="article-style">
       <p>Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?</p>
 <p>Besides the obvious ones&ndash;recommendation systems at <a href="https://medium.com/pinterest-engineering/pinsage-a-new-graph-convolutional-neural-network-for-web-scale-recommender-systems-88795a107f48">Pinterest</a>, <a href="https://arxiv.org/abs/1902.08730">Alibaba</a> and <a href="https://blog.twitter.com/en_us/topics/company/2019/Twitter-acquires-Fabula-AI.html">Twitter</a>&ndash;a slightly nuanced success story is the <a href="https://arxiv.org/abs/1706.03762"><strong>Transformer architecture</strong></a>, which has <a href="https://openai.com/blog/better-language-models/">taken</a> <a href="https://www.blog.google/products/search/search-language-understanding-bert/">the</a> <a href="https://www.microsoft.com/en-us/research/project/large-scale-pretraining-for-response-generation/">NLP</a> <a href="https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/">industry</a> <a href="https://blog.einstein.ai/introducing-a-conditional-transformer-language-model-for-controllable-generation/">by</a> <a href="https://nv-adlr.github.io/MegatronLM">storm</a>.</p>
-<p>Through this post, I want to establish links between <a href="(https://graphdeeplearning.github.io/project/spatial-convnets/)">Graph Neural Networks (GNNs)</a> and Transformers.
+<p>Through this post, I want to establish links between <a href="https://graphdeeplearning.github.io/project/spatial-convnets/">Graph Neural Networks (GNNs)</a> and Transformers.
 I&rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.</p>
 <p>Let&rsquo;s start by talking about the purpose of model architectures&ndash;<em>representation learning</em>.</p>
 <hr>
@@ -815,7 +815,7 @@ h_i^{\ell+1} = \text{LN} \left( \text{MLP} \left( \text{LN} \left( h_i^{\ell+1} 
 $$</p>
 <blockquote>
 <p>To be honest, I&rsquo;m not sure what the exact intuition behind the over-parameterized feed-forward sub-layer was and nobody seems to be asking questions about it, too! I suppose LayerNorm and scaled dot-products didn&rsquo;t completely solve the issues highlighted, so the big MLP is a sort of hack to re-scale the feature vectors independently of each other.</p>
-<p><a href="mailto:chaitanya-joshi@ntu.edu.sg">Email me</a> if you know more!</p>
+<p><a href="mailto:chaitanya.joshi@ntu.edu.sg">Email me</a> if you know more!</p>
 </blockquote>
 <hr>
 <p>The final picture of a Transformer layer looks like this:</p>
@@ -908,9 +908,11 @@ In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.</p>
 
 </figure>
 
-<blockquote>
-<p>If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, <em>i.e.</em>, a weighted sum, we&rsquo;d get the <b>Graph Attention Network</b> (GAT). Add normalization and the feed-forward MLP, and voila, we have a <b>Graph Transformer</b>!</p>
-</blockquote>
+<div class="alert alert-note">
+  <div>
+    If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, <em>i.e.</em>, a weighted sum, we&rsquo;d get the <b>Graph Attention Network</b> (GAT). Add normalization and the feed-forward MLP, and voila, we have a <b>Graph Transformer</b>!
+  </div>
+</div>
 <hr>
 <h3 id="sentences-are-fully-connected-word-graphs">Sentences are fully-connected word graphs</h3>
 <p>To make the connection more explicit, consider a sentence as a fully-connected graph, where each word is connected to every other word.
@@ -1081,6 +1083,11 @@ Similarly, DeepMind&rsquo;s <a href="https://arxiv.org/abs/1806.01261">star-stud
 For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/tutorials/models/4_old_wines/7_transformer.html">a nice tutorial</a> on seq2seq as a graph problem and building Transformers as GNNs.</p>
 <p><strong>In our next post, we&rsquo;ll be doing the reverse: using GNN architectures as Transformers for NLP (based on the Transformers library by <a href="https://github.com/huggingface/transformers">🤗 HuggingFace</a>).</strong></p>
 <p>Finally, we wrote <a href="https://graphdeeplearning.github.io/publication/xu-2019-multi/">a recent paper</a> applying Transformers to sketch graphs. Do check it out!</p>
+<hr>
+<h4 id="updates">Updates</h4>
+<p>The post has also been translated to <a href="https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g">Chinese</a>.
+Do join the discussion on <a href="https://twitter.com/chaitjo/status/1233220586358181888?s=20">Twitter</a> or <a href="https://www.reddit.com/r/MachineLearning/comments/fb86mo/d_transformers_are_graph_neural_networks_blog/">Reddit</a>!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Transformers are a special case of Graph Neural Networks. This may be obvious to some, but the following blog post does a good job at explaining these important concepts. <a href="https://t.co/H8LT2F7LqC">https://t.co/H8LT2F7LqC</a></p>&mdash; Oriol Vinyals (@OriolVinyalsML) <a href="https://twitter.com/OriolVinyalsML/status/1233783593626951681?ref_src=twsrc%5Etfw">February 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     </div>
 
