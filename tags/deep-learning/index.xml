@@ -341,7 +341,7 @@ are all promising new ideas for better Transformers.&lt;/p&gt;
 
 &lt;h4 id=&#34;are-transformers-learning-neural-syntax&#34;&gt;Are Transformers learning &amp;lsquo;neural syntax&amp;rsquo;?&lt;/h4&gt;
 &lt;p&gt;There have been &lt;a href=&#34;https://pair-code.github.io/interpretability/bert-tree/&#34;&gt;several&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1905.05950&#34;&gt;interesting&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1906.04341&#34;&gt;papers&lt;/a&gt; from the NLP community on what Transformers might be learning.
-The basic premise is that performing attention on all word pairs in a sentence&amp;ndash;with the purpose of identifying which pairs are the most interesting&amp;ndash;enables Transformers to learn something like a &lt;strong&gt;task-specific syntax&lt;/strong&gt;.&lt;br&gt;
+The basic premise is that performing attention on all word pairs in a sentence&amp;ndash;with the purpose of identifying which pairs are the most interesting&amp;ndash;enables Transformers to learn something like a &lt;strong&gt;task-specific syntax&lt;/strong&gt;.
 Different heads in the multi-head attention might also be &amp;lsquo;looking&amp;rsquo; at different syntactic properties.&lt;/p&gt;
 &lt;p&gt;In graph terms, by using GNNs on full graphs, can we recover the most important edges&amp;ndash;and what they might entail&amp;ndash;from how the GNN performs neighbourhood aggregation at each layer?
 I&amp;rsquo;m &lt;a href=&#34;https://arxiv.org/abs/1909.07913&#34;&gt;not so convinced&lt;/a&gt; by this view yet.&lt;/p&gt;
@@ -419,8 +419,8 @@ For a code walkthrough, the DGL team has &lt;a href=&#34;https://docs.dgl.ai/en/
 &lt;p&gt;Finally, we wrote &lt;a href=&#34;https://graphdeeplearning.github.io/publication/xu-2019-multi/&#34;&gt;a recent paper&lt;/a&gt; applying Transformers to sketch graphs. Do check it out!&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;updates&#34;&gt;Updates&lt;/h4&gt;
-&lt;p&gt;The post has also been translated to &lt;a href=&#34;https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g&#34;&gt;Chinese&lt;/a&gt;.
-Do join the discussion on &lt;a href=&#34;https://twitter.com/chaitjo/status/1233220586358181888?s=20&#34;&gt;Twitter&lt;/a&gt; or &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/fb86mo/d_transformers_are_graph_neural_networks_blog/&#34;&gt;Reddit&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The post is also available on &lt;a href=&#34;https://medium.com/@chaitjo/transformers-are-graph-neural-networks-bca9f75412aa?source=friends_link&amp;amp;sk=c54de873b2cec3db70166a6cf0b41d3e&#34;&gt;Medium&lt;/a&gt;, and has been translated to &lt;a href=&#34;https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g&#34;&gt;Chinese&lt;/a&gt; and &lt;a href=&#34;https://habr.com/ru/post/491576/&#34;&gt;Russian&lt;/a&gt;.
+Do join the discussion on &lt;a href=&#34;https://twitter.com/chaitjo/status/1233220586358181888?s=20&#34;&gt;Twitter&lt;/a&gt;, &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/fb86mo/d_transformers_are_graph_neural_networks_blog/&#34;&gt;Reddit&lt;/a&gt; or &lt;a href=&#34;https://news.ycombinator.com/item?id=22518263&#34;&gt;HackerNews&lt;/a&gt;!&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Transformers are a special case of Graph Neural Networks. This may be obvious to some, but the following blog post does a good job at explaining these important concepts. &lt;a href=&#34;https://t.co/H8LT2F7LqC&#34;&gt;https://t.co/H8LT2F7LqC&lt;/a&gt;&lt;/p&gt;&amp;mdash; Oriol Vinyals (@OriolVinyalsML) &lt;a href=&#34;https://twitter.com/OriolVinyalsML/status/1233783593626951681?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
