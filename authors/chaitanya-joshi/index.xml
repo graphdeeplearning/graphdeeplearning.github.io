@@ -41,33 +41,22 @@
       <link>https://graphdeeplearning.github.io/post/transformers-are-gnns/</link>
       <pubDate>Wed, 12 Feb 2020 16:08:39 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/post/transformers-are-gnns/</guid>
-      <description>
-
-&lt;p&gt;Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?&lt;/p&gt;
-
+      <description>&lt;p&gt;Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?&lt;/p&gt;
 &lt;p&gt;Besides the obvious ones&amp;ndash;recommendation systems at &lt;a href=&#34;https://medium.com/pinterest-engineering/pinsage-a-new-graph-convolutional-neural-network-for-web-scale-recommender-systems-88795a107f48&#34;&gt;Pinterest&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1902.08730&#34;&gt;Alibaba&lt;/a&gt; and &lt;a href=&#34;https://blog.twitter.com/en_us/topics/company/2019/Twitter-acquires-Fabula-AI.html&#34;&gt;Twitter&lt;/a&gt;&amp;ndash;a slightly nuanced success story is the &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34;&gt;&lt;strong&gt;Transformer architecture&lt;/strong&gt;&lt;/a&gt;, which has &lt;a href=&#34;https://openai.com/blog/better-language-models/&#34;&gt;taken&lt;/a&gt; &lt;a href=&#34;https://www.blog.google/products/search/search-language-understanding-bert/&#34;&gt;the&lt;/a&gt; &lt;a href=&#34;https://www.microsoft.com/en-us/research/project/large-scale-pretraining-for-response-generation/&#34;&gt;NLP&lt;/a&gt; &lt;a href=&#34;https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/&#34;&gt;industry&lt;/a&gt; &lt;a href=&#34;https://blog.einstein.ai/introducing-a-conditional-transformer-language-model-for-controllable-generation/&#34;&gt;by&lt;/a&gt; &lt;a href=&#34;https://nv-adlr.github.io/MegatronLM&#34;&gt;storm&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Through this post, I want to establish links between &lt;a href=&#34;https://graphdeeplearning.github.io/project/spatial-convnets/&#34;&gt;Graph Neural Networks (GNNs)&lt;/a&gt; and Transformers.
-I&amp;rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s start by talking about the purpose of model architectures&amp;ndash;&lt;em&gt;representation learning&lt;/em&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
+I&#39;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.&lt;/p&gt;
+&lt;p&gt;Let&#39;s start by talking about the purpose of model architectures&amp;ndash;&lt;em&gt;representation learning&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;representation-learning-for-nlp&#34;&gt;Representation Learning for NLP&lt;/h3&gt;
-
 &lt;p&gt;At a high level, all neural network architectures build &lt;em&gt;representations&lt;/em&gt; of input data as vectors/embeddings, which encode useful statistical and semantic information about the data.
 These &lt;em&gt;latent&lt;/em&gt; or &lt;em&gt;hidden&lt;/em&gt; representations can then be used for performing something useful, such as classifying an image or translating a sentence.
 The neural network &lt;em&gt;learns&lt;/em&gt; to build better-and-better representations by receiving feedback, usually via error/loss functions.&lt;/p&gt;
-
 &lt;p&gt;For Natural Language Processing (NLP), conventionally, &lt;strong&gt;Recurrent Neural Networks&lt;/strong&gt; (RNNs) build representations of each word in a sentence in a sequential manner, &lt;em&gt;i.e.&lt;/em&gt;, &lt;strong&gt;one word at a time&lt;/strong&gt;.
 Intuitively, we can imagine an RNN layer as a conveyor belt, with the words being processed on it &lt;em&gt;autoregressively&lt;/em&gt; from left to right.
 At the end, we get a hidden feature for each word in the sentence, which we pass to the next RNN layer or use for our NLP tasks of choice.&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;I highly recommend Chris Olah&amp;rsquo;s legendary blog for recaps on &lt;a href=&#34;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&#34;&gt;RNNs&lt;/a&gt; and &lt;a href=&#34;http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/&#34;&gt;representation learning&lt;/a&gt; for NLP.&lt;/p&gt;
+&lt;p&gt;I highly recommend Chris Olah&#39;s legendary blog for recaps on &lt;a href=&#34;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&#34;&gt;RNNs&lt;/a&gt; and &lt;a href=&#34;http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/&#34;&gt;representation learning&lt;/a&gt; for NLP.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 
 
 
@@ -91,42 +80,30 @@ At the end, we get a hidden feature for each word in the sentence, which we pass
 
 &lt;/figure&gt;
 
-
 &lt;p&gt;Initially introduced for machine translation, &lt;strong&gt;Transformers&lt;/strong&gt; have gradually replaced RNNs in mainstream NLP.
 The architecture takes a fresh approach to representation learning: Doing away with recurrence entirely, Transformers build features of each word using an &lt;a href=&#34;https://distill.pub/2016/augmented-rnns/&#34;&gt;attention&lt;/a&gt; &lt;a href=&#34;https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html&#34;&gt;mechanism&lt;/a&gt; to figure out how important &lt;strong&gt;all the other words&lt;/strong&gt; in the sentence are w.r.t. to the aforementioned word.
-Knowing this, the word&amp;rsquo;s updated features are simply the sum of linear transformations of the features of all the words, weighted by their importance.&lt;/p&gt;
-
+Knowing this, the word&#39;s updated features are simply the sum of linear transformations of the features of all the words, weighted by their importance.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Back in 2017, this idea sounded very radical, because the NLP community was so used to the sequential&amp;ndash;one-word-at-a-time&amp;ndash;style of processing text with RNNs. The title of the paper probably added fuel to the fire!&lt;/p&gt;
-
 &lt;p&gt;For a recap, Yannic Kilcher made an excellent &lt;a href=&#34;https://www.youtube.com/watch?v=iDulhoQ2pro&#34;&gt;video overview&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h3 id=&#34;breaking-down-the-transformer&#34;&gt;Breaking down the Transformer&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s develop intuitions about the architecture by translating the previous paragraph into the language of mathematical symbols and vectors.
-We update the hidden feature $h$ of the $i$&amp;lsquo;th word in a sentence $\mathcal{S}$ from layer $\ell$ to layer $\ell+1$ as follows:&lt;/p&gt;
-
+&lt;p&gt;Let&#39;s develop intuitions about the architecture by translating the previous paragraph into the language of mathematical symbols and vectors.
+We update the hidden feature $h$ of the $i$&#39;th word in a sentence $\mathcal{S}$ from layer $\ell$ to layer $\ell+1$ as follows:&lt;/p&gt;
 &lt;p&gt;$$
-h&lt;em&gt;{i}^{\ell+1} = \text{Attention} \left( Q^{\ell} h&lt;/em&gt;{i}^{\ell} \ , K^{\ell} h&lt;em&gt;{j}^{\ell} \ , V^{\ell} h&lt;/em&gt;{j}^{\ell} \right),
+h_{i}^{\ell+1} = \text{Attention} \left( Q^{\ell} h_{i}^{\ell} \ , K^{\ell} h_{j}^{\ell} \ , V^{\ell} h_{j}^{\ell} \right),
 $$&lt;/p&gt;
-
 &lt;p&gt;$$
-i.e.,\ h&lt;em&gt;{i}^{\ell+1} = \sum&lt;/em&gt;{j \in \mathcal{S}} w&lt;em&gt;{ij} \left( V^{\ell} h&lt;/em&gt;{j}^{\ell} \right),
+i.e.,\ h_{i}^{\ell+1} = \sum_{j \in \mathcal{S}} w_{ij} \left( V^{\ell} h_{j}^{\ell} \right),
 $$&lt;/p&gt;
-
 &lt;p&gt;$$
-\text{where} \ w_{ij} = \text{softmax}&lt;em&gt;j \left( Q^{\ell} h&lt;/em&gt;{i}^{\ell} \cdot  K^{\ell} h_{j}^{\ell} \right),
+\text{where} \ w_{ij} = \text{softmax}_j \left( Q^{\ell} h_{i}^{\ell} \cdot  K^{\ell} h_{j}^{\ell} \right),
 $$&lt;/p&gt;
-
 &lt;p&gt;where $j \in \mathcal{S}$ denotes the set of words in the sentence and $Q^{\ell}, K^{\ell}, V^{\ell}$ are learnable linear weights (denoting the &lt;strong&gt;Q&lt;/strong&gt;uery, &lt;strong&gt;K&lt;/strong&gt;ey and &lt;strong&gt;V&lt;/strong&gt;alue for the attention computation, respectively).
 The attention mechanism is performed parallelly for each word in the sentence to obtain their updated features in &lt;em&gt;one shot&lt;/em&gt;&amp;ndash;another plus point for Transformers over RNNs, which update features word-by-word.&lt;/p&gt;
-
 &lt;p&gt;We can understand the attention mechanism better through the following pipeline:&lt;/p&gt;
 
-&lt;p&gt;
 
 
 
@@ -149,56 +126,41 @@ The attention mechanism is performed parallelly for each word in the sentence to
 
 &lt;/figure&gt;
 
-&amp;gt; Taking in the features of the word $h&lt;em&gt;{i}^{\ell}$ and the set of other words in the sentence ${ h&lt;/em&gt;{j}^{\ell} \;\ \forall j \in \mathcal{S} }$, we compute the attention weights $w&lt;em&gt;{ij}$ for each pair $(i,j)$ through the dot-product, followed by a softmax across all $j$&amp;rsquo;s. Finally, we produce the updated word feature $h&lt;/em&gt;{i}^{\ell+1}$ for word $i$ by summing over all ${ h&lt;em&gt;{j}^{\ell} }$&amp;rsquo;s weighted by their corresponding $w&lt;/em&gt;{ij}$. Each word in the sentence parallelly undergoes the same pipeline to update its features.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;multi-head-attention-mechanism&#34;&gt;Multi-head Attention mechanism&lt;/h3&gt;
-
+&lt;blockquote&gt;
+&lt;p&gt;Taking in the features of the word $h_{i}^{\ell}$ and the set of other words in the sentence ${ h_{j}^{\ell} ;\ \forall j \in \mathcal{S} }$, we compute the attention weights $w_{ij}$ for each pair $(i,j)$ through the dot-product, followed by a softmax across all $j$&#39;s. Finally, we produce the updated word feature $h_{i}^{\ell+1}$ for word $i$ by summing over all ${ h_{j}^{\ell} }$&#39;s weighted by their corresponding $w_{ij}$. Each word in the sentence parallelly undergoes the same pipeline to update its features.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;multihead-attention-mechanism&#34;&gt;Multi-head Attention mechanism&lt;/h3&gt;
 &lt;p&gt;Getting this dot-product attention mechanism to work proves to be tricky&amp;ndash;bad random initializations can de-stabilize the learning process.
 We can overcome this by parallelly performing multiple &amp;lsquo;heads&amp;rsquo; of attention and concatenating the result (with each head now having separate learnable  weights):&lt;/p&gt;
-
 &lt;p&gt;$$
 h_{i}^{\ell+1} = \text{Concat} \left( \text{head}_1, \ldots, \text{head}_K \right) O^{\ell},
 $$
 $$
-\text{head}&lt;em&gt;k = \text{Attention} \left(  Q^{k,\ell} h&lt;/em&gt;{i}^{\ell} \ , K^{k, \ell} h&lt;em&gt;{j}^{\ell} \ , V^{k, \ell} h&lt;/em&gt;{j}^{\ell} \right),
+\text{head}_k = \text{Attention} \left(  Q^{k,\ell} h_{i}^{\ell} \ , K^{k, \ell} h_{j}^{\ell} \ , V^{k, \ell} h_{j}^{\ell} \right),
 $$&lt;/p&gt;
-
-&lt;p&gt;where $Q^{k,\ell}, K^{k,\ell}, V^{k,\ell}$ are the learnable weights of the $k$&amp;lsquo;th attention head and $O^{\ell}$ is a down-projection to match the dimensions of $h_i^{\ell+1}$ and $h_i^{\ell}$ across layers.&lt;/p&gt;
-
+&lt;p&gt;where $Q^{k,\ell}, K^{k,\ell}, V^{k,\ell}$ are the learnable weights of the $k$&#39;th attention head and $O^{\ell}$ is a down-projection to match the dimensions of $h_i^{\ell+1}$ and $h_i^{\ell}$ across layers.&lt;/p&gt;
 &lt;p&gt;Multiple heads allow the attention mechanism to essentially &amp;lsquo;hedge its bets&amp;rsquo;, looking at different transformations or aspects of the hidden features from the previous layer.
-We&amp;rsquo;ll talk more about this later.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;scale-issues-and-the-feed-forward-sub-layer&#34;&gt;Scale issues and the Feed-forward sub-layer&lt;/h3&gt;
-
+We&#39;ll talk more about this later.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;scale-issues-and-the-feedforward-sublayer&#34;&gt;Scale issues and the Feed-forward sub-layer&lt;/h3&gt;
 &lt;p&gt;A key issue motivating the final Transformer architecture is that the features for words &lt;em&gt;after&lt;/em&gt; the attention mechanism might be at &lt;strong&gt;different scales&lt;/strong&gt; or &lt;strong&gt;magnitudes&lt;/strong&gt;:
-(1) This can be due to some words having very sharp or very distributed attention weights $w&lt;em&gt;{ij}$ when summing over the features of the other words.
-(2) At the individual feature/vector entries level, concatenating across multiple attention heads&amp;ndash;each of which might output values at different scales&amp;ndash;can lead to the entries of the final vector $h&lt;/em&gt;{i}^{\ell+1}$ having a wide range of values.
+(1) This can be due to some words having very sharp or very distributed attention weights $w_{ij}$ when summing over the features of the other words.
+(2) At the individual feature/vector entries level, concatenating across multiple attention heads&amp;ndash;each of which might output values at different scales&amp;ndash;can lead to the entries of the final vector $h_{i}^{\ell+1}$ having a wide range of values.
 Following conventional ML wisdom, it seems reasonable to add a &lt;a href=&#34;https://nealjean.com/ml/neural-network-normalization/&#34;&gt;normalization layer&lt;/a&gt; into the pipeline.&lt;/p&gt;
-
 &lt;p&gt;Transformers overcome issue (2) with &lt;a href=&#34;https://arxiv.org/abs/1607.06450&#34;&gt;&lt;strong&gt;LayerNorm&lt;/strong&gt;&lt;/a&gt;, which normalizes and learns an affine transformation at the feature level.
 Additionally, &lt;strong&gt;scaling the dot-product&lt;/strong&gt; attention by the square-root of the feature dimension helps counteract issue (1).&lt;/p&gt;
-
 &lt;p&gt;Finally, the authors propose another &amp;lsquo;trick&amp;rsquo; to control the scale issue: &lt;strong&gt;a position-wise 2-layer MLP&lt;/strong&gt; with a special structure.
 After the multi-head attention, they project $h_i^{\ell+1}$ to a (absurdly) higher dimension by a learnable weight, where it undergoes the ReLU non-linearity, and is then projected back to its original dimension followed by another normalization:&lt;/p&gt;
-
 &lt;p&gt;$$
 h_i^{\ell+1} = \text{LN} \left( \text{MLP} \left( \text{LN} \left( h_i^{\ell+1} \right) \right) \right)
 $$&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;To be honest, I&amp;rsquo;m not sure what the exact intuition behind the over-parameterized feed-forward sub-layer was and nobody seems to be asking questions about it, too! I suppose LayerNorm and scaled dot-products didn&amp;rsquo;t completely solve the issues highlighted, so the big MLP is a sort of hack to re-scale the feature vectors independently of each other.&lt;/p&gt;
-
+&lt;p&gt;To be honest, I&#39;m not sure what the exact intuition behind the over-parameterized feed-forward sub-layer was and nobody seems to be asking questions about it, too! I suppose LayerNorm and scaled dot-products didn&#39;t completely solve the issues highlighted, so the big MLP is a sort of hack to re-scale the feature vectors independently of each other.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;mailto:chaitanya.joshi@ntu.edu.sg&#34;&gt;Email me&lt;/a&gt; if you know more!&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;p&gt;The final picture of a Transformer layer looks like this:&lt;/p&gt;
-
 
 
 
@@ -222,21 +184,15 @@ $$&lt;/p&gt;
 
 &lt;/figure&gt;
 
-
 &lt;p&gt;The Transformer architecture is also extremely amenable to very deep networks, enabling the NLP community to &lt;em&gt;&lt;a href=&#34;https://arxiv.org/abs/1910.10683&#34;&gt;scale&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/2001.08361&#34;&gt;up&lt;/a&gt;&lt;/em&gt; in terms of both model parameters and, by extension, data.
 &lt;strong&gt;Residual connections&lt;/strong&gt; between the inputs and outputs of each multi-head attention sub-layer and the feed-forward sub-layer are key for stacking Transformer layers (but omitted from the diagram for clarity).&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h3 id=&#34;gnns-build-representations-of-graphs&#34;&gt;GNNs build representations of graphs&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s take a step away from NLP for a moment.&lt;/p&gt;
-
+&lt;p&gt;Let&#39;s take a step away from NLP for a moment.&lt;/p&gt;
 &lt;p&gt;Graph Neural Networks (GNNs) or Graph Convolutional Networks (GCNs) build representations of nodes and edges in graph data.
 They do so through &lt;strong&gt;neighbourhood aggregation&lt;/strong&gt; (or message passing), where each node gathers features from its neighbours to update its representation of the &lt;em&gt;local&lt;/em&gt; graph structure around it.
-Stacking several GNN layers enables the model to propagate each node&amp;rsquo;s features over the entire graph&amp;ndash;from its neighbours to the neighbours&amp;rsquo; neighbours, and so on.&lt;/p&gt;
+Stacking several GNN layers enables the model to propagate each node&#39;s features over the entire graph&amp;ndash;from its neighbours to the neighbours&amp;rsquo; neighbours, and so on.&lt;/p&gt;
 
-&lt;p&gt;
 
 
 
@@ -259,23 +215,18 @@ Stacking several GNN layers enables the model to propagate each node&amp;rsquo;s
 
 &lt;/figure&gt;
 
-&amp;gt; Take the example of this emoji social network: The node features produced by the GNN can be used for predictive tasks such as identifying the most influential members or proposing potential connections.&lt;/p&gt;
-
-&lt;p&gt;In their most basic form, GNNs update the hidden features $h$ of node $i$ (for example, 😆) at layer $\ell$ via a non-linear transformation of the node&amp;rsquo;s own features $h_i^{\ell}$ added to the aggregation of features $h_j^{\ell}$ from each neighbouring node $j \in \mathcal{N}(i)$:&lt;/p&gt;
-
+&lt;blockquote&gt;
+&lt;p&gt;Take the example of this emoji social network: The node features produced by the GNN can be used for predictive tasks such as identifying the most influential members or proposing potential connections.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In their most basic form, GNNs update the hidden features $h$ of node $i$ (for example, 😆) at layer $\ell$ via a non-linear transformation of the node&#39;s own features $h_i^{\ell}$ added to the aggregation of features $h_j^{\ell}$ from each neighbouring node $j \in \mathcal{N}(i)$:&lt;/p&gt;
 &lt;p&gt;$$
-h&lt;em&gt;{i}^{\ell+1} =  \sigma \Big( U^{\ell} h&lt;/em&gt;{i}^{\ell} + \sum&lt;em&gt;{j \in \mathcal{N}(i)} \left( V^{\ell} h&lt;/em&gt;{j}^{\ell} \right)  \Big),
+h_{i}^{\ell+1} =  \sigma \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}(i)} \left( V^{\ell} h_{j}^{\ell} \right)  \Big),
 $$&lt;/p&gt;
-
 &lt;p&gt;where $U^{\ell}, V^{\ell}$ are learnable weight matrices of the GNN layer and $\sigma$ is a non-linearity such as ReLU.
 In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.&lt;/p&gt;
-
 &lt;p&gt;The summation over the neighbourhood nodes $j \in \mathcal{N}(i)$ can be replaced by other input size-invariant &lt;strong&gt;aggregation functions&lt;/strong&gt; such as simple mean/max or something more powerful, such as a weighted sum via an &lt;a href=&#34;https://petar-v.com/GAT/&#34;&gt;&lt;strong&gt;attention mechanism&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Does that sound familiar?&lt;/p&gt;
-
 &lt;p&gt;Maybe a pipeline will help make the connection:&lt;/p&gt;
-
 
 
 
@@ -299,20 +250,15 @@ In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.&lt;/p&gt;
 
 &lt;/figure&gt;
 
-
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, &lt;em&gt;i.e.&lt;/em&gt;, a weighted sum, we&amp;rsquo;d get the &lt;b&gt;Graph Attention Network&lt;/b&gt; (GAT). Add normalization and the feed-forward MLP, and voila, we have a &lt;b&gt;Graph Transformer&lt;/b&gt;!
+    If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, &lt;em&gt;i.e.&lt;/em&gt;, a weighted sum, we&#39;d get the &lt;b&gt;Graph Attention Network&lt;/b&gt; (GAT). Add normalization and the feed-forward MLP, and voila, we have a &lt;b&gt;Graph Transformer&lt;/b&gt;!
   &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;sentences-are-fully-connected-word-graphs&#34;&gt;Sentences are fully-connected word graphs&lt;/h3&gt;
-
+&lt;hr&gt;
+&lt;h3 id=&#34;sentences-are-fullyconnected-word-graphs&#34;&gt;Sentences are fully-connected word graphs&lt;/h3&gt;
 &lt;p&gt;To make the connection more explicit, consider a sentence as a fully-connected graph, where each word is connected to every other word.
 Now, we can use a GNN to build features for each node (word) in the graph (sentence), which we can then perform NLP tasks with.&lt;/p&gt;
-
 
 
 
@@ -336,25 +282,17 @@ Now, we can use a GNN to build features for each node (word) in the graph (sente
 
 &lt;/figure&gt;
 
-
 &lt;p&gt;Broadly, this is what Transformers are doing: they are &lt;strong&gt;GNNs with multi-head attention&lt;/strong&gt; as the neighbourhood aggregation function.
 Whereas standard GNNs aggregate features from their local neighbourhood nodes $j \in \mathcal{N}(i)$,
 Transformers for NLP treat the entire sentence $\mathcal{S}$ as the local neighbourhood, aggregating features from each word $j \in \mathcal{S}$ at each layer.&lt;/p&gt;
-
 &lt;p&gt;Importantly, various problem-specific tricks&amp;ndash;such as position encodings, causal/masked aggregation, learning rate schedules and extensive pre-training&amp;ndash;are essential for the success of Transformers but seldom seem in the GNN community.
 At the same time, looking at Transformers from a GNN perspective could inspire us to get rid of a lot of the &lt;em&gt;bells and whistles&lt;/em&gt; in the architecture.&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h3 id=&#34;what-can-we-learn-from-each-other&#34;&gt;What can we learn from each other?&lt;/h3&gt;
-
-&lt;p&gt;Now that we&amp;rsquo;ve established a connection between Transformers and GNNs, let me throw some ideas around&amp;hellip;&lt;/p&gt;
-
-&lt;h4 id=&#34;are-fully-connected-graphs-the-best-input-format-for-nlp&#34;&gt;Are fully-connected graphs the best input format for NLP?&lt;/h4&gt;
-
+&lt;p&gt;Now that we&#39;ve established a connection between Transformers and GNNs, let me throw some ideas around&amp;hellip;&lt;/p&gt;
+&lt;h4 id=&#34;are-fullyconnected-graphs-the-best-input-format-for-nlp&#34;&gt;Are fully-connected graphs the best input format for NLP?&lt;/h4&gt;
 &lt;p&gt;Before statistical NLP and ML, linguists like Noam Chomsky focused on developing fomal theories of &lt;a href=&#34;https://en.wikipedia.org/wiki/Syntactic_Structures&#34;&gt;linguistic structure&lt;/a&gt;, such as &lt;strong&gt;syntax trees/graphs&lt;/strong&gt;.
 &lt;a href=&#34;https://arxiv.org/abs/1503.00075&#34;&gt;Tree LSTMs&lt;/a&gt; already tried this, but maybe Transformers/GNNs are better architectures for bringing the world of linguistic theory and statistical NLP closer?&lt;/p&gt;
-
 
 
 
@@ -378,19 +316,14 @@ At the same time, looking at Transformers from a GNN perspective could inspire u
 
 &lt;/figure&gt;
 
-
-&lt;h4 id=&#34;how-to-learn-long-term-dependencies&#34;&gt;How to learn long-term dependencies?&lt;/h4&gt;
-
+&lt;h4 id=&#34;how-to-learn-longterm-dependencies&#34;&gt;How to learn long-term dependencies?&lt;/h4&gt;
 &lt;p&gt;Another issue with fully-connected graphs is that they make learning very long-term dependencies between words difficult.
 This is simply due to how the number of edges in the graph &lt;strong&gt;scales quadratically&lt;/strong&gt; with the number of nodes, &lt;em&gt;i.e.&lt;/em&gt;, in an $n$ word sentence, a Transformer/GNN would be doing computations over $n^2$ pairs of words. Things get out of hand for very large $n$.&lt;/p&gt;
-
-&lt;p&gt;The NLP community&amp;rsquo;s perspective on the long sequences and dependencies problem is interesting:
+&lt;p&gt;The NLP community&#39;s perspective on the long sequences and dependencies problem is interesting:
 Making the attention mechanism &lt;a href=&#34;https://openai.com/blog/sparse-transformer/&#34;&gt;sparse&lt;/a&gt; or &lt;a href=&#34;https://ai.facebook.com/blog/making-transformer-networks-simpler-and-more-efficient/&#34;&gt;adaptive&lt;/a&gt; in terms of input size, adding &lt;a href=&#34;https://ai.googleblog.com/2019/01/transformer-xl-unleashing-potential-of.html&#34;&gt;recurrence&lt;/a&gt; or &lt;a href=&#34;https://deepmind.com/blog/article/A_new_model_and_dataset_for_long-range_memory&#34;&gt;compression&lt;/a&gt; into each layer,
 and using &lt;a href=&#34;https://www.pragmatic.ml/reformer-deep-dive/&#34;&gt;Locality Sensitive Hashing&lt;/a&gt; for efficient attention
 are all promising new ideas for better Transformers.&lt;/p&gt;
-
 &lt;p&gt;It would be interesting to see ideas from the GNN community thrown into the mix, &lt;em&gt;e.g.&lt;/em&gt;, &lt;a href=&#34;https://arxiv.org/abs/1911.04070&#34;&gt;Binary Partitioning&lt;/a&gt; for sentence &lt;strong&gt;graph sparsification&lt;/strong&gt; seems like another exciting approach.&lt;/p&gt;
-
 
 
 
@@ -414,16 +347,12 @@ are all promising new ideas for better Transformers.&lt;/p&gt;
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;are-transformers-learning-neural-syntax&#34;&gt;Are Transformers learning &amp;lsquo;neural syntax&amp;rsquo;?&lt;/h4&gt;
-
 &lt;p&gt;There have been &lt;a href=&#34;https://pair-code.github.io/interpretability/bert-tree/&#34;&gt;several&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1905.05950&#34;&gt;interesting&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1906.04341&#34;&gt;papers&lt;/a&gt; from the NLP community on what Transformers might be learning.
 The basic premise is that performing attention on all word pairs in a sentence&amp;ndash;with the purpose of identifying which pairs are the most interesting&amp;ndash;enables Transformers to learn something like a &lt;strong&gt;task-specific syntax&lt;/strong&gt;.
 Different heads in the multi-head attention might also be &amp;lsquo;looking&amp;rsquo; at different syntactic properties.&lt;/p&gt;
-
 &lt;p&gt;In graph terms, by using GNNs on full graphs, can we recover the most important edges&amp;ndash;and what they might entail&amp;ndash;from how the GNN performs neighbourhood aggregation at each layer?
-I&amp;rsquo;m &lt;a href=&#34;https://arxiv.org/abs/1909.07913&#34;&gt;not so convinced&lt;/a&gt; by this view yet.&lt;/p&gt;
-
+I&#39;m &lt;a href=&#34;https://arxiv.org/abs/1909.07913&#34;&gt;not so convinced&lt;/a&gt; by this view yet.&lt;/p&gt;
 
 
 
@@ -447,21 +376,15 @@ I&amp;rsquo;m &lt;a href=&#34;https://arxiv.org/abs/1909.07913&#34;&gt;not so co
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;why-multiple-heads-of-attention-why-attention&#34;&gt;Why multiple heads of attention? Why attention?&lt;/h4&gt;
-
-&lt;p&gt;I&amp;rsquo;m more sympathetic to the optimization view of the multi-head mechanism&amp;ndash;having multiple attention heads &lt;strong&gt;improves learning&lt;/strong&gt; and overcomes &lt;strong&gt;bad random initializations&lt;/strong&gt;.
+&lt;p&gt;I&#39;m more sympathetic to the optimization view of the multi-head mechanism&amp;ndash;having multiple attention heads &lt;strong&gt;improves learning&lt;/strong&gt; and overcomes &lt;strong&gt;bad random initializations&lt;/strong&gt;.
 For instance, &lt;a href=&#34;https://lena-voita.github.io/posts/acl19_heads.html&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1905.10650&#34;&gt;papers&lt;/a&gt; showed that Transformer heads can be &amp;lsquo;pruned&amp;rsquo; or removed &lt;em&gt;after&lt;/em&gt; training without significant performance impact.&lt;/p&gt;
-
 &lt;p&gt;Multi-head neighbourhood aggregation mechanisms have also proven effective in GNNs, &lt;em&gt;e.g.&lt;/em&gt;, GAT uses the same multi-head attention and &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt; uses multiple &lt;em&gt;Gaussian kernels&lt;/em&gt; for aggregating features.
 Although invented to stabilize attention mechanisms, could the multi-head trick become standard for squeezing out extra model performance?&lt;/p&gt;
-
 &lt;p&gt;Conversely, GNNs with simpler aggregation functions such as sum or max do not require multiple aggregation heads for stable training.
-Wouldn&amp;rsquo;t it be nice for Transformers if we didn&amp;rsquo;t have to compute pair-wise compatibilities between each word pair in the sentence?&lt;/p&gt;
-
+Wouldn&#39;t it be nice for Transformers if we didn&#39;t have to compute pair-wise compatibilities between each word pair in the sentence?&lt;/p&gt;
 &lt;p&gt;Could Transformers benefit from ditching attention, altogether? Yann Dauphin and collaborators&amp;rsquo; &lt;a href=&#34;https://arxiv.org/abs/1705.03122&#34;&gt;recent&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1901.10430&#34;&gt;work&lt;/a&gt; suggests an alternative &lt;strong&gt;ConvNet architecture&lt;/strong&gt;.
 Transformers, too, might ultimately be doing &lt;a href=&#34;http://jbcordonnier.com/posts/attention-cnn/&#34;&gt;something&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ChrSzegedy/status/1232148457810538496&#34;&gt;similar&lt;/a&gt; to ConvNets!&lt;/p&gt;
-
 
 
 
@@ -485,45 +408,28 @@ Transformers, too, might ultimately be doing &lt;a href=&#34;http://jbcordonnier
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;why-is-training-transformers-so-hard&#34;&gt;Why is training Transformers so hard?&lt;/h4&gt;
-
 &lt;p&gt;Reading new Transformer papers makes me feel that training these models requires something akin to &lt;em&gt;black magic&lt;/em&gt; when determining the best &lt;strong&gt;learning rate schedule, warmup strategy&lt;/strong&gt; and &lt;strong&gt;decay settings&lt;/strong&gt;.
 This could simply be because the models are so huge and the NLP tasks studied are so challenging.&lt;/p&gt;
-
 &lt;p&gt;But &lt;a href=&#34;https://arxiv.org/abs/1906.01787&#34;&gt;recent&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/1910.06764&#34;&gt;results&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/abs/2002.04745&#34;&gt;suggest&lt;/a&gt; that it could also be due to the specific permutation of normalization and residual connections within the architecture.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I enjoyed reading the new &lt;a href=&#34;https://twitter.com/DeepMind?ref_src=twsrc%5Etfw&#34;&gt;@DeepMind&lt;/a&gt; Transformer paper, but why is training these models such dark magic? &amp;quot;For word-based LM we used 16, 000 warmup steps with 500, 000 decay steps and sacrifice 9,000 goats.&amp;quot;&lt;a href=&#34;https://t.co/dP49GTa4ze&#34;&gt;https://t.co/dP49GTa4ze&lt;/a&gt; &lt;a href=&#34;https://t.co/1K3Fx4s3M8&#34;&gt;pic.twitter.com/1K3Fx4s3M8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chaitanya Joshi (@chaitjo) &lt;a href=&#34;https://twitter.com/chaitjo/status/1229335421806501888?ref_src=twsrc%5Etfw&#34;&gt;February 17, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;At this point I&amp;rsquo;m ranting, but this makes me sceptical: Do we really need multiple heads of expensive pair-wise attention, overparameterized MLP sub-layers, and complicated learning schedules?&lt;/p&gt;
-
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I enjoyed reading the new &lt;a href=&#34;https://twitter.com/DeepMind?ref_src=twsrc%5Etfw&#34;&gt;@DeepMind&lt;/a&gt; Transformer paper, but why is training these models such dark magic? &amp;quot;For word-based LM we used 16, 000 warmup steps with 500, 000 decay steps and sacrifice 9,000 goats.&amp;quot;&lt;a href=&#34;https://t.co/dP49GTa4ze&#34;&gt;https://t.co/dP49GTa4ze&lt;/a&gt; &lt;a href=&#34;https://t.co/1K3Fx4s3M8&#34;&gt;pic.twitter.com/1K3Fx4s3M8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chaitanya Joshi (@chaitjo) &lt;a href=&#34;https://twitter.com/chaitjo/status/1229335421806501888?ref_src=twsrc%5Etfw&#34;&gt;February 17, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;	
+&lt;p&gt;At this point I&#39;m ranting, but this makes me sceptical: Do we really need multiple heads of expensive pair-wise attention, overparameterized MLP sub-layers, and complicated learning schedules?&lt;/p&gt;
 &lt;p&gt;Do we really need massive models with &lt;a href=&#34;https://www.technologyreview.com/s/613630/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/&#34;&gt;massive carbon footprints&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;Shouldn&amp;rsquo;t architectures with good &lt;a href=&#34;https://arxiv.org/abs/1806.01261&#34;&gt;inductive biases&lt;/a&gt; for the task at hand be easier to train?&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;p&gt;Shouldn&#39;t architectures with good &lt;a href=&#34;https://arxiv.org/abs/1806.01261&#34;&gt;inductive biases&lt;/a&gt; for the task at hand be easier to train?&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h3&gt;
-
 &lt;p&gt;To dive deep into the Transformer architecture from an NLP perspective, check out these amazing blog posts: &lt;a href=&#34;http://jalammar.github.io/illustrated-transformer/&#34;&gt;The Illustrated Transformer&lt;/a&gt; and &lt;a href=&#34;http://nlp.seas.harvard.edu/2018/04/03/attention.html&#34;&gt;The Annotated Transformer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Also, this blog isn&amp;rsquo;t the first to link GNNs and Transformers:
-Here&amp;rsquo;s &lt;a href=&#34;https://ipam.wistia.com/medias/1zgl4lq6nh&#34;&gt;an excellent talk&lt;/a&gt; by Arthur Szlam on the history and connection between Attention/Memory Networks, GNNs and Transformers.
-Similarly, DeepMind&amp;rsquo;s &lt;a href=&#34;https://arxiv.org/abs/1806.01261&#34;&gt;star-studded position paper&lt;/a&gt; introduces the &lt;em&gt;Graph Networks&lt;/em&gt; framework, unifying all these ideas.
+&lt;p&gt;Also, this blog isn&#39;t the first to link GNNs and Transformers:
+Here&#39;s &lt;a href=&#34;https://ipam.wistia.com/medias/1zgl4lq6nh&#34;&gt;an excellent talk&lt;/a&gt; by Arthur Szlam on the history and connection between Attention/Memory Networks, GNNs and Transformers.
+Similarly, DeepMind&#39;s &lt;a href=&#34;https://arxiv.org/abs/1806.01261&#34;&gt;star-studded position paper&lt;/a&gt; introduces the &lt;em&gt;Graph Networks&lt;/em&gt; framework, unifying all these ideas.
 For a code walkthrough, the DGL team has &lt;a href=&#34;https://docs.dgl.ai/en/latest/tutorials/models/4_old_wines/7_transformer.html&#34;&gt;a nice tutorial&lt;/a&gt; on seq2seq as a graph problem and building Transformers as GNNs.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;In our next post, we&amp;rsquo;ll be doing the reverse: using GNN architectures as Transformers for NLP (based on the Transformers library by &lt;a href=&#34;https://github.com/huggingface/transformers&#34;&gt;🤗 HuggingFace&lt;/a&gt;).&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;In our next post, we&#39;ll be doing the reverse: using GNN architectures as Transformers for NLP (based on the Transformers library by &lt;a href=&#34;https://github.com/huggingface/transformers&#34;&gt;🤗 HuggingFace&lt;/a&gt;).&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Finally, we wrote &lt;a href=&#34;https://graphdeeplearning.github.io/publication/xu-2019-multi/&#34;&gt;a recent paper&lt;/a&gt; applying Transformers to sketch graphs. Do check it out!&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h4 id=&#34;updates&#34;&gt;Updates&lt;/h4&gt;
-
 &lt;p&gt;The post is also available on &lt;a href=&#34;https://medium.com/@chaitjo/transformers-are-graph-neural-networks-bca9f75412aa?source=friends_link&amp;amp;sk=c54de873b2cec3db70166a6cf0b41d3e&#34;&gt;Medium&lt;/a&gt;, and has been translated to &lt;a href=&#34;https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g&#34;&gt;Chinese&lt;/a&gt; and &lt;a href=&#34;https://habr.com/ru/post/491576/&#34;&gt;Russian&lt;/a&gt;.
 Do join the discussion on &lt;a href=&#34;https://twitter.com/chaitjo/status/1233220586358181888?s=20&#34;&gt;Twitter&lt;/a&gt;, &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/fb86mo/d_transformers_are_graph_neural_networks_blog/&#34;&gt;Reddit&lt;/a&gt; or &lt;a href=&#34;https://news.ycombinator.com/item?id=22518263&#34;&gt;HackerNews&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Transformers are a special case of Graph Neural Networks. This may be obvious to some, but the following blog post does a good job at explaining these important concepts. &lt;a href=&#34;https://t.co/H8LT2F7LqC&#34;&gt;https://t.co/H8LT2F7LqC&lt;/a&gt;&lt;/p&gt;&amp;mdash; Oriol Vinyals (@OriolVinyalsML) &lt;a href=&#34;https://twitter.com/OriolVinyalsML/status/1233783593626951681?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Transformers are a special case of Graph Neural Networks. This may be obvious to some, but the following blog post does a good job at explaining these important concepts. &lt;a href=&#34;https://t.co/H8LT2F7LqC&#34;&gt;https://t.co/H8LT2F7LqC&lt;/a&gt;&lt;/p&gt;&amp;mdash; Oriol Vinyals (@OriolVinyalsML) &lt;a href=&#34;https://twitter.com/OriolVinyalsML/status/1233783593626951681?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -532,22 +438,16 @@ Do join the discussion on &lt;a href=&#34;https://twitter.com/chaitjo/status/123
       <link>https://graphdeeplearning.github.io/project/sketches/</link>
       <pubDate>Tue, 14 Jan 2020 16:19:27 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/sketches/</guid>
-      <description>
-
-&lt;h2 id=&#34;representation-learning-for-sketches&#34;&gt;Representation Learning for Sketches&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;representation-learning-for-sketches&#34;&gt;Representation Learning for Sketches&lt;/h2&gt;
 &lt;p&gt;Human beings have been creating free-hand sketches, &lt;em&gt;i.e.&lt;/em&gt;, drawings without precise instruments, since &lt;a href=&#34;https://en.wikipedia.org/wiki/Cave_painting&#34;&gt;time immemorial&lt;/a&gt;.
 Due to the popularity of touchscreen interfaces, machine learning using sketches has emerged as an interesting problem with a myriad of applications:
 If we consider sketches as 2D images, we can throw them into off-the-shelf &lt;a href=&#34;https://arxiv.org/abs/1501.07873&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt;.
 While CNNs are designed for &lt;em&gt;static&lt;/em&gt; collections of pixels with &lt;em&gt;dense&lt;/em&gt; colors and textures,
 sketches are usually an extremely &lt;em&gt;sparse&lt;/em&gt; sequences of strokes which capture high-level abstractions and ideas. &lt;a href=&#34;https://ai.googleblog.com/2017/04/teaching-machines-to-draw.html&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; stick out as a natural architecture for capturing this temporal nature of sketches.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Structure vs. temporal order: can we have the best of both worlds?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h2 id=&#34;sketches-as-graphs&#34;&gt;Sketches as Graphs&lt;/h2&gt;
-
 &lt;p&gt;We are working on a novel representation of free-hand sketches as &lt;strong&gt;sparsely-connected graphs&lt;/strong&gt;.
 We assume that sketches are sets of curves and strokes, which are discretized by a set of points representing the graph nodes.
 Each node encodes spatial, temporal and semantic information.
@@ -585,34 +485,24 @@ To exploit these graph structures, we are developing &lt;strong&gt;Graph Neural 
       <link>https://graphdeeplearning.github.io/project/combinatorial-optimization/</link>
       <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/combinatorial-optimization/</guid>
-      <description>
-
-&lt;h2 id=&#34;operations-research-and-combinatorial-problems&#34;&gt;Operations Research and Combinatorial Problems&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;operations-research-and-combinatorial-problems&#34;&gt;Operations Research and Combinatorial Problems&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Operations_research&#34;&gt;Operations Research (OR)&lt;/a&gt;&lt;/strong&gt; started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions. Nowadays it is widely used in the industry, including but not limited to transportation, supply chain, energy, finance, and scheduling.&lt;/p&gt;
-
 &lt;p&gt;OR Problems are formulated as integer constrained optimization, &lt;em&gt;i.e.&lt;/em&gt;, with integral or binary variables (called decision variables).
 While not all such problems are hard to solve (&lt;em&gt;e.g.&lt;/em&gt;, finding the shortest path between two locations), we concentrate on &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Combinatorial_optimization&#34;&gt;Combinatorial (NP-Hard) problems&lt;/a&gt;&lt;/strong&gt;.
 NP-Hard problems are &lt;em&gt;impossible&lt;/em&gt; to solve optimally at large scales as exhaustively searching for their solutions is beyond the limits of modern computers.
 The &lt;a href=&#34;https://en.wikipedia.org/wiki/Travelling_salesman_problem&#34;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt; and the &lt;a href=&#34;https://en.wikipedia.org/wiki/Minimum_spanning_tree&#34;&gt;Minimum Spanning Tree Problem (MST)&lt;/a&gt; are two of the most popular examples for such problems defined using graphs.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;tsp-gif.gif&#34; alt=&#34;TSP GIF&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;tsp-gif.gif&#34; alt=&#34;TSP GIF&#34;&gt;
 &lt;em&gt;TSP asks the following question: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city? Formally, given a graph, one needs to search the space of permutations to find an optimal sequence of nodes, called a tour, with minimal total edge weights (tour length).&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h2 id=&#34;neural-combinatorial-optimization&#34;&gt;Neural Combinatorial Optimization&lt;/h2&gt;
-
 &lt;p&gt;Although handcrafted heuristic algorithms are able to solve problems such as TSP with up to a million variables,
 designing good heuristics often requires significant specialized knowledge and years of trial-and-error.
 The state-of-the-art TSP solver, &lt;a href=&#34;http://www.math.uwaterloo.ca/tsp/concorde.html&#34;&gt;Concorde&lt;/a&gt;, leverages &lt;a href=&#34;https://www.youtube.com/watch?v=q8nQTNvCrjE&#34;&gt;over 50 years of research&lt;/a&gt; on linear programming, cutting plane algorithms and branch-and-bound.
-At our lab, we&amp;rsquo;re working on &lt;strong&gt;automating&lt;/strong&gt; and &lt;strong&gt;augmenting&lt;/strong&gt; such expert intuition through Machine Learning [&lt;a href=&#34;https://arxiv.org/abs/1811.06128&#34;&gt;Bengio &lt;em&gt;et al.&lt;/em&gt;, 2018&lt;/a&gt;].&lt;/p&gt;
-
+At our lab, we&#39;re working on &lt;strong&gt;automating&lt;/strong&gt; and &lt;strong&gt;augmenting&lt;/strong&gt; such expert intuition through Machine Learning [&lt;a href=&#34;https://arxiv.org/abs/1811.06128&#34;&gt;Bengio &lt;em&gt;et al.&lt;/em&gt;, 2018&lt;/a&gt;].&lt;/p&gt;
 &lt;p&gt;Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, &lt;em&gt;e.g.&lt;/em&gt;, determine the TSP tour one city at a time.
 Our research uses deep neural networks to parameterize these policies and train them directly from problem instances.
 In particular, &lt;strong&gt;Graph Neural Networks&lt;/strong&gt; are the perfect fit for the task because they naturally operate on the graph structure of these problems.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;pipeline.png&#34; alt=&#34;End-to-end pipeline&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pipeline.png&#34; alt=&#34;End-to-end pipeline&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -621,53 +511,36 @@ In particular, &lt;strong&gt;Graph Neural Networks&lt;/strong&gt; are the perfec
       <link>https://graphdeeplearning.github.io/project/spatial-convnets/</link>
       <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/spatial-convnets/</guid>
-      <description>
-
-&lt;h2 id=&#34;non-euclidean-and-graph-structured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;noneuclidean-and-graphstructured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
 &lt;p&gt;Classic deep learning architectures such as &lt;a href=&#34;http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt; and &lt;a href=&#34;https://www.bioinf.jku.at/publications/older/2604.pdf&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; require the input data domain to be regular, such as 2D or 3D Euclidean grids for Computer Vision and 1D lines for Natural Language Processing.&lt;/p&gt;
-
 &lt;p&gt;However, most real-world data beyond images and language has an underlying structure that is &lt;strong&gt;non-Euclidean&lt;/strong&gt;.
 Such complex data commonly occurs in science and engineering, and can be modelled by heterogeneous graphs.
 Examples include chemical graphs, computer graphics, social networks, genetics, neuroscience, and sensor networks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;graph-neural-networks&#34;&gt;Graph Neural Networks&lt;/h2&gt;
-
 &lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
 However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
 We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve &lt;em&gt;generic&lt;/em&gt; graph problems, such as vertex classification, graph classification, graph regression, and graph generation.&lt;/p&gt;
-
 &lt;p&gt;These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in a myriad of domains, including chemistry, social networks, recommendations and computer graphics.&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h2 id=&#34;basic-formalism&#34;&gt;Basic Formalism&lt;/h2&gt;
-
 &lt;p&gt;Each GNN layer computes $d$-dimensional representations for the nodes/edges of the graph through recursive neighborhood diffusion (or message passing), where each graph node gathers features from its neighbors to represent local graph structure.
 Stacking $L$ GNN layers allows the network to build node representations from the &lt;strong&gt;$L$-hop neighborhood&lt;/strong&gt; of each node.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Let $h_i^{\ell}$ denote the feature vector at layer $\ell$ associated with node $i$.
-The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h&lt;em&gt;i^{\ell}$ and the feature vectors $h&lt;/em&gt;{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
+The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h_i^{\ell}$ and the feature vectors $h_{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
 This guarantees the transformation to build local reception fields, such as in standard ConvNets for computer vision, and be invariant to both graph size and vertex re-indexing.&lt;/p&gt;
-
-&lt;p&gt;Thus, the most generic version of a feature vector $h&lt;em&gt;i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
+&lt;p&gt;Thus, the most generic version of a feature vector $h_i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
 \begin{equation}
-    h&lt;/em&gt;{i}^{\ell+1} =  f \left( \ h&lt;em&gt;i^{\ell} \  , \ { h&lt;/em&gt;{j}^{\ell}: j \rightarrow i }  \ \right) ,
+h_{i}^{\ell+1} =  f \left( \ h_i^{\ell} \  , \ { h_{j}^{\ell}: j \rightarrow i }  \ \right) ,
 \end{equation}
-where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h&lt;em&gt;i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h&lt;/em&gt;{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
-
+where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h_{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
 &lt;p&gt;The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, &lt;em&gt;e.g.&lt;/em&gt;, &lt;a href=&#34;https://arxiv.org/abs/1706.02216&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;GAT&lt;/a&gt;, etc.
-For an illustration, here&amp;rsquo;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
+For an illustration, here&#39;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
 \begin{equation}
-    h&lt;em&gt;{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h&lt;/em&gt;{i}^{\ell} + \sum_{j \in \mathcal{N}&lt;em&gt;i} V^{\ell} h&lt;/em&gt;{j}^{\ell} \Big),
+h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} V^{\ell} h_{j}^{\ell} \Big),
 \end{equation}
 where $U^{\ell}, V^{\ell} \in \mathbb{R}^{d \times d}$ are the learnable parameters.&lt;/p&gt;
 </description>

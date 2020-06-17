@@ -645,7 +645,7 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="non-euclidean-and-graph-structured-data">Non-Euclidean and Graph-structured Data</h2>
+      <h2 id="noneuclidean-and-graphstructured-data">Non-Euclidean and Graph-structured Data</h2>
 <p>Classic deep learning architectures such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">Convolutional Neural Networks (CNNs)</a> and <a href="https://www.bioinf.jku.at/publications/older/2604.pdf">Recurrent Neural Networks (RNNs)</a> require the input data domain to be regular, such as 2D or 3D Euclidean grids for Computer Vision and 1D lines for Natural Language Processing.</p>
 <p>However, most real-world data beyond images and language has an underlying structure that is <strong>non-Euclidean</strong>.
 Such complex data commonly occurs in science and engineering, and can be modelled by heterogeneous graphs.
@@ -672,7 +672,7 @@ h_{i}^{\ell+1} =  f \left( \ h_i^{\ell} \  , \ { h_{j}^{\ell}: j \rightarrow i }
 \end{equation}
 where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h_{j}^{\ell}}$ (the feature vectors of all neighboring vertices).</p>
 <p>The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, <em>e.g.</em>, <a href="https://arxiv.org/abs/1706.02216">GraphSage</a>, <a href="https://arxiv.org/abs/1611.08402">MoNet</a>, <a href="https://arxiv.org/abs/1710.10903">GAT</a>, etc.
-For an illustration, here&rsquo;s a simple-yet-effective Graph ConvNet from <a href="https://arxiv.org/abs/1605.07736">Sukhbaatar <em>et al.</em>, 2016</a>:
+For an illustration, here's a simple-yet-effective Graph ConvNet from <a href="https://arxiv.org/abs/1605.07736">Sukhbaatar <em>et al.</em>, 2016</a>:
 \begin{equation}
 h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} V^{\ell} h_{j}^{\ell} \Big),
 \end{equation}

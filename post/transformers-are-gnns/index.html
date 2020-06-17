@@ -30,7 +30,7 @@
   
   <meta name="description" content="Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?
 Besides the obvious ones&ndash;recommendation systems at Pinterest, Alibaba and Twitter&ndash;a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm.
-Through this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I&rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.">
+Through this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I&#39;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://graphdeeplearning.github.io/post/transformers-are-gnns/">
@@ -240,7 +240,7 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
   <meta property="og:title" content="Transformers are Graph Neural Networks | NTU Graph Deep Learning Lab">
   <meta property="og:description" content="Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?
 Besides the obvious ones&ndash;recommendation systems at Pinterest, Alibaba and Twitter&ndash;a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm.
-Through this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I&rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."><meta property="og:image" content="https://graphdeeplearning.github.io/post/transformers-are-gnns/featured.jpeg">
+Through this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I&#39;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."><meta property="og:image" content="https://graphdeeplearning.github.io/post/transformers-are-gnns/featured.jpeg">
   <meta property="twitter:image" content="https://graphdeeplearning.github.io/post/transformers-are-gnns/featured.jpeg"><meta property="og:locale" content="en-us">
   
     
@@ -296,7 +296,7 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
       "url": "img/https://graphdeeplearning.github.io/"
     }
   },
-  "description": "Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?\nBesides the obvious ones\u0026ndash;recommendation systems at Pinterest, Alibaba and Twitter\u0026ndash;a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm.\nThrough this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I\u0026rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."
+  "description": "Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?\nBesides the obvious ones\u0026ndash;recommendation systems at Pinterest, Alibaba and Twitter\u0026ndash;a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm.\nThrough this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I'll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."
 }
 </script>
 
@@ -704,8 +704,8 @@ Through this post, I want to establish links between Graph Neural Networks (GNNs
       <p>Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications?</p>
 <p>Besides the obvious ones&ndash;recommendation systems at <a href="https://medium.com/pinterest-engineering/pinsage-a-new-graph-convolutional-neural-network-for-web-scale-recommender-systems-88795a107f48">Pinterest</a>, <a href="https://arxiv.org/abs/1902.08730">Alibaba</a> and <a href="https://blog.twitter.com/en_us/topics/company/2019/Twitter-acquires-Fabula-AI.html">Twitter</a>&ndash;a slightly nuanced success story is the <a href="https://arxiv.org/abs/1706.03762"><strong>Transformer architecture</strong></a>, which has <a href="https://openai.com/blog/better-language-models/">taken</a> <a href="https://www.blog.google/products/search/search-language-understanding-bert/">the</a> <a href="https://www.microsoft.com/en-us/research/project/large-scale-pretraining-for-response-generation/">NLP</a> <a href="https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/">industry</a> <a href="https://blog.einstein.ai/introducing-a-conditional-transformer-language-model-for-controllable-generation/">by</a> <a href="https://nv-adlr.github.io/MegatronLM">storm</a>.</p>
 <p>Through this post, I want to establish links between <a href="https://graphdeeplearning.github.io/project/spatial-convnets/">Graph Neural Networks (GNNs)</a> and Transformers.
-I&rsquo;ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.</p>
-<p>Let&rsquo;s start by talking about the purpose of model architectures&ndash;<em>representation learning</em>.</p>
+I'll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress.</p>
+<p>Let's start by talking about the purpose of model architectures&ndash;<em>representation learning</em>.</p>
 <hr>
 <h3 id="representation-learning-for-nlp">Representation Learning for NLP</h3>
 <p>At a high level, all neural network architectures build <em>representations</em> of input data as vectors/embeddings, which encode useful statistical and semantic information about the data.
@@ -715,7 +715,7 @@ The neural network <em>learns</em> to build better-and-better representations by
 Intuitively, we can imagine an RNN layer as a conveyor belt, with the words being processed on it <em>autoregressively</em> from left to right.
 At the end, we get a hidden feature for each word in the sentence, which we pass to the next RNN layer or use for our NLP tasks of choice.</p>
 <blockquote>
-<p>I highly recommend Chris Olah&rsquo;s legendary blog for recaps on <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">RNNs</a> and <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">representation learning</a> for NLP.</p>
+<p>I highly recommend Chris Olah's legendary blog for recaps on <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">RNNs</a> and <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">representation learning</a> for NLP.</p>
 </blockquote>
 
 
@@ -742,14 +742,14 @@ At the end, we get a hidden feature for each word in the sentence, which we pass
 
 <p>Initially introduced for machine translation, <strong>Transformers</strong> have gradually replaced RNNs in mainstream NLP.
 The architecture takes a fresh approach to representation learning: Doing away with recurrence entirely, Transformers build features of each word using an <a href="https://distill.pub/2016/augmented-rnns/">attention</a> <a href="https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html">mechanism</a> to figure out how important <strong>all the other words</strong> in the sentence are w.r.t. to the aforementioned word.
-Knowing this, the word&rsquo;s updated features are simply the sum of linear transformations of the features of all the words, weighted by their importance.</p>
+Knowing this, the word's updated features are simply the sum of linear transformations of the features of all the words, weighted by their importance.</p>
 <blockquote>
 <p>Back in 2017, this idea sounded very radical, because the NLP community was so used to the sequential&ndash;one-word-at-a-time&ndash;style of processing text with RNNs. The title of the paper probably added fuel to the fire!</p>
 <p>For a recap, Yannic Kilcher made an excellent <a href="https://www.youtube.com/watch?v=iDulhoQ2pro">video overview</a>.</p>
 </blockquote>
 <hr>
 <h3 id="breaking-down-the-transformer">Breaking down the Transformer</h3>
-<p>Let&rsquo;s develop intuitions about the architecture by translating the previous paragraph into the language of mathematical symbols and vectors.
+<p>Let's develop intuitions about the architecture by translating the previous paragraph into the language of mathematical symbols and vectors.
 We update the hidden feature $h$ of the $i$'th word in a sentence $\mathcal{S}$ from layer $\ell$ to layer $\ell+1$ as follows:</p>
 <p>$$
 h_{i}^{\ell+1} = \text{Attention} \left( Q^{\ell} h_{i}^{\ell} \ , K^{\ell} h_{j}^{\ell} \ , V^{\ell} h_{j}^{\ell} \right),
@@ -790,7 +790,7 @@ The attention mechanism is performed parallelly for each word in the sentence to
 <p>Taking in the features of the word $h_{i}^{\ell}$ and the set of other words in the sentence ${ h_{j}^{\ell} ;\ \forall j \in \mathcal{S} }$, we compute the attention weights $w_{ij}$ for each pair $(i,j)$ through the dot-product, followed by a softmax across all $j$'s. Finally, we produce the updated word feature $h_{i}^{\ell+1}$ for word $i$ by summing over all ${ h_{j}^{\ell} }$'s weighted by their corresponding $w_{ij}$. Each word in the sentence parallelly undergoes the same pipeline to update its features.</p>
 </blockquote>
 <hr>
-<h3 id="multi-head-attention-mechanism">Multi-head Attention mechanism</h3>
+<h3 id="multihead-attention-mechanism">Multi-head Attention mechanism</h3>
 <p>Getting this dot-product attention mechanism to work proves to be tricky&ndash;bad random initializations can de-stabilize the learning process.
 We can overcome this by parallelly performing multiple &lsquo;heads&rsquo; of attention and concatenating the result (with each head now having separate learnable  weights):</p>
 <p>$$
@@ -801,9 +801,9 @@ $$
 $$</p>
 <p>where $Q^{k,\ell}, K^{k,\ell}, V^{k,\ell}$ are the learnable weights of the $k$'th attention head and $O^{\ell}$ is a down-projection to match the dimensions of $h_i^{\ell+1}$ and $h_i^{\ell}$ across layers.</p>
 <p>Multiple heads allow the attention mechanism to essentially &lsquo;hedge its bets&rsquo;, looking at different transformations or aspects of the hidden features from the previous layer.
-We&rsquo;ll talk more about this later.</p>
+We'll talk more about this later.</p>
 <hr>
-<h3 id="scale-issues-and-the-feed-forward-sub-layer">Scale issues and the Feed-forward sub-layer</h3>
+<h3 id="scale-issues-and-the-feedforward-sublayer">Scale issues and the Feed-forward sub-layer</h3>
 <p>A key issue motivating the final Transformer architecture is that the features for words <em>after</em> the attention mechanism might be at <strong>different scales</strong> or <strong>magnitudes</strong>:
 (1) This can be due to some words having very sharp or very distributed attention weights $w_{ij}$ when summing over the features of the other words.
 (2) At the individual feature/vector entries level, concatenating across multiple attention heads&ndash;each of which might output values at different scales&ndash;can lead to the entries of the final vector $h_{i}^{\ell+1}$ having a wide range of values.
@@ -816,7 +816,7 @@ After the multi-head attention, they project $h_i^{\ell+1}$ to a (absurdly) high
 h_i^{\ell+1} = \text{LN} \left( \text{MLP} \left( \text{LN} \left( h_i^{\ell+1} \right) \right) \right)
 $$</p>
 <blockquote>
-<p>To be honest, I&rsquo;m not sure what the exact intuition behind the over-parameterized feed-forward sub-layer was and nobody seems to be asking questions about it, too! I suppose LayerNorm and scaled dot-products didn&rsquo;t completely solve the issues highlighted, so the big MLP is a sort of hack to re-scale the feature vectors independently of each other.</p>
+<p>To be honest, I'm not sure what the exact intuition behind the over-parameterized feed-forward sub-layer was and nobody seems to be asking questions about it, too! I suppose LayerNorm and scaled dot-products didn't completely solve the issues highlighted, so the big MLP is a sort of hack to re-scale the feature vectors independently of each other.</p>
 <p><a href="mailto:chaitanya.joshi@ntu.edu.sg">Email me</a> if you know more!</p>
 </blockquote>
 <hr>
@@ -848,10 +848,10 @@ $$</p>
 <strong>Residual connections</strong> between the inputs and outputs of each multi-head attention sub-layer and the feed-forward sub-layer are key for stacking Transformer layers (but omitted from the diagram for clarity).</p>
 <hr>
 <h3 id="gnns-build-representations-of-graphs">GNNs build representations of graphs</h3>
-<p>Let&rsquo;s take a step away from NLP for a moment.</p>
+<p>Let's take a step away from NLP for a moment.</p>
 <p>Graph Neural Networks (GNNs) or Graph Convolutional Networks (GCNs) build representations of nodes and edges in graph data.
 They do so through <strong>neighbourhood aggregation</strong> (or message passing), where each node gathers features from its neighbours to update its representation of the <em>local</em> graph structure around it.
-Stacking several GNN layers enables the model to propagate each node&rsquo;s features over the entire graph&ndash;from its neighbours to the neighbours&rsquo; neighbours, and so on.</p>
+Stacking several GNN layers enables the model to propagate each node's features over the entire graph&ndash;from its neighbours to the neighbours&rsquo; neighbours, and so on.</p>
 
 
 
@@ -878,7 +878,7 @@ Stacking several GNN layers enables the model to propagate each node&rsquo;s fea
 <blockquote>
 <p>Take the example of this emoji social network: The node features produced by the GNN can be used for predictive tasks such as identifying the most influential members or proposing potential connections.</p>
 </blockquote>
-<p>In their most basic form, GNNs update the hidden features $h$ of node $i$ (for example, 😆) at layer $\ell$ via a non-linear transformation of the node&rsquo;s own features $h_i^{\ell}$ added to the aggregation of features $h_j^{\ell}$ from each neighbouring node $j \in \mathcal{N}(i)$:</p>
+<p>In their most basic form, GNNs update the hidden features $h$ of node $i$ (for example, 😆) at layer $\ell$ via a non-linear transformation of the node's own features $h_i^{\ell}$ added to the aggregation of features $h_j^{\ell}$ from each neighbouring node $j \in \mathcal{N}(i)$:</p>
 <p>$$
 h_{i}^{\ell+1} =  \sigma \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}(i)} \left( V^{\ell} h_{j}^{\ell} \right)  \Big),
 $$</p>
@@ -912,11 +912,11 @@ In the example, $\mathcal{N}$(😆) $=$ { 😘, 😎, 😜, 🤩 }.</p>
 
 <div class="alert alert-note">
   <div>
-    If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, <em>i.e.</em>, a weighted sum, we&rsquo;d get the <b>Graph Attention Network</b> (GAT). Add normalization and the feed-forward MLP, and voila, we have a <b>Graph Transformer</b>!
+    If we were to do multiple parallel heads of neighbourhood aggregation and replace summation over the neighbours $j$ with the attention mechanism, <em>i.e.</em>, a weighted sum, we'd get the <b>Graph Attention Network</b> (GAT). Add normalization and the feed-forward MLP, and voila, we have a <b>Graph Transformer</b>!
   </div>
 </div>
 <hr>
-<h3 id="sentences-are-fully-connected-word-graphs">Sentences are fully-connected word graphs</h3>
+<h3 id="sentences-are-fullyconnected-word-graphs">Sentences are fully-connected word graphs</h3>
 <p>To make the connection more explicit, consider a sentence as a fully-connected graph, where each word is connected to every other word.
 Now, we can use a GNN to build features for each node (word) in the graph (sentence), which we can then perform NLP tasks with.</p>
 
@@ -949,8 +949,8 @@ Transformers for NLP treat the entire sentence $\mathcal{S}$ as the local neighb
 At the same time, looking at Transformers from a GNN perspective could inspire us to get rid of a lot of the <em>bells and whistles</em> in the architecture.</p>
 <hr>
 <h3 id="what-can-we-learn-from-each-other">What can we learn from each other?</h3>
-<p>Now that we&rsquo;ve established a connection between Transformers and GNNs, let me throw some ideas around&hellip;</p>
-<h4 id="are-fully-connected-graphs-the-best-input-format-for-nlp">Are fully-connected graphs the best input format for NLP?</h4>
+<p>Now that we've established a connection between Transformers and GNNs, let me throw some ideas around&hellip;</p>
+<h4 id="are-fullyconnected-graphs-the-best-input-format-for-nlp">Are fully-connected graphs the best input format for NLP?</h4>
 <p>Before statistical NLP and ML, linguists like Noam Chomsky focused on developing fomal theories of <a href="https://en.wikipedia.org/wiki/Syntactic_Structures">linguistic structure</a>, such as <strong>syntax trees/graphs</strong>.
 <a href="https://arxiv.org/abs/1503.00075">Tree LSTMs</a> already tried this, but maybe Transformers/GNNs are better architectures for bringing the world of linguistic theory and statistical NLP closer?</p>
 
@@ -976,10 +976,10 @@ At the same time, looking at Transformers from a GNN perspective could inspire u
 
 </figure>
 
-<h4 id="how-to-learn-long-term-dependencies">How to learn long-term dependencies?</h4>
+<h4 id="how-to-learn-longterm-dependencies">How to learn long-term dependencies?</h4>
 <p>Another issue with fully-connected graphs is that they make learning very long-term dependencies between words difficult.
 This is simply due to how the number of edges in the graph <strong>scales quadratically</strong> with the number of nodes, <em>i.e.</em>, in an $n$ word sentence, a Transformer/GNN would be doing computations over $n^2$ pairs of words. Things get out of hand for very large $n$.</p>
-<p>The NLP community&rsquo;s perspective on the long sequences and dependencies problem is interesting:
+<p>The NLP community's perspective on the long sequences and dependencies problem is interesting:
 Making the attention mechanism <a href="https://openai.com/blog/sparse-transformer/">sparse</a> or <a href="https://ai.facebook.com/blog/making-transformer-networks-simpler-and-more-efficient/">adaptive</a> in terms of input size, adding <a href="https://ai.googleblog.com/2019/01/transformer-xl-unleashing-potential-of.html">recurrence</a> or <a href="https://deepmind.com/blog/article/A_new_model_and_dataset_for_long-range_memory">compression</a> into each layer,
 and using <a href="https://www.pragmatic.ml/reformer-deep-dive/">Locality Sensitive Hashing</a> for efficient attention
 are all promising new ideas for better Transformers.</p>
@@ -1012,7 +1012,7 @@ are all promising new ideas for better Transformers.</p>
 The basic premise is that performing attention on all word pairs in a sentence&ndash;with the purpose of identifying which pairs are the most interesting&ndash;enables Transformers to learn something like a <strong>task-specific syntax</strong>.
 Different heads in the multi-head attention might also be &lsquo;looking&rsquo; at different syntactic properties.</p>
 <p>In graph terms, by using GNNs on full graphs, can we recover the most important edges&ndash;and what they might entail&ndash;from how the GNN performs neighbourhood aggregation at each layer?
-I&rsquo;m <a href="https://arxiv.org/abs/1909.07913">not so convinced</a> by this view yet.</p>
+I'm <a href="https://arxiv.org/abs/1909.07913">not so convinced</a> by this view yet.</p>
 
 
 
@@ -1037,12 +1037,12 @@ I&rsquo;m <a href="https://arxiv.org/abs/1909.07913">not so convinced</a> by thi
 </figure>
 
 <h4 id="why-multiple-heads-of-attention-why-attention">Why multiple heads of attention? Why attention?</h4>
-<p>I&rsquo;m more sympathetic to the optimization view of the multi-head mechanism&ndash;having multiple attention heads <strong>improves learning</strong> and overcomes <strong>bad random initializations</strong>.
+<p>I'm more sympathetic to the optimization view of the multi-head mechanism&ndash;having multiple attention heads <strong>improves learning</strong> and overcomes <strong>bad random initializations</strong>.
 For instance, <a href="https://lena-voita.github.io/posts/acl19_heads.html">these</a> <a href="https://arxiv.org/abs/1905.10650">papers</a> showed that Transformer heads can be &lsquo;pruned&rsquo; or removed <em>after</em> training without significant performance impact.</p>
 <p>Multi-head neighbourhood aggregation mechanisms have also proven effective in GNNs, <em>e.g.</em>, GAT uses the same multi-head attention and <a href="https://arxiv.org/abs/1611.08402">MoNet</a> uses multiple <em>Gaussian kernels</em> for aggregating features.
 Although invented to stabilize attention mechanisms, could the multi-head trick become standard for squeezing out extra model performance?</p>
 <p>Conversely, GNNs with simpler aggregation functions such as sum or max do not require multiple aggregation heads for stable training.
-Wouldn&rsquo;t it be nice for Transformers if we didn&rsquo;t have to compute pair-wise compatibilities between each word pair in the sentence?</p>
+Wouldn't it be nice for Transformers if we didn't have to compute pair-wise compatibilities between each word pair in the sentence?</p>
 <p>Could Transformers benefit from ditching attention, altogether? Yann Dauphin and collaborators&rsquo; <a href="https://arxiv.org/abs/1705.03122">recent</a> <a href="https://arxiv.org/abs/1901.10430">work</a> suggests an alternative <strong>ConvNet architecture</strong>.
 Transformers, too, might ultimately be doing <a href="http://jbcordonnier.com/posts/attention-cnn/">something</a> <a href="https://twitter.com/ChrSzegedy/status/1232148457810538496">similar</a> to ConvNets!</p>
 
@@ -1073,17 +1073,17 @@ Transformers, too, might ultimately be doing <a href="http://jbcordonnier.com/po
 This could simply be because the models are so huge and the NLP tasks studied are so challenging.</p>
 <p>But <a href="https://arxiv.org/abs/1906.01787">recent</a> <a href="https://arxiv.org/abs/1910.06764">results</a> <a href="https://arxiv.org/abs/2002.04745">suggest</a> that it could also be due to the specific permutation of normalization and residual connections within the architecture.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I enjoyed reading the new <a href="https://twitter.com/DeepMind?ref_src=twsrc%5Etfw">@DeepMind</a> Transformer paper, but why is training these models such dark magic? &quot;For word-based LM we used 16, 000 warmup steps with 500, 000 decay steps and sacrifice 9,000 goats.&quot;<a href="https://t.co/dP49GTa4ze">https://t.co/dP49GTa4ze</a> <a href="https://t.co/1K3Fx4s3M8">pic.twitter.com/1K3Fx4s3M8</a></p>&mdash; Chaitanya Joshi (@chaitjo) <a href="https://twitter.com/chaitjo/status/1229335421806501888?ref_src=twsrc%5Etfw">February 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>	
-<p>At this point I&rsquo;m ranting, but this makes me sceptical: Do we really need multiple heads of expensive pair-wise attention, overparameterized MLP sub-layers, and complicated learning schedules?</p>
+<p>At this point I'm ranting, but this makes me sceptical: Do we really need multiple heads of expensive pair-wise attention, overparameterized MLP sub-layers, and complicated learning schedules?</p>
 <p>Do we really need massive models with <a href="https://www.technologyreview.com/s/613630/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/">massive carbon footprints</a>?</p>
-<p>Shouldn&rsquo;t architectures with good <a href="https://arxiv.org/abs/1806.01261">inductive biases</a> for the task at hand be easier to train?</p>
+<p>Shouldn't architectures with good <a href="https://arxiv.org/abs/1806.01261">inductive biases</a> for the task at hand be easier to train?</p>
 <hr>
 <h3 id="further-reading">Further Reading</h3>
 <p>To dive deep into the Transformer architecture from an NLP perspective, check out these amazing blog posts: <a href="http://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a> and <a href="http://nlp.seas.harvard.edu/2018/04/03/attention.html">The Annotated Transformer</a>.</p>
-<p>Also, this blog isn&rsquo;t the first to link GNNs and Transformers:
-Here&rsquo;s <a href="https://ipam.wistia.com/medias/1zgl4lq6nh">an excellent talk</a> by Arthur Szlam on the history and connection between Attention/Memory Networks, GNNs and Transformers.
-Similarly, DeepMind&rsquo;s <a href="https://arxiv.org/abs/1806.01261">star-studded position paper</a> introduces the <em>Graph Networks</em> framework, unifying all these ideas.
+<p>Also, this blog isn't the first to link GNNs and Transformers:
+Here's <a href="https://ipam.wistia.com/medias/1zgl4lq6nh">an excellent talk</a> by Arthur Szlam on the history and connection between Attention/Memory Networks, GNNs and Transformers.
+Similarly, DeepMind's <a href="https://arxiv.org/abs/1806.01261">star-studded position paper</a> introduces the <em>Graph Networks</em> framework, unifying all these ideas.
 For a code walkthrough, the DGL team has <a href="https://docs.dgl.ai/en/latest/tutorials/models/4_old_wines/7_transformer.html">a nice tutorial</a> on seq2seq as a graph problem and building Transformers as GNNs.</p>
-<p><strong>In our next post, we&rsquo;ll be doing the reverse: using GNN architectures as Transformers for NLP (based on the Transformers library by <a href="https://github.com/huggingface/transformers">🤗 HuggingFace</a>).</strong></p>
+<p><strong>In our next post, we'll be doing the reverse: using GNN architectures as Transformers for NLP (based on the Transformers library by <a href="https://github.com/huggingface/transformers">🤗 HuggingFace</a>).</strong></p>
 <p>Finally, we wrote <a href="https://graphdeeplearning.github.io/publication/xu-2019-multi/">a recent paper</a> applying Transformers to sketch graphs. Do check it out!</p>
 <hr>
 <h4 id="updates">Updates</h4>

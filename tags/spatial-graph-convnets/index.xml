@@ -33,53 +33,36 @@
       <link>https://graphdeeplearning.github.io/project/spatial-convnets/</link>
       <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/spatial-convnets/</guid>
-      <description>
-
-&lt;h2 id=&#34;non-euclidean-and-graph-structured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;noneuclidean-and-graphstructured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
 &lt;p&gt;Classic deep learning architectures such as &lt;a href=&#34;http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt; and &lt;a href=&#34;https://www.bioinf.jku.at/publications/older/2604.pdf&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; require the input data domain to be regular, such as 2D or 3D Euclidean grids for Computer Vision and 1D lines for Natural Language Processing.&lt;/p&gt;
-
 &lt;p&gt;However, most real-world data beyond images and language has an underlying structure that is &lt;strong&gt;non-Euclidean&lt;/strong&gt;.
 Such complex data commonly occurs in science and engineering, and can be modelled by heterogeneous graphs.
 Examples include chemical graphs, computer graphics, social networks, genetics, neuroscience, and sensor networks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;graph-neural-networks&#34;&gt;Graph Neural Networks&lt;/h2&gt;
-
 &lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
 However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
 We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve &lt;em&gt;generic&lt;/em&gt; graph problems, such as vertex classification, graph classification, graph regression, and graph generation.&lt;/p&gt;
-
 &lt;p&gt;These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in a myriad of domains, including chemistry, social networks, recommendations and computer graphics.&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;h2 id=&#34;basic-formalism&#34;&gt;Basic Formalism&lt;/h2&gt;
-
 &lt;p&gt;Each GNN layer computes $d$-dimensional representations for the nodes/edges of the graph through recursive neighborhood diffusion (or message passing), where each graph node gathers features from its neighbors to represent local graph structure.
 Stacking $L$ GNN layers allows the network to build node representations from the &lt;strong&gt;$L$-hop neighborhood&lt;/strong&gt; of each node.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Let $h_i^{\ell}$ denote the feature vector at layer $\ell$ associated with node $i$.
-The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h&lt;em&gt;i^{\ell}$ and the feature vectors $h&lt;/em&gt;{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
+The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h_i^{\ell}$ and the feature vectors $h_{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
 This guarantees the transformation to build local reception fields, such as in standard ConvNets for computer vision, and be invariant to both graph size and vertex re-indexing.&lt;/p&gt;
-
-&lt;p&gt;Thus, the most generic version of a feature vector $h&lt;em&gt;i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
+&lt;p&gt;Thus, the most generic version of a feature vector $h_i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
 \begin{equation}
-    h&lt;/em&gt;{i}^{\ell+1} =  f \left( \ h&lt;em&gt;i^{\ell} \  , \ { h&lt;/em&gt;{j}^{\ell}: j \rightarrow i }  \ \right) ,
+h_{i}^{\ell+1} =  f \left( \ h_i^{\ell} \  , \ { h_{j}^{\ell}: j \rightarrow i }  \ \right) ,
 \end{equation}
-where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h&lt;em&gt;i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h&lt;/em&gt;{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
-
+where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h_{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
 &lt;p&gt;The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, &lt;em&gt;e.g.&lt;/em&gt;, &lt;a href=&#34;https://arxiv.org/abs/1706.02216&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;GAT&lt;/a&gt;, etc.
-For an illustration, here&amp;rsquo;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
+For an illustration, here&#39;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
 \begin{equation}
-    h&lt;em&gt;{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h&lt;/em&gt;{i}^{\ell} + \sum_{j \in \mathcal{N}&lt;em&gt;i} V^{\ell} h&lt;/em&gt;{j}^{\ell} \Big),
+h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} V^{\ell} h_{j}^{\ell} \Big),
 \end{equation}
 where $U^{\ell}, V^{\ell} \in \mathbb{R}^{d \times d}$ are the learnable parameters.&lt;/p&gt;
 </description>
