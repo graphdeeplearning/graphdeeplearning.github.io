@@ -5,12 +5,164 @@
     <link>https://graphdeeplearning.github.io/tags/</link>
       <atom:link href="https://graphdeeplearning.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020 · Made with &amp;hearts; by [Chaitanya Joshi](https://chaitjo.github.io/)</copyright><lastBuildDate>Tue, 03 Mar 2020 22:20:35 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020 · Made with &amp;hearts; by [Chaitanya Joshi](https://chaitjo.github.io/)</copyright><lastBuildDate>Mon, 15 Jun 2020 03:03:47 +0800</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_512x512_fill_lanczos_center_2.png</url>
       <title>Tags</title>
       <link>https://graphdeeplearning.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>Benchmark</title>
+      <link>https://graphdeeplearning.github.io/tags/benchmark/</link>
+      <pubDate>Mon, 15 Jun 2020 03:03:47 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://graphdeeplearning.github.io/tags/deep-learning/</link>
+      <pubDate>Mon, 15 Jun 2020 03:03:47 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Neural Networks</title>
+      <link>https://graphdeeplearning.github.io/tags/graph-neural-networks/</link>
+      <pubDate>Mon, 15 Jun 2020 03:03:47 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/graph-neural-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Combinatorial Optimization</title>
+      <link>https://graphdeeplearning.github.io/tags/combinatorial-optimization/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/combinatorial-optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operations Research</title>
+      <link>https://graphdeeplearning.github.io/tags/operations-research/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/operations-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Travelling Salesman Problem</title>
+      <link>https://graphdeeplearning.github.io/tags/travelling-salesman-problem/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/travelling-salesman-problem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Models</title>
+      <link>https://graphdeeplearning.github.io/tags/models/</link>
+      <pubDate>Tue, 03 Mar 2020 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatial Graph ConvNets</title>
+      <link>https://graphdeeplearning.github.io/tags/spatial-graph-convnets/</link>
+      <pubDate>Tue, 03 Mar 2020 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/spatial-graph-convnets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chemistry</title>
+      <link>https://graphdeeplearning.github.io/tags/chemistry/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/chemistry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>https://graphdeeplearning.github.io/tags/computer-vision/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Natural Language Processing</title>
+      <link>https://graphdeeplearning.github.io/tags/natural-language-processing/</link>
+      <pubDate>Wed, 12 Feb 2020 16:08:39 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/natural-language-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer</title>
+      <link>https://graphdeeplearning.github.io/tags/transformer/</link>
+      <pubDate>Wed, 12 Feb 2020 16:08:39 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/transformer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>https://graphdeeplearning.github.io/tags/applications/</link>
+      <pubDate>Tue, 14 Jan 2020 16:19:27 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sketches</title>
+      <link>https://graphdeeplearning.github.io/tags/sketches/</link>
+      <pubDate>Tue, 14 Jan 2020 16:19:27 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/sketches/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Molecule Generation</title>
+      <link>https://graphdeeplearning.github.io/tags/molecule-generation/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/molecule-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>https://graphdeeplearning.github.io/tags/talks/</link>
+      <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Visualization</title>
+      <link>https://graphdeeplearning.github.io/tags/graph-visualization/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/graph-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spectral Graph ConvNets</title>
+      <link>https://graphdeeplearning.github.io/tags/spectral-graph-convnets/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/spectral-graph-convnets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Classification</title>
+      <link>https://graphdeeplearning.github.io/tags/text-classification/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://graphdeeplearning.github.io/tags/text-classification/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

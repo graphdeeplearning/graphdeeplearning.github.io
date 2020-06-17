@@ -1,30 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://graphdeeplearning.github.io/authors/chaitanya-joshi/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://graphdeeplearning.github.io/authors/vijay-dwivedi/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/authors/xavier-bresson/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://graphdeeplearning.github.io/authors/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://graphdeeplearning.github.io/tags/benchmark/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/post/benchmarking-gnns/</loc>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/graph-neural-networks/</loc>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/</loc>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/post/</loc>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/</loc>
+    <lastmod>2020-06-15T03:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/chaitanya-joshi/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/xavier-bresson/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/publication_types/3/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/combinatorial-optimization/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/publication/joshi-2020-learning/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/louis-martin-rousseau/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/operations-research/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/publication_types/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/publication/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/quentin-cappart/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/authors/thomas-laurent/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://graphdeeplearning.github.io/tags/travelling-salesman-problem/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -38,22 +118,12 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/tags/deep-learning/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/tags/graph-neural-networks/</loc>
+    <loc>https://graphdeeplearning.github.io/categories/models/</loc>
     <lastmod>2020-03-03T22:20:35+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://graphdeeplearning.github.io/tags/models/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/categories/models/</loc>
     <lastmod>2020-03-03T22:20:35+08:00</lastmod>
   </url>
   
@@ -68,16 +138,6 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/tags/</loc>
-    <lastmod>2020-03-03T22:20:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/publication_types/3/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
@@ -88,32 +148,7 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/tags/combinatorial-optimization/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://graphdeeplearning.github.io/tags/computer-vision/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/tags/operations-research/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/publication_types/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/publication/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/authors/thomas-laurent/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -124,11 +159,6 @@
   
   <url>
     <loc>https://graphdeeplearning.github.io/tags/natural-language-processing/</loc>
-    <lastmod>2020-02-12T16:08:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/post/</loc>
     <lastmod>2020-02-12T16:08:39+08:00</lastmod>
   </url>
   
@@ -148,12 +178,12 @@
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/tags/applications/</loc>
+    <loc>https://graphdeeplearning.github.io/categories/applications/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://graphdeeplearning.github.io/categories/applications/</loc>
+    <loc>https://graphdeeplearning.github.io/tags/applications/</loc>
     <lastmod>2020-01-14T16:19:27+08:00</lastmod>
   </url>
   
@@ -184,11 +214,6 @@
   
   <url>
     <loc>https://graphdeeplearning.github.io/publication/joshi-2019-learning/</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/tags/travelling-salesman-problem/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -255,11 +280,6 @@
   <url>
     <loc>https://graphdeeplearning.github.io/authors/yao-yang-leow/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://graphdeeplearning.github.io/</loc>
-    <lastmod>2018-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>

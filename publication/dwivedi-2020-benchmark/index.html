@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. They have been successfully applied to a myriad of domains including chemistry, physics, social sciences, knowledge graphs, recommendation, and neuroscience. As the field grows, it becomes critical to identify the architectures and key mechanisms which generalize across graphs sizes, enabling us to tackle larger, more complex datasets and domains. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new GNNs and compare models in the absence of a standardized benchmark with consistent experimental settings and large datasets. In this paper, we propose a reproducible GNN benchmarking framework, with the facility for researchers to add new datasets and models conveniently. We apply this benchmarking framework to novel medium-scale graph datasets from mathematical modeling, computer vision, chemistry and combinatorial problems to establish key operations when designing effective GNNs. Precisely, graph convolutions, anisotropic diffusion, residual connections and normalization layers are universal building blocks for developing robust and scalable GNNs.">
+  <meta name="description" content="Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. As the field grows, it becomes critical to identify key architectures and validate new ideas that generalize to larger, more complex datasets. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new models in the absence of a standardized benchmark with consistent experimental settings. In this paper, we introduce a reproducible GNN benchmarking framework, with the facility for researchers to add new models conveniently for arbitrary datasets. We demonstrate the usefulness of our framework by presenting a principled investigation into the recent Weisfeiler-Lehman GNNs (WL-GNNs) compared to message passing-based graph convolutional networks (GCNs) for a variety of graph tasks, i.e. graph regression/classification and node/link prediction, with medium-scale datasets.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/">
@@ -236,7 +236,7 @@
   <meta property="og:site_name" content="NTU Graph Deep Learning Lab">
   <meta property="og:url" content="https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/">
   <meta property="og:title" content="Benchmarking Graph Neural Networks | NTU Graph Deep Learning Lab">
-  <meta property="og:description" content="Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. They have been successfully applied to a myriad of domains including chemistry, physics, social sciences, knowledge graphs, recommendation, and neuroscience. As the field grows, it becomes critical to identify the architectures and key mechanisms which generalize across graphs sizes, enabling us to tackle larger, more complex datasets and domains. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new GNNs and compare models in the absence of a standardized benchmark with consistent experimental settings and large datasets. In this paper, we propose a reproducible GNN benchmarking framework, with the facility for researchers to add new datasets and models conveniently. We apply this benchmarking framework to novel medium-scale graph datasets from mathematical modeling, computer vision, chemistry and combinatorial problems to establish key operations when designing effective GNNs. Precisely, graph convolutions, anisotropic diffusion, residual connections and normalization layers are universal building blocks for developing robust and scalable GNNs."><meta property="og:image" content="https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/featured.png">
+  <meta property="og:description" content="Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. As the field grows, it becomes critical to identify key architectures and validate new ideas that generalize to larger, more complex datasets. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new models in the absence of a standardized benchmark with consistent experimental settings. In this paper, we introduce a reproducible GNN benchmarking framework, with the facility for researchers to add new models conveniently for arbitrary datasets. We demonstrate the usefulness of our framework by presenting a principled investigation into the recent Weisfeiler-Lehman GNNs (WL-GNNs) compared to message passing-based graph convolutional networks (GCNs) for a variety of graph tasks, i.e. graph regression/classification and node/link prediction, with medium-scale datasets."><meta property="og:image" content="https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/featured.png">
   <meta property="twitter:image" content="https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/featured.png"><meta property="og:locale" content="en-us">
   
     
@@ -290,7 +290,7 @@
       "url": "img/https://graphdeeplearning.github.io/"
     }
   },
-  "description": "Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. They have been successfully applied to a myriad of domains including chemistry, physics, social sciences, knowledge graphs, recommendation, and neuroscience. As the field grows, it becomes critical to identify the architectures and key mechanisms which generalize across graphs sizes, enabling us to tackle larger, more complex datasets and domains. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new GNNs and compare models in the absence of a standardized benchmark with consistent experimental settings and large datasets. In this paper, we propose a reproducible GNN benchmarking framework, with the facility for researchers to add new datasets and models conveniently. We apply this benchmarking framework to novel medium-scale graph datasets from mathematical modeling, computer vision, chemistry and combinatorial problems to establish key operations when designing effective GNNs. Precisely, graph convolutions, anisotropic diffusion, residual connections and normalization layers are universal building blocks for developing robust and scalable GNNs."
+  "description": "Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. As the field grows, it becomes critical to identify key architectures and validate new ideas that generalize to larger, more complex datasets. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new models in the absence of a standardized benchmark with consistent experimental settings. In this paper, we introduce a reproducible GNN benchmarking framework, with the facility for researchers to add new models conveniently for arbitrary datasets. We demonstrate the usefulness of our framework by presenting a principled investigation into the recent Weisfeiler-Lehman GNNs (WL-GNNs) compared to message passing-based graph convolutional networks (GCNs) for a variety of graph tasks, i.e. graph regression/classification and node/link prediction, with medium-scale datasets."
 }
 </script>
 
@@ -447,28 +447,6 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/post/"><span>Blog</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/reading-group/"><span>Reading Group</span></a>
         </li>
 
         
@@ -710,6 +688,25 @@
 
 
 
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    
+      
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/post/benchmarking-gnns" >
+    
+    Blog
+  </a>
+
 
 </div>
 
@@ -730,7 +727,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract">Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. They have been successfully applied to a myriad of domains including chemistry, physics, social sciences, knowledge graphs, recommendation, and neuroscience. As the field grows, it becomes critical to identify the architectures and key mechanisms which generalize across graphs sizes, enabling us to tackle larger, more complex datasets and domains. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new GNNs and compare models in the absence of a standardized benchmark with consistent experimental settings and large datasets. In this paper, we propose a reproducible GNN benchmarking framework, with the facility for researchers to add new datasets and models conveniently. We apply this benchmarking framework to novel medium-scale graph datasets from mathematical modeling, computer vision, chemistry and combinatorial problems to establish key operations when designing effective GNNs. Precisely, graph convolutions, anisotropic diffusion, residual connections and normalization layers are universal building blocks for developing robust and scalable GNNs.</p>
+    <p class="pub-abstract">Graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. As the field grows, it becomes critical to identify key architectures and validate new ideas that generalize to larger, more complex datasets. Unfortunately, it has been increasingly difficult to gauge the effectiveness of new models in the absence of a standardized benchmark with consistent experimental settings. In this paper, we introduce a reproducible GNN benchmarking framework, with the facility for researchers to add new models conveniently for arbitrary datasets. We demonstrate the usefulness of our framework by presenting a principled investigation into the recent Weisfeiler-Lehman GNNs (WL-GNNs) compared to message passing-based graph convolutional networks (GCNs) for a variety of graph tasks, i.e. graph regression/classification and node/link prediction, with medium-scale datasets.</p>
     
 
     
@@ -1086,7 +1083,7 @@
   
 
   <p class="powered-by">
-    Xavier Bresson © 2020 · Made with ♥ by <a href="https://chaitjo.github.io/">Chaitanya Joshi</a> &middot; 
+    Xavier Bresson &copy; 2020 · Made with &hearts; by <a href="https://chaitjo.github.io/">Chaitanya Joshi</a> &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

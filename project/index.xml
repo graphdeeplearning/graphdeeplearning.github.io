@@ -25,16 +25,22 @@
       <link>https://graphdeeplearning.github.io/project/sketches/</link>
       <pubDate>Tue, 14 Jan 2020 16:19:27 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/sketches/</guid>
-      <description>&lt;h2 id=&#34;representation-learning-for-sketches&#34;&gt;Representation Learning for Sketches&lt;/h2&gt;
+      <description>
+
+&lt;h2 id=&#34;representation-learning-for-sketches&#34;&gt;Representation Learning for Sketches&lt;/h2&gt;
+
 &lt;p&gt;Human beings have been creating free-hand sketches, &lt;em&gt;i.e.&lt;/em&gt;, drawings without precise instruments, since &lt;a href=&#34;https://en.wikipedia.org/wiki/Cave_painting&#34;&gt;time immemorial&lt;/a&gt;.
 Due to the popularity of touchscreen interfaces, machine learning using sketches has emerged as an interesting problem with a myriad of applications:
 If we consider sketches as 2D images, we can throw them into off-the-shelf &lt;a href=&#34;https://arxiv.org/abs/1501.07873&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt;.
 While CNNs are designed for &lt;em&gt;static&lt;/em&gt; collections of pixels with &lt;em&gt;dense&lt;/em&gt; colors and textures,
 sketches are usually an extremely &lt;em&gt;sparse&lt;/em&gt; sequences of strokes which capture high-level abstractions and ideas. &lt;a href=&#34;https://ai.googleblog.com/2017/04/teaching-machines-to-draw.html&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; stick out as a natural architecture for capturing this temporal nature of sketches.&lt;/p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Structure vs. temporal order: can we have the best of both worlds?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
 &lt;h2 id=&#34;sketches-as-graphs&#34;&gt;Sketches as Graphs&lt;/h2&gt;
+
 &lt;p&gt;We are working on a novel representation of free-hand sketches as &lt;strong&gt;sparsely-connected graphs&lt;/strong&gt;.
 We assume that sketches are sets of curves and strokes, which are discretized by a set of points representing the graph nodes.
 Each node encodes spatial, temporal and semantic information.
@@ -48,24 +54,34 @@ To exploit these graph structures, we are developing &lt;strong&gt;Graph Neural 
       <link>https://graphdeeplearning.github.io/project/combinatorial-optimization/</link>
       <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/combinatorial-optimization/</guid>
-      <description>&lt;h2 id=&#34;operations-research-and-combinatorial-problems&#34;&gt;Operations Research and Combinatorial Problems&lt;/h2&gt;
+      <description>
+
+&lt;h2 id=&#34;operations-research-and-combinatorial-problems&#34;&gt;Operations Research and Combinatorial Problems&lt;/h2&gt;
+
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Operations_research&#34;&gt;Operations Research (OR)&lt;/a&gt;&lt;/strong&gt; started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions. Nowadays it is widely used in the industry, including but not limited to transportation, supply chain, energy, finance, and scheduling.&lt;/p&gt;
+
 &lt;p&gt;OR Problems are formulated as integer constrained optimization, &lt;em&gt;i.e.&lt;/em&gt;, with integral or binary variables (called decision variables).
 While not all such problems are hard to solve (&lt;em&gt;e.g.&lt;/em&gt;, finding the shortest path between two locations), we concentrate on &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Combinatorial_optimization&#34;&gt;Combinatorial (NP-Hard) problems&lt;/a&gt;&lt;/strong&gt;.
 NP-Hard problems are &lt;em&gt;impossible&lt;/em&gt; to solve optimally at large scales as exhaustively searching for their solutions is beyond the limits of modern computers.
 The &lt;a href=&#34;https://en.wikipedia.org/wiki/Travelling_salesman_problem&#34;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt; and the &lt;a href=&#34;https://en.wikipedia.org/wiki/Minimum_spanning_tree&#34;&gt;Minimum Spanning Tree Problem (MST)&lt;/a&gt; are two of the most popular examples for such problems defined using graphs.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tsp-gif.gif&#34; alt=&#34;TSP GIF&#34;&gt;
+
+&lt;p&gt;&lt;img src=&#34;tsp-gif.gif&#34; alt=&#34;TSP GIF&#34; /&gt;
 &lt;em&gt;TSP asks the following question: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city? Formally, given a graph, one needs to search the space of permutations to find an optimal sequence of nodes, called a tour, with minimal total edge weights (tour length).&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&#34;neural-combinatorial-optimization&#34;&gt;Neural Combinatorial Optimization&lt;/h2&gt;
+
 &lt;p&gt;Although handcrafted heuristic algorithms are able to solve problems such as TSP with up to a million variables,
 designing good heuristics often requires significant specialized knowledge and years of trial-and-error.
 The state-of-the-art TSP solver, &lt;a href=&#34;http://www.math.uwaterloo.ca/tsp/concorde.html&#34;&gt;Concorde&lt;/a&gt;, leverages &lt;a href=&#34;https://www.youtube.com/watch?v=q8nQTNvCrjE&#34;&gt;over 50 years of research&lt;/a&gt; on linear programming, cutting plane algorithms and branch-and-bound.
 At our lab, we&amp;rsquo;re working on &lt;strong&gt;automating&lt;/strong&gt; and &lt;strong&gt;augmenting&lt;/strong&gt; such expert intuition through Machine Learning [&lt;a href=&#34;https://arxiv.org/abs/1811.06128&#34;&gt;Bengio &lt;em&gt;et al.&lt;/em&gt;, 2018&lt;/a&gt;].&lt;/p&gt;
+
 &lt;p&gt;Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, &lt;em&gt;e.g.&lt;/em&gt;, determine the TSP tour one city at a time.
 Our research uses deep neural networks to parameterize these policies and train them directly from problem instances.
 In particular, &lt;strong&gt;Graph Neural Networks&lt;/strong&gt; are the perfect fit for the task because they naturally operate on the graph structure of these problems.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pipeline.png&#34; alt=&#34;End-to-end pipeline&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;pipeline.png&#34; alt=&#34;End-to-end pipeline&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -82,36 +98,53 @@ In particular, &lt;strong&gt;Graph Neural Networks&lt;/strong&gt; are the perfec
       <link>https://graphdeeplearning.github.io/project/spatial-convnets/</link>
       <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/spatial-convnets/</guid>
-      <description>&lt;h2 id=&#34;non-euclidean-and-graph-structured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
+      <description>
+
+&lt;h2 id=&#34;non-euclidean-and-graph-structured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
+
 &lt;p&gt;Classic deep learning architectures such as &lt;a href=&#34;http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt; and &lt;a href=&#34;https://www.bioinf.jku.at/publications/older/2604.pdf&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; require the input data domain to be regular, such as 2D or 3D Euclidean grids for Computer Vision and 1D lines for Natural Language Processing.&lt;/p&gt;
+
 &lt;p&gt;However, most real-world data beyond images and language has an underlying structure that is &lt;strong&gt;non-Euclidean&lt;/strong&gt;.
 Such complex data commonly occurs in science and engineering, and can be modelled by heterogeneous graphs.
 Examples include chemical graphs, computer graphics, social networks, genetics, neuroscience, and sensor networks.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&#34;graph-neural-networks&#34;&gt;Graph Neural Networks&lt;/h2&gt;
+
 &lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
 However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
 We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve &lt;em&gt;generic&lt;/em&gt; graph problems, such as vertex classification, graph classification, graph regression, and graph generation.&lt;/p&gt;
+
 &lt;p&gt;These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in a myriad of domains, including chemistry, social networks, recommendations and computer graphics.&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&#34;basic-formalism&#34;&gt;Basic Formalism&lt;/h2&gt;
+
 &lt;p&gt;Each GNN layer computes $d$-dimensional representations for the nodes/edges of the graph through recursive neighborhood diffusion (or message passing), where each graph node gathers features from its neighbors to represent local graph structure.
 Stacking $L$ GNN layers allows the network to build node representations from the &lt;strong&gt;$L$-hop neighborhood&lt;/strong&gt; of each node.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Let $h_i^{\ell}$ denote the feature vector at layer $\ell$ associated with node $i$.
-The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h_i^{\ell}$ and the feature vectors $h_{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
+The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h&lt;em&gt;i^{\ell}$ and the feature vectors $h&lt;/em&gt;{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
 This guarantees the transformation to build local reception fields, such as in standard ConvNets for computer vision, and be invariant to both graph size and vertex re-indexing.&lt;/p&gt;
-&lt;p&gt;Thus, the most generic version of a feature vector $h_i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
+
+&lt;p&gt;Thus, the most generic version of a feature vector $h&lt;em&gt;i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
 \begin{equation}
-h_{i}^{\ell+1} =  f \left( \ h_i^{\ell} \  , \ { h_{j}^{\ell}: j \rightarrow i }  \ \right) ,
+    h&lt;/em&gt;{i}^{\ell+1} =  f \left( \ h&lt;em&gt;i^{\ell} \  , \ { h&lt;/em&gt;{j}^{\ell}: j \rightarrow i }  \ \right) ,
 \end{equation}
-where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h_{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
+where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h&lt;em&gt;i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h&lt;/em&gt;{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
+
 &lt;p&gt;The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, &lt;em&gt;e.g.&lt;/em&gt;, &lt;a href=&#34;https://arxiv.org/abs/1706.02216&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;GAT&lt;/a&gt;, etc.
 For an illustration, here&amp;rsquo;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
 \begin{equation}
-h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} V^{\ell} h_{j}^{\ell} \Big),
+    h&lt;em&gt;{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h&lt;/em&gt;{i}^{\ell} + \sum_{j \in \mathcal{N}&lt;em&gt;i} V^{\ell} h&lt;/em&gt;{j}^{\ell} \Big),
 \end{equation}
 where $U^{\ell}, V^{\ell} \in \mathbb{R}^{d \times d}$ are the learnable parameters.&lt;/p&gt;
 </description>

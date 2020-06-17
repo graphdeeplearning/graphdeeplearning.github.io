@@ -12,5 +12,21 @@
       <link>https://graphdeeplearning.github.io/categories/</link>
     </image>
     
+    <item>
+      <title>Models</title>
+      <link>https://graphdeeplearning.github.io/categories/models/</link>
+      <pubDate>Tue, 03 Mar 2020 22:20:35 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/categories/models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>https://graphdeeplearning.github.io/categories/applications/</link>
+      <pubDate>Tue, 14 Jan 2020 16:19:27 +0800</pubDate>
+      <guid>https://graphdeeplearning.github.io/categories/applications/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
