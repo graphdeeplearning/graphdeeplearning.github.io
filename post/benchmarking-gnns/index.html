@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="This blog is based on the paper Benchmarking Graph Neural Networks which is a joint work with Chaitanya K. Joshi, Thomas Laurent, Yoshua Bengio and Xavier Bresson.
-Graph Neural Networks (GNNs) are widely used today in diverse applications of social sciences, knowledge graphs, chemistry, physics, neuroscience, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.
+ Graph Neural Networks (GNNs) are widely used today in diverse applications of social sciences, knowledge graphs, chemistry, physics, neuroscience, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.
 However, it has been increasingly difficult to gauge the effectiveness of new models and validate new ideas that generalize universally to larger and complex datasets in the absence of a standard and widely-adopted benchmark.">
 
   
@@ -239,7 +239,7 @@ However, it has been increasingly difficult to gauge the effectiveness of new mo
   <meta property="og:url" content="https://graphdeeplearning.github.io/post/benchmarking-gnns/">
   <meta property="og:title" content="Benchmarking Graph Neural Networks | NTU Graph Deep Learning Lab">
   <meta property="og:description" content="This blog is based on the paper Benchmarking Graph Neural Networks which is a joint work with Chaitanya K. Joshi, Thomas Laurent, Yoshua Bengio and Xavier Bresson.
-Graph Neural Networks (GNNs) are widely used today in diverse applications of social sciences, knowledge graphs, chemistry, physics, neuroscience, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.
+ Graph Neural Networks (GNNs) are widely used today in diverse applications of social sciences, knowledge graphs, chemistry, physics, neuroscience, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.
 However, it has been increasingly difficult to gauge the effectiveness of new models and validate new ideas that generalize universally to larger and complex datasets in the absence of a standard and widely-adopted benchmark."><meta property="og:image" content="https://graphdeeplearning.github.io/post/benchmarking-gnns/featured.png">
   <meta property="twitter:image" content="https://graphdeeplearning.github.io/post/benchmarking-gnns/featured.png"><meta property="og:locale" content="en-us">
   
@@ -296,7 +296,7 @@ However, it has been increasingly difficult to gauge the effectiveness of new mo
       "url": "img/https://graphdeeplearning.github.io/"
     }
   },
-  "description": "This blog is based on the paper Benchmarking Graph Neural Networks which is a joint work with Chaitanya K. Joshi, Thomas Laurent, Yoshua Bengio and Xavier Bresson.\nGraph Neural Networks (GNNs) are widely used today in diverse applications of social sciences, knowledge graphs, chemistry, physics, neuroscience, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.\nHowever, it has been increasingly difficult to gauge the effectiveness of new models and validate new ideas that generalize universally to larger and complex datasets in the absence of a standard and widely-adopted benchmark."
+  "description": "This blog is based on the paper Benchmarking Graph Neural Networks which is a joint work with Chaitanya K. Joshi, Thomas Laurent, Yoshua Bengio and Xavier Bresson.\n Graph Neural Networks (GNNs) are widely used today in diverse applications of social sciences, knowledge graphs, chemistry, physics, neuroscience, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.\nHowever, it has been increasingly difficult to gauge the effectiveness of new models and validate new ideas that generalize universally to larger and complex datasets in the absence of a standard and widely-adopted benchmark."
 }
 </script>
 
@@ -703,30 +703,19 @@ However, it has been increasingly difficult to gauge the effectiveness of new mo
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<p><em>This blog is based on the paper <a href="https://arxiv.org/abs/2003.00982">Benchmarking Graph Neural Networks</a> which is a joint work with <a href="https://chaitjo.github.io">Chaitanya K. Joshi</a>, <a href="http://thomaslaurent.lmu.build/homepage.html">Thomas Laurent</a>, <a href="https://mila.quebec/en/person/bengio-yoshua/">Yoshua Bengio</a> and <a href="https://www.ntu.edu.sg/home/xbresson/">Xavier Bresson</a>.</em></p>
-
-<hr />
-
+      <p><em>This blog is based on the paper <a href="https://arxiv.org/abs/2003.00982">Benchmarking Graph Neural Networks</a> which is a joint work with <a href="https://chaitjo.github.io">Chaitanya K. Joshi</a>, <a href="http://thomaslaurent.lmu.build/homepage.html">Thomas Laurent</a>, <a href="https://mila.quebec/en/person/bengio-yoshua/">Yoshua Bengio</a> and <a href="https://www.ntu.edu.sg/home/xbresson/">Xavier Bresson</a>.</em></p>
+<hr>
 <p><a href="https://graphdeeplearning.github.io/project/spatial-convnets/">Graph Neural Networks (GNNs)</a> are widely used today in diverse applications of <a href="https://arxiv.org/abs/1609.02907">social</a> <a href="https://arxiv.org/abs/1902.06673">sciences</a>, <a href="https://arxiv.org/abs/1703.06103">knowledge</a> <a href="https://arxiv.org/abs/2005.00545">graphs</a>, <a href="https://arxiv.org/abs/1704.01212">chemistry</a>, <a href="https://arxiv.org/abs/2002.09405">physics</a>, <a href="https://infoscience.epfl.ch/record/229954?ln=en">neuroscience</a>, etc., and accordingly there has been a great surge of interest and growth in the number of papers in the literature.</p>
-
 <p>However, it has been increasingly difficult to gauge the effectiveness of new models and validate new ideas that generalize universally to larger and complex datasets <strong>in the absence of</strong> a standard and widely-adopted <strong>benchmark</strong>.</p>
-
 <p><strong>To address</strong> this paramount concern existing in graph learning research, we develop an open-source, easy-to-use and reproducible <a href="https://github.com/graphdeeplearning/benchmarking-gnns">benchmarking framework</a> with a rigorous experimental protocol that is representative of the categorical advances in GNNs.</p>
-
 <div class="alert alert-note">
   <div>
     This post outlines the <a href="https://arxiv.org/abs/1912.09893">issues</a> <a href="https://arxiv.org/abs/1905.09550">in</a> <a href="https://arxiv.org/abs/1905.04682">the</a> <a href="https://arxiv.org/abs/1905.04579">GNN</a> literature suggesting the need of a benchmark, the framework proposed in the <a href="https://arxiv.org/abs/2003.00982">paper</a>, the broad classes of widely used and powerful GNNs benchmarked and the insights learnt from the extensive experiments.
   </div>
 </div>
-
-<hr />
-
+<hr>
 <h3 id="why-benchmark">Why benchmark?</h3>
-
 <p>In any core research or application area in <a href="https://www.nature.com/articles/nature14539">deep learning</a>, a benchmark helps to identify and quantify what types of <a href="https://arxiv.org/abs/1409.4842">architectures</a>, <a href="https://arxiv.org/abs/1512.03385">principles</a>, or <a href="https://arxiv.org/abs/1502.03167">mechanisms</a> are universal and generalizable to real-world tasks and large datasets. Particularly, the <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">recent</a> <a href="https://cacm.acm.org/magazines/2017/6/217744-technical-perspective-what-led-computer-vision-to-deep-learning/fulltext">revolution</a> in this AI field is often credited, <em>to a possibly large extent</em>, to be triggered by the large-scale benchmark image dataset, <a href="http://www.image-net.org">ImageNet</a>. (Obviously, other driving factors include increase in the volume of research, more datasets, compute, wide-adoptance, etc.)</p>
-
 
 
 
@@ -756,17 +745,11 @@ However, it has been increasingly difficult to gauge the effectiveness of new mo
 
 </figure>
 
-
 <p>Benchmarking has been proved to be beneficial for <strong>driving progress</strong>, identifying <strong>essential ideas</strong>, and solving domain-related problems in <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1738-8">many</a> sub-fields of science. This project was conceived with this fundamental motivation.</p>
-
-<hr />
-
+<hr>
 <h3 id="need-of-a-benchmarking-framework-for-gnns">Need of a benchmarking framework for GNNs</h3>
-
 <h4 id="a-datasets">a. Datasets:</h4>
-
 <p>Many of the widely cited papers in the GNN literature contain experiments that are evaluated on <strong>small graph datasets</strong> which have only a few hundreds (or, thousand) of graphs.</p>
-
 
 
 
@@ -796,71 +779,48 @@ However, it has been increasingly difficult to gauge the effectiveness of new mo
 
 </figure>
 
-
-<p><strong>Take for example</strong>, the ENZYMES dataset, which is almost seen in every work on a GNN for classification task. If one uses a random $10$-fold cross validation (in most papers), the test set would have $60$ graphs (i.e. $10$% of $600$ total graphs). That would mean a correct classification (or, alternatively a misclassification) would change $1.67$% of test accuracy score. <strong>A couple of samples could determine a $3.33$% difference in performance measure</strong>, which is usually a significant gain score stated when one validates a new idea in literature. You see there, the number of samples is unreliable to concretely acknowledge the advances. <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
-
+<p><strong>Take for example</strong>, the ENZYMES dataset, which is almost seen in every work on a GNN for classification task. If one uses a random $10$-fold cross validation (in most papers), the test set would have $60$ graphs (i.e. $10$% of $600$ total graphs). That would mean a correct classification (or, alternatively a misclassification) would change $1.67$% of test accuracy score. <strong>A couple of samples could determine a $3.33$% difference in performance measure</strong>, which is usually a significant gain score stated when one validates a new idea in literature. You see there, the number of samples is unreliable to concretely acknowledge the advances. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>Our experiments, too, show that the standard deviation of performance on such datasets is large, making it difficult to make substantial conclusions on a research idea. Moreover, most GNNs perform statistically the same on these datasets.
 The <strong>quality</strong> of these datasets also leads one to question if you should use them while validating ideas on GNNs. On several of these datasets, <a href="https://openreview.net/forum?id=HygDF6NFPB">simpler models</a>, sometimes, <a href="https://openreview.net/forum?id=rJlUhhVYvS">perform as good</a>, or even beats GNNs.</p>
-
-<p>Consequently, <strong>it has become difficult</strong> to differentiate <a href="https://arxiv.org/abs/1905.09550">complex</a>, <a href="https://arxiv.org/abs/1905.04579">simple</a> and <a href="https://openreview.net/forum?id=HygDF6NFPB">graph-agnostic</a> architectures for graph machine learning.
-<!-- Most papers do not even use the same splits when comparing with an existing literature.  --></p>
-
+<p>Consequently, <strong>it has become difficult</strong> to differentiate <a href="https://arxiv.org/abs/1905.09550">complex</a>, <a href="https://arxiv.org/abs/1905.04579">simple</a> and <a href="https://openreview.net/forum?id=HygDF6NFPB">graph-agnostic</a> architectures for graph machine learning.</p>
+<!-- Most papers do not even use the same splits when comparing with an existing literature.  -->
 <h4 id="b-consistent-experimental-protocol">b. Consistent experimental protocol:</h4>
-
 <p>Several papers in the GNN literature do not have consensus on a unifying and robust experimental setting which leads to <a href="https://arxiv.org/abs/1811.05868">discussing</a> the inconsistencies and <a href="https://openreview.net/forum?id=HygDF6NFPB">re-evaluating</a> several papers&rsquo; experiments.</p>
-
 <p>For a couple of examples to highlight here, <a href="https://papers.nips.cc/paper/7729-hierarchical-graph-representation-learning-with-differentiable-pooling">Ying et al., 2018</a> performed training on $10$-fold split data for a fixed number of epochs and reported the performance of the epoch which has the <em>&ldquo;highest average validation accuracy across the splits at any epoch&rdquo;</em> whereas <a href="http://proceedings.mlr.press/v97/lee19c.html">Lee et al., 2019</a> used an <em>&ldquo;early stopping criterion&rdquo;</em>  by monitoring the epoch-wise validation loss and report <em>&ldquo;average test accuracy at last epoch&rdquo;</em> over $10$-fold split.</p>
-
 <p>Now, if we extract results of both these papers to put together in the same table and claim that the model with the highest performance score is the promising of all, <strong>can we get convinced</strong> that the comparison is fair?</p>
-
 <blockquote>
 <p>There are other issues related to hyperparamter selection, comparison in an unfair budgets of trainable paramters, use of different train-validation-test splits, etc.</p>
 </blockquote>
-
 <p>The existence of such problems pushed us to develop a GNN benchmarking framework which <strong>standardizes GNN research</strong> and help researchers make more meaningful advances.</p>
-
-<hr />
-
+<hr>
 <h3 id="challenges-of-building-a-gnn-benchmark">Challenges of building a GNN benchmark</h3>
-
 <p>The lack of benchmarks have been a major issue in GNN literature as the <strong>aforementioned requirements have not been strictly enforced</strong>.</p>
-
 <!-- We believe that a standard and unified benchmark framework should have --
 
 1. an easy to use and reproducible coding framework
 2. rigorous and fair experimental setting
 3. appropriate datasets that can statistically separate model performance
 4. comprehensive in terms of the fundamental tasks (applications) that the research can be applied to.  -->
-
 <p>Designing benchmarks is highly challenging as we must make robust decisions for coding framework, experimental settings and appropriate datasets. The benchmark should also be comprehensive to cover most of the fundamental tasks which is indicative of the application area the research can be applied to. For instance, graph learning problems include predicting properties at the node-level, edge-level and graph-level. A benchmark should attempt to cover many, if not all, of these.</p>
-
 <p>Similarly, it is <strong>challenging to collect real and representative large-scale datasets</strong>. The lack of theoretical tools that can define the quality of a dataset or, validate its statistical representativeness for a given task makes it difficult to decide on datasets. Furthermore, there are arbitrary choices required on the features of nodes and edges for graphs and the scale of graph sizes as most of the popular graph learning frameworks do not cater <em>‘very efficiently’</em> to large graphs.</p>
-
 <blockquote>
 <p>There has been a promising effort recently, <a href="https://ogb.stanford.edu">The Open Graph Benchmark (OGB)</a>, to collect meaningful medium-to-large scale dataset in order to steer graph learning research. The initiative is complementary to the goals of this project.</p>
 </blockquote>
-
-<hr />
-
+<hr>
 <h3 id="proposed-benchmarking-framework">Proposed benchmarking framework:</h3>
-
 <!-- We include each of the four characteristics listed out in the previous section to propose a benchmarking framework.  -->
-
 <p>We propose a benchmarking framework for graph neural networks with the following key characteristics:</p>
-
 <ol>
 <li>We develop a modular coding infrastructure which can be used to speed up the development of new ideas</li>
 <li>Our framework adopts a rigorous and fair experimental protocol,</li>
-<li>We propose appropriate medium-scale datasets that can be used a plug-ins for later research. <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup><br /></li>
+<li>We propose appropriate medium-scale datasets that can be used a plug-ins for later research. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+</ol>
+<ol start="4">
 <li>Four fundamental tasks in graph machine learning are covered, i.e. graph classification, graph regression, node classification, and edge classification.</li>
 </ol>
-
 <h4 id="a-coding-infrastructure">a. Coding infrastructure:</h4>
-
 <p>Our benchmarking code infrastructure is based on <a href="http://pytorch.org">Pytorch</a>/<a href="http://dgl.ai">DGL</a>.</p>
-
 <p><strong>From a high-level view</strong>, our framework unifies independent components for i) Data pipelines, ii) GNN layers and models, iii Training and evaluation functions, iv) Network and hyperparameters configurations, and v) Single execution scripts for reproducibility.</p>
-
 
 
 
@@ -890,15 +850,10 @@ The <strong>quality</strong> of these datasets also leads one to question if you
 
 </figure>
 
-
-<p>The detailed user instructions on use of each of these components is described on <a href="https://github.com/graphdeeplearning/benchmarking-gnns">GitHub README</a>. <sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup></p>
-
-<hr />
-
+<p>The detailed user instructions on use of each of these components is described on <a href="https://github.com/graphdeeplearning/benchmarking-gnns">GitHub README</a>. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<hr>
 <h4 id="b-datasets">b. Datasets:</h4>
-
 <p>We include 8 datasets from diverse domains of chemistry, mathematical modeling, computer vision, combinatorial optimization and social networks.</p>
-
 
 
 
@@ -928,47 +883,29 @@ The <strong>quality</strong> of these datasets also leads one to question if you
 
 </figure>
 
-
 <p>The steps for datasets&rsquo; preparation and their relevance to benchmarking graph neural networks are described in the paper.</p>
-
 <blockquote>
 <p>It is worth mentioning that we include <a href="https://ogb.stanford.edu/docs/linkprop/#ogbl-collab">OGBL-COLLAB</a> from OGB which demonstrates the we can <strong>flexibly incorporate</strong> any of the current and future datasets from the OGB initiative.</p>
 </blockquote>
-
 <!-- **Brief Description and Relevance**: ZINC is one of the most popular real-world molecular dataset of 250K graphs, out of which we select 12K for efficiency. The task is to regress a graph property of constrained solubility which is an important chemical property for designing generative molecules. PATTERN and CLUSTER are node classification datasets generated from Stochastic Block Models (SBMs), which are widely used to model communities in social networks. MNIST and CIFAR10 datasets are the superpixels graphs from the respective standard computer vision datasets. These datasets are important from a sanity-check perspective since we expect to perform close to 100% for MNIST and perform well enough for CIFAR10. TSP dataset is based on the traveling salesman problem, which is modeled for the edge classification task. The dataset is a collection of 2D Euclidean graphs where each graph is a TSP instance and the problem is to predict the edges that would form part of the optimal TSP tour. OGBL-COLLAB is a link prediction dataset from OGB, which is from a collaboration network dataset indexed by Microsoft Academic Graph. The task here is to predict authorship collaboration, i.e. link prediction between two authors represented by nodes. Finally, we include a small-scale dataset of Circular Skip Link Graphs. The CSL is a synthetic mathematical dataset used for the graph isomorphism problem and check expressivity of GNNs. Note that we include OGBL-COLLAB from OGB which demonstrates the we can flexibly incorporate any of the current and future datasets from the OGB initiative. -->
-
-<hr />
-
+<hr>
 <h4 id="c-experimental-protocol">c. Experimental Protocol:</h4>
-
 <p>We define a rigorous and fair experimental protocol for benchmarking graph neural network models.</p>
-
 <p><strong>Dataset splits:</strong> Given the literature has issues with using different train-val-test splits for different models, we make sure our data pipelines provide the same training, validation and test splits for every GNN model compared. We follow standard splits for the datasets available. For synthetic datasets with no standard splits, we ensure the class distribution or the synthetic properties are the same across the splits. Please refer to the paper on more details.</p>
-
 <p><strong>Training:</strong> We use the same training setup and reporting protocol for all experiments. We use the Adam optimizer to train the GNNs with a learning rate decay strategy based on the validation loss. We train each experiment for an unspecified number of epochs where the model stops to train at a minimum learning rate at which there is no significant learning.</p>
-
 <blockquote>
 <p>Importantly, this strategy makes it easy for the users to not fathom on choosing how many epochs to train their model for.</p>
 </blockquote>
-
 <p>Each experiment is run on $4$ different seeds for a maximum of $12$ hours of training time and the summary statistics of the last epoch score of the $4$ experiments is reported.</p>
-
 <p><strong>Parameter budget:</strong> We decide on using two trainable parameter budgets: (i) $100k$ parameters for each GNNs for all the tasks, and (ii) $500k$ parameters for GNNs for which we investigate scaling a model to larger parameters and deeper layers. The number of hidden layers and hidden dimensions are selected accordingly to match these budgets.</p>
-
 <p>We make this choice of having a similar parameter budget for fair comparison because it becomes otherwise difficult to rigorously evaluate different models. In GNN literature, it is often seen the a new model is compared to the existing literature without any detail of the number of parameters, or any attempt to have the same size of the model. Having said that, our goal is not to find the optimal set of hyperparameters for each of the models which is a compute-intensive task.</p>
-
-<hr />
-
+<hr>
 <h4 id="d-graph-neural-networks">d. Graph Neural Networks:</h4>
-
 <p>We benchmark two broad classes of GNNs that represent the categorical advances in the architectures of a graph neural network witnessed in the most recent literature. We call the two classes, for nomenclature, as <strong>GCNs (Graph Convolutional Networks)</strong> and <strong>WL-GNNs (Weisfeiler-Lehman GNNs)</strong>.</p>
-
 <blockquote>
 <p>GCNs refer to the popular message-passing based GNNs which leverage sparse tensor computation and WL-GNNs are the theoretically expressive GNNs based on the WL-test to distinguish non-isomorphic graphs which require dense tensor computation at each layer.</p>
 </blockquote>
-
 <p>Accordingly, our experimental pipeline is shown in Fig 5 for GCNs and Fig 6 for WL-GNNs.</p>
-
 <p>
 
 
@@ -1027,72 +964,51 @@ The <strong>quality</strong> of these datasets also leads one to question if you
 
 </figure>
 </p>
-
 <p>We direct the readers to our paper and the corresponding works for more details on the mathematical formulations of the GNNs. To interested readers, we also include in paper the <strong>block diagrams of layer updates</strong> of each GNN benchmarked.</p>
-
-<hr />
-
+<hr>
 <div class="alert alert-note">
   <div>
     For a quick recap at this stage, we discussed the <strong>need of a benchmark</strong>, the <strong>challenges</strong> in building such a framework and <strong>details on our proposed benchmarking framework</strong>. We now delve into the experiments.
   </div>
 </div>
-
 <p>We perform a principled investigation into the message passing based GCNs and the WL-GNNs to reveal important insights and highlight critical underlying challenges in building a powerful GNN model.</p>
-
-<hr />
-
+<hr>
 <h3 id="benchmarking-gnns-on-the-proposed-datasets">Benchmarking GNNs on the proposed datasets.</h3>
-
 <p>We perform exhaustive experiments on all datasets using every GNN models included currently in our benchmarking framework. The experiments help us draw many insights, few of which are discussed here. We recommend reading the paper for details on the experimental results.</p>
-
 <blockquote>
 <p>The GNNs that we benchmark are: <a href="https://arxiv.org/abs/1609.02907"><em>Vanilla</em> Graph Convolutional Network (GCN)</a>, <a href="https://cs.stanford.edu/people/jure/pubs/graphsage-nips17.pdf">GraphSage</a>, <a href="https://arxiv.org/abs/1710.10903">Graph Attention Network (GAT)</a>, <a href="https://arxiv.org/abs/1611.08402">Gaussian Mixture Model (MoNet)</a>, <a href="https://arxiv.org/abs/1711.07553">GatedGCN</a>, <a href="https://arxiv.org/abs/1810.00826">Graph Isomorphism Network (GIN)</a>, <a href="https://papers.nips.cc/paper/9718-on-the-equivalence-between-graph-isomorphism-testing-and-function-approximation-with-gnns">RingGNN</a> and <a href="https://arxiv.org/abs/1905.11136">3WL-GNN</a>.</p>
 </blockquote>
-
 <p><strong>1. Graph-agnostic NNs perform poorly on the proposed datasets</strong>: We compare all GNNs to a simple MLP which updates each node’s features independent of one-another, i.e. ignoring the graph structure.</p>
-
 <blockquote>
 <p>MLP node update equation at layer $\ell$ is:
 $$
 h^{\ell+1}<em>{i} =  \sigma \left( W^{\ell} \ h^{\ell}</em>{i} \right)
 $$</p>
 </blockquote>
-
 <p>MLP evaluates to consistently low scores on each of the datasets which shows the necessity to consider graph structure for these tasks. This result is also indicative of how appropriate these datasets are for GNN research as they statistically separate model’s performance.</p>
-
 <p><strong>2. GCNs outperform WL-GNNs on the proposed datasets</strong>: Although WL-GNNs are provably powerful in terms of graph isomorphism and expressiveness, the WL-GNN models that we consider were not able to outperform GCNs. These models are limited in scaling to larger datasets as their space/time complexity are inefficient as compared to the GCNs which leverage sparse tensors.</p>
-
 <blockquote>
 <p>GCNs are seen to conveniently scale to $16$ layers and provide the best results on all datasets, whereas the WL-GNNs face loss divergence and/or out-of-memory errors when trying to build deeper networks.</p>
 </blockquote>
-
 <p><strong>3. Anisotropic mechanisms improve message-passing GCNs architectures</strong>: Among the models in the message-passing GCNs, we can classify them into <strong>isotropic</strong> and <strong>anisotropic</strong>.</p>
-
 <p>A GCN model whose node update equation treats every edge direction equally, is considered <strong>isotropic</strong>; and a GCN model whose node update equation treats every edge direction differently, is considered <strong>anisotropic</strong>.</p>
-
 <blockquote>
 <p>Isotropic layer update equation:
 $$
-h^{\ell+1}_{i} =  \sigma\Big(W<em>1^{\ell} \ h^{\ell}</em>{i} + \sum_{j\in\mathcal{N}_i} W<em>2^{\ell} \ h^{\ell}</em>{j} \Big)
-$$</p>
-
-<p>Anisotropic layer update equation:
-$$
-h^{\ell+1}_{i} =  \sigma\Big(W<em>1^{\ell} \ h^{\ell}</em>{i} + \sum_{j\in\mathcal{N}<em>i} <span style="color:red">\eta</em>{ij}</span> W<em>2 h^{\ell}</em>{j} \Big)
+h^{\ell+1}<em>{i} =  \sigma\Big(W_1^{\ell} \ h^{\ell}</em>{i} + \sum_{j\in\mathcal{N}_i} W_2^{\ell} \ h^{\ell}_{j} \Big)
 $$</p>
 </blockquote>
-
+<blockquote>
+<p>Anisotropic layer update equation:
+$$
+h^{\ell+1}<em>{i} =  \sigma\Big(W_1^{\ell} \ h^{\ell}</em>{i} + \sum_{j\in\mathcal{N}_i} <span style="color:red">\eta_{ij}</span> W_2 h^{\ell}_{j} \Big)
+$$</p>
+</blockquote>
 <p>As per the above equations, GCN, GraphSage and GIN are isotropic GCNs whereas GAT, MoNet and GatedGCN are anisotropic GCNs.</p>
-
 <p>Our benchmark experiments reveal that the <strong>anisotropic mechanism is an architectural improvement</strong> in GCNs which give consistently impressive results. Note that sparse and dense attention mechanisms (in GAT and GatedGCN respectively) are examples anisotropic components in a GNN.</p>
-
 <p><strong>4. There are underlying challenges for training the theoretically powerful WL-GNNs</strong>: We observe a high standard deviation of performance scores on the WL-GNNs. (Recall that we report every performance of 4 runs with different seeds). This reveals <strong>the problem in training</strong> these models.</p>
-
 <p>Universal training procedures like batched training and batch normalization are not used in WL-GNNs since they operate on dense rank-2 tensors.</p>
-
 <p>To describe this clearly, the batching approach for GCNs in leading graph machine learning libraries which operate on sparse rank-2 tensors involves preparing a <strong>sparse block diagonal adjacency matrix</strong> for a batch of graphs.</p>
-
 
 
 
@@ -1122,25 +1038,15 @@ $$</p>
 
 </figure>
 
-
 <p>The WL-GNNs that operate on dense rank-2 tensors, have components which compute information at/from every position in the dense tensor. Therefore, the same approach (Fig 7) is not applicable as it would make the entire block diagonal matrix dense and would break sparsity.</p>
-
 <p>GCNs leverage batched training and hence batch normalization for stable and fast training. Besides, WL-GNNs, with the current design, are not suitable for single large graphs, eg. OGBL-COLLAB. We failed to fit the dense tensor of this large size on both GPU and CPU memory.</p>
-
 <p>Hence, our benchmark suggests the need for <strong>re-thinking</strong> better design approaches for WL-GNNs which can leverage sparsity, batching, normalization schemes, etc. that have become universal ingredients in deep learning.</p>
-
 <!-- **5. 3WL-GNNs perform the best among their class**: Among the models in the WL-GNN class, 3WL-GNN provides better results than its similar counterpart RingGNN. 3WL-GNN is the most theoretically powerful model of all the GNNs currently considered in our benchmarking framework. It is as powerful as 3-WL for isomorphism. The GIN models while being less expressive is able to scale better and provides overall good performance. -->
-
-<hr />
-
+<hr>
 <h3 id="more-reading">More reading</h3>
-
 <p>With this introduction and usefulness of a GNN benchmarking framework, we conlcude this blog post, but there is more reading left if you&rsquo;re interested in this work.</p>
-
 <p><strong>Particularly</strong>, we investigate anisotropy and edge representations for link prediction in more detail in the paper and propose a new approach for improving low-structurally expressive GCNs. <em>We shall discuss these in future blog posts separately for clear understanding</em>.</p>
-
 <p>If this benchmarking framework comes to use in your research, please use the following bibtex in your work. For discussions, hit us with a query on <a href="https://github.com/graphdeeplearning/benchmarking-gnns/issues">GitHub Issues</a>. We would love to discuss and improve the benchmark for steering more meaningful research in graph neural networks.</p>
-
 <pre><code>@article{dwivedi2020benchmarkgnns,
   title={Benchmarking Graph Neural Networks},
   author={Dwivedi, Vijay Prakash and Joshi, Chaitanya K and Laurent, Thomas and Bengio, Yoshua and Bresson, Xavier},
@@ -1148,19 +1054,20 @@ $$</p>
   year={2020}
 }
 </code></pre>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">By this, we do not mean the ideas are not useful and/or the work put by the authors is not meaningful. Every effort equally contributes to the advance of this field.
- <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
-<li id="fn:2">As examples, you may refer <a href="https://arxiv.org/pdf/2006.07846.pdf">to</a> <a href="https://github.com/lukecavabarrett/pna">these</a> <a href="https://github.com/AITRICS/mol_reliable_gnn">works</a> that leverage our framework to conveniently work on their research idea. It indicates the effectiveness of having such a framework.
- <a class="footnote-return" href="#fnref:2"><sup>^</sup></a></li>
-<li id="fn:3">Note that we do not aim to develop a software library, but to come up with a coding framework where each component is simple and transparent to as many users as possible.
- <a class="footnote-return" href="#fnref:3"><sup>^</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>By this, we do not mean the ideas are not useful and/or the work put by the authors is not meaningful. Every effort equally contributes to the advance of this field. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>As examples, you may refer <a href="https://arxiv.org/pdf/2006.07846.pdf">to</a> <a href="https://github.com/lukecavabarrett/pna">these</a> <a href="https://github.com/AITRICS/mol_reliable_gnn">works</a> that leverage our framework to conveniently work on their research idea. It indicates the effectiveness of having such a framework. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Note that we do not aim to develop a software library, but to come up with a coding framework where each component is simple and transparent to as many users as possible. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
     </div>
 
@@ -1468,7 +1375,7 @@ $$</p>
   
 
   <p class="powered-by">
-    Xavier Bresson &copy; 2020 · Made with &hearts; by <a href="https://chaitjo.github.io/">Chaitanya Joshi</a> &middot; 
+    Xavier Bresson © 2020 · Made with ♥ by <a href="https://chaitjo.github.io/">Chaitanya Joshi</a> &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

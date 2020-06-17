@@ -643,34 +643,24 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<h2 id="operations-research-and-combinatorial-problems">Operations Research and Combinatorial Problems</h2>
-
+      <h2 id="operations-research-and-combinatorial-problems">Operations Research and Combinatorial Problems</h2>
 <p><strong><a href="https://en.wikipedia.org/wiki/Operations_research">Operations Research (OR)</a></strong> started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions. Nowadays it is widely used in the industry, including but not limited to transportation, supply chain, energy, finance, and scheduling.</p>
-
 <p>OR Problems are formulated as integer constrained optimization, <em>i.e.</em>, with integral or binary variables (called decision variables).
 While not all such problems are hard to solve (<em>e.g.</em>, finding the shortest path between two locations), we concentrate on <strong><a href="https://en.wikipedia.org/wiki/Combinatorial_optimization">Combinatorial (NP-Hard) problems</a></strong>.
 NP-Hard problems are <em>impossible</em> to solve optimally at large scales as exhaustively searching for their solutions is beyond the limits of modern computers.
 The <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">Travelling Salesman Problem (TSP)</a> and the <a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum Spanning Tree Problem (MST)</a> are two of the most popular examples for such problems defined using graphs.</p>
-
-<p><img src="tsp-gif.gif" alt="TSP GIF" />
+<p><img src="tsp-gif.gif" alt="TSP GIF">
 <em>TSP asks the following question: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city? Formally, given a graph, one needs to search the space of permutations to find an optimal sequence of nodes, called a tour, with minimal total edge weights (tour length).</em></p>
-
-<hr />
-
+<hr>
 <h2 id="neural-combinatorial-optimization">Neural Combinatorial Optimization</h2>
-
 <p>Although handcrafted heuristic algorithms are able to solve problems such as TSP with up to a million variables,
 designing good heuristics often requires significant specialized knowledge and years of trial-and-error.
 The state-of-the-art TSP solver, <a href="http://www.math.uwaterloo.ca/tsp/concorde.html">Concorde</a>, leverages <a href="https://www.youtube.com/watch?v=q8nQTNvCrjE">over 50 years of research</a> on linear programming, cutting plane algorithms and branch-and-bound.
 At our lab, we&rsquo;re working on <strong>automating</strong> and <strong>augmenting</strong> such expert intuition through Machine Learning [<a href="https://arxiv.org/abs/1811.06128">Bengio <em>et al.</em>, 2018</a>].</p>
-
 <p>Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, <em>e.g.</em>, determine the TSP tour one city at a time.
 Our research uses deep neural networks to parameterize these policies and train them directly from problem instances.
 In particular, <strong>Graph Neural Networks</strong> are the perfect fit for the task because they naturally operate on the graph structure of these problems.</p>
-
-<p><img src="pipeline.png" alt="End-to-end pipeline" /></p>
+<p><img src="pipeline.png" alt="End-to-end pipeline"></p>
 
     </div>
 
@@ -1688,7 +1678,7 @@ In particular, <strong>Graph Neural Networks</strong> are the perfect fit for th
   
 
   <p class="powered-by">
-    Xavier Bresson &copy; 2020 · Made with &hearts; by <a href="https://chaitjo.github.io/">Chaitanya Joshi</a> &middot; 
+    Xavier Bresson © 2020 · Made with ♥ by <a href="https://chaitjo.github.io/">Chaitanya Joshi</a> &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
