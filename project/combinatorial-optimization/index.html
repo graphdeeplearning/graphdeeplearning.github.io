@@ -548,24 +548,18 @@
 
 
 
-
-
-
-
-
-
-
+  
 
   
   
-
-
+  
 <div class="article-container pt-3">
   <h1>Combinatorial Optimization</h1>
 
   
 
   
+    
 
 
 <div class="article-metadata">
@@ -613,29 +607,22 @@
 
 </div>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 445px; max-height: 294px;">
-  <div style="position: relative">
-    <img src="/project/combinatorial-optimization/featured.png" alt="" class="featured-image">
     
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </div>
 
 
@@ -644,7 +631,8 @@
 
     <div class="article-style">
       <h2 id="operations-research-and-combinatorial-problems">Operations Research and Combinatorial Problems</h2>
-<p><strong><a href="https://en.wikipedia.org/wiki/Operations_research">Operations Research (OR)</a></strong> started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions. Nowadays it is widely used in the industry, including but not limited to transportation, supply chain, energy, finance, and scheduling.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/Operations_research">Operations Research (OR)</a></strong> started in the first world war as an initiative to use mathematics and computer science to assist military planners in their decisions.
+Today, combinatorial optimization algorithms developed in the OR community form the backbone of the most important modern industries including transportation, logistics, scheduling, finance and supply chains.</p>
 <p>OR Problems are formulated as integer constrained optimization, <em>i.e.</em>, with integral or binary variables (called decision variables).
 While not all such problems are hard to solve (<em>e.g.</em>, finding the shortest path between two locations), we concentrate on <strong><a href="https://en.wikipedia.org/wiki/Combinatorial_optimization">Combinatorial (NP-Hard) problems</a></strong>.
 NP-Hard problems are <em>impossible</em> to solve optimally at large scales as exhaustively searching for their solutions is beyond the limits of modern computers.
@@ -653,14 +641,33 @@ The <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">Travelli
 <em>TSP asks the following question: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city? Formally, given a graph, one needs to search the space of permutations to find an optimal sequence of nodes, called a tour, with minimal total edge weights (tour length).</em></p>
 <hr>
 <h2 id="neural-combinatorial-optimization">Neural Combinatorial Optimization</h2>
-<p>Although handcrafted heuristic algorithms are able to solve problems such as TSP with up to a million variables,
-designing good heuristics often requires significant specialized knowledge and years of trial-and-error.
-The state-of-the-art TSP solver, <a href="http://www.math.uwaterloo.ca/tsp/concorde.html">Concorde</a>, leverages <a href="https://www.youtube.com/watch?v=q8nQTNvCrjE">over 50 years of research</a> on linear programming, cutting plane algorithms and branch-and-bound.
-At our lab, we're working on <strong>automating</strong> and <strong>augmenting</strong> such expert intuition through Machine Learning [<a href="https://arxiv.org/abs/1811.06128">Bengio <em>et al.</em>, 2018</a>].</p>
+<p>Solvers and heuristic algorithms developed in the OR community are able to solve classical problems such as TSP with up to millions of variables.
+However, designing powerful and robust optimization algorithms requires significant <strong>specialized knowledge</strong> and years of <strong>trial-and-error</strong>, especially for understudied but high-impact problems arising in <a href="https://arxiv.org/abs/2003.11755">scientific discovery</a> or <a href="https://arxiv.org/abs/1911.05289">computer architecture</a>.
+The state-of-the-art TSP solver, <a href="http://www.math.uwaterloo.ca/tsp/concorde.html">Concorde</a>, leverages <a href="https://www.youtube.com/watch?v=q8nQTNvCrjE">over 50 years of research</a> on linear programming, cutting plane algorithms and branch-and-bound.</p>
+<div class="alert alert-note">
+  <div>
+    At our lab, we&rsquo;re working on <strong>automating</strong> and <strong>augmenting</strong> such expert intuition through Machine Learning [<a href="https://arxiv.org/abs/1811.06128">Bengio <em>et al.</em>, 2018</a>].
+  </div>
+</div>
 <p>Since most problems are highly structured, heuristics take the form of rules or policies to make sequential decisions, <em>e.g.</em>, determine the TSP tour one city at a time.
 Our research uses deep neural networks to parameterize these policies and train them directly from problem instances.
 In particular, <strong>Graph Neural Networks</strong> are the perfect fit for the task because they naturally operate on the graph structure of these problems.</p>
-<p><img src="pipeline.png" alt="End-to-end pipeline"></p>
+<p><img src="pipeline.png" alt="End-to-end pipeline">
+<em>A generic five-stage pipeline for end-to-end learning of combinatorial problems on graphs</em></p>
+<hr>
+<h2 id="why-study-tsp-in-particular">Why study TSP in particular?</h2>
+<p>(1) The problem has an amazing history of serving as an <strong>engine of discovery</strong> for applied mathematics, with several <a href="https://en.wikipedia.org/wiki/John_von_Neumann">legendary</a> <a href="https://en.wikipedia.org/wiki/Richard_E._Bellman">computer</a> <a href="https://en.wikipedia.org/wiki/George_Dantzig">scientists</a> and <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">mathematicians</a> having a crack at it. Here&rsquo;s an <a href="https://www.youtube.com/watch?v=q8nQTNvCrjE">amazing talk</a> by William Cook, the co-inventor of the current state-of-the-art Concorde TSP solver.</p>
+<p>(2) TSP has been the focus of intense research in the combinatorial optimization community. If you come up with a new solver, <em>e.g.</em>, a learning-driven solver, you <em>need</em> to benchmark it on TSP. TSP’s <strong>multi-scale nature</strong> makes it a challenging graph task which requires reasoning about both local node neighborhoods as well as global graph structure.</p>
+<p>(3) Learning-based approaches for heuristic algorithms have the potential to be a breakthrough for OR if they are able to  learn efficiently on small scale problems and then generalize robustly to larger instances.
+However, such <em>scale-invariant</em> generalization is an exciting and unsolved challenge, not just for TSP, but for machine learning as a whole.
+<strong>Update:</strong> We explore this in our <a href="https://arxiv.org/abs/2006.07054">latest paper</a>!</p>
+<p><img src="https://imgs.xkcd.com/comics/travelling_salesman_problem.png" alt="XKCD:TSP"></p>
+<hr>
+<p>At the same time, the more <em>profound</em> motivation of using deep learning for combinatorial optimization is not to outperform classical approaches on well-studied problems.
+Neural networks can be used as a general tool for tackling previously <em>un-encountered</em> NP-hard problems, especially those that are <strong>non-trivial to design heuristics for</strong> [<a href="https://arxiv.org/abs/1611.09940">Bello <em>et al.</em>, 2016</a>].
+We are excited about recent applications of neural combinatorial optimization for <a href="https://deepmind.com/blog/article/AlphaFold-Using-AI-for-scientific-discovery">accelarating drug discovery</a>, <a href="https://arxiv.org/abs/1910.01578">optimizing operating systems</a> and <a href="https://arxiv.org/abs/2004.10746">designing computer chips</a>.</p>
+<hr>
+<p><strong>P.S.</strong> XB is organizing an exciting workshop at IPAM titled <a href="http://www.ipam.ucla.edu/programs/workshops/deep-learning-and-combinatorial-optimization/">&ldquo;Deep Learning and Combinatorial Optimization&rdquo;</a>.</p>
 
     </div>
 

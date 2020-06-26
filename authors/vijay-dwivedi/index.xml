@@ -293,25 +293,31 @@ The &lt;strong&gt;quality&lt;/strong&gt; of these datasets also leads one to que
 &lt;p&gt;The GNNs that we benchmark are: &lt;a href=&#34;https://arxiv.org/abs/1609.02907&#34;&gt;&lt;em&gt;Vanilla&lt;/em&gt; Graph Convolutional Network (GCN)&lt;/a&gt;, &lt;a href=&#34;https://cs.stanford.edu/people/jure/pubs/graphsage-nips17.pdf&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;Graph Attention Network (GAT)&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;Gaussian Mixture Model (MoNet)&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1711.07553&#34;&gt;GatedGCN&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1810.00826&#34;&gt;Graph Isomorphism Network (GIN)&lt;/a&gt;, &lt;a href=&#34;https://papers.nips.cc/paper/9718-on-the-equivalence-between-graph-isomorphism-testing-and-function-approximation-with-gnns&#34;&gt;RingGNN&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/abs/1905.11136&#34;&gt;3WL-GNN&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;1. Graph-agnostic NNs perform poorly on the proposed datasets&lt;/strong&gt;: We compare all GNNs to a simple MLP which updates each node’s features independent of one-another, i.e. ignoring the graph structure.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;MLP node update equation at layer $\ell$ is:
 $$
-h_{i}^{\ell+1} =  \sigma \left( W^{\ell} \ h_{i}^{\ell} \right)
+h^{\ell+1}&lt;em&gt;{i} =  \sigma \left( W^{\ell} \ h^{\ell}&lt;/em&gt;{i} \right)
 $$&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;MLP evaluates to consistently low scores on each of the datasets which shows the necessity to consider graph structure for these tasks. This result is also indicative of how appropriate these datasets are for GNN research as they statistically separate model’s performance.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2. GCNs outperform WL-GNNs on the proposed datasets&lt;/strong&gt;: Although WL-GNNs are provably powerful in terms of graph isomorphism and expressiveness, the WL-GNN models that we consider were not able to outperform GCNs. These models are limited in scaling to larger datasets as their space/time complexity are inefficient as compared to the GCNs which leverage sparse tensors.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;GCNs are seen to conveniently scale to $16$ layers and provide the best results on all datasets, whereas the WL-GNNs face loss divergence and/or out-of-memory errors when trying to build deeper networks.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;3. Anisotropic mechanisms improve message-passing GCNs architectures&lt;/strong&gt;: Among the models in the message-passing GCNs, we can classify them into &lt;strong&gt;isotropic&lt;/strong&gt; and &lt;strong&gt;anisotropic&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;A GCN model whose node update equation treats every edge direction equally, is considered &amp;ldquo;isotropic&amp;rdquo;; and a GCN model whose node update equation treats every edge direction differently (see $\eta_{ij}$ for every edge between the nodes $i$ and $j$), is considered &amp;ldquo;anisotropic&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;A GCN model whose node update equation treats every edge direction equally, is considered &lt;strong&gt;isotropic&lt;/strong&gt;; and a GCN model whose node update equation treats every edge direction differently, is considered &lt;strong&gt;anisotropic&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Isotropic layer update equation:
 $$
-h_{i}^{\ell+1} =  \sigma\Big(W_1^{\ell} \ h^{\ell}_{i} + \sum_{j\in\mathcal{N}_i} W_2^{\ell} \ h_{j}^{\ell} \Big)
+h^{\ell+1}&lt;em&gt;{i} =  \sigma\Big(W_1^{\ell} \ h^{\ell}&lt;/em&gt;{i} + \sum_{j\in\mathcal{N}_i} W_2^{\ell} \ h^{\ell}_{j} \Big)
 $$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Anisotropic layer update equation:
 $$
-h_{i}^{\ell+1} =  \sigma\Big(W_1^{\ell} \ h^{\ell}_{i} + \sum_{j\in\mathcal{N}_i} \eta_{ij} W_2^{\ell} h_{j}^{\ell} \Big)
+h^{\ell+1}&lt;em&gt;{i} =  \sigma\Big(W_1^{\ell} \ h^{\ell}&lt;/em&gt;{i} + \sum_{j\in\mathcal{N}_i} &lt;span style=&#34;color:red&#34;&gt;\eta_{ij}&lt;/span&gt; W_2 h^{\ell}_{j} \Big)
 $$&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;As per the above equations, GCN, GraphSage and GIN are isotropic GCNs whereas GAT, MoNet and GatedGCN are anisotropic GCNs.&lt;/p&gt;
 &lt;p&gt;Our benchmark experiments reveal that the &lt;strong&gt;anisotropic mechanism is an architectural improvement&lt;/strong&gt; in GCNs which give consistently impressive results. Note that sparse and dense attention mechanisms (in GAT and GatedGCN respectively) are examples anisotropic components in a GNN.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;4. There are underlying challenges for training the theoretically powerful WL-GNNs&lt;/strong&gt;: We observe a high standard deviation of performance scores on the WL-GNNs. (Recall that we report every performance of 4 runs with different seeds). This reveals &lt;strong&gt;the problem in training&lt;/strong&gt; these models.&lt;/p&gt;
@@ -352,7 +358,7 @@ $$&lt;/p&gt;
 &lt;!-- **5. 3WL-GNNs perform the best among their class**: Among the models in the WL-GNN class, 3WL-GNN provides better results than its similar counterpart RingGNN. 3WL-GNN is the most theoretically powerful model of all the GNNs currently considered in our benchmarking framework. It is as powerful as 3-WL for isomorphism. The GIN models while being less expressive is able to scale better and provides overall good performance. --&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;more-reading&#34;&gt;More reading&lt;/h3&gt;
-&lt;p&gt;With this introduction and usefulness of a GNN benchmarking framework, we conlcude this blog post, but there is more reading left if you&#39;re interested in this work.&lt;/p&gt;
+&lt;p&gt;With this introduction and usefulness of a GNN benchmarking framework, we conlcude this blog post, but there is more reading left if you&amp;rsquo;re interested in this work.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Particularly&lt;/strong&gt;, we investigate anisotropy and edge representations for link prediction in more detail in the paper and propose a new approach for improving low-structurally expressive GCNs. &lt;em&gt;We shall discuss these in future blog posts separately for clear understanding&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;If this benchmarking framework comes to use in your research, please use the following bibtex in your work. For discussions, hit us with a query on &lt;a href=&#34;https://github.com/graphdeeplearning/benchmarking-gnns/issues&#34;&gt;GitHub Issues&lt;/a&gt;. We would love to discuss and improve the benchmark for steering more meaningful research in graph neural networks.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@article{dwivedi2020benchmarkgnns,
@@ -366,13 +372,13 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;By this, we do not mean the ideas are not useful and/or the work put by the authors is not meaningful. Every effort equally contributes to the advance of this field.&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By this, we do not mean the ideas are not useful and/or the work put by the authors is not meaningful. Every effort equally contributes to the advance of this field. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;As examples, you may refer &lt;a href=&#34;https://arxiv.org/pdf/2006.07846.pdf&#34;&gt;to&lt;/a&gt; &lt;a href=&#34;https://github.com/lukecavabarrett/pna&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://github.com/AITRICS/mol_reliable_gnn&#34;&gt;works&lt;/a&gt; that leverage our framework to conveniently work on their research idea. It indicates the effectiveness of having such a framework.&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As examples, you may refer &lt;a href=&#34;https://arxiv.org/pdf/2006.07846.pdf&#34;&gt;to&lt;/a&gt; &lt;a href=&#34;https://github.com/lukecavabarrett/pna&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://github.com/AITRICS/mol_reliable_gnn&#34;&gt;works&lt;/a&gt; that leverage our framework to conveniently work on their research idea. It indicates the effectiveness of having such a framework. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Note that we do not aim to develop a software library, but to come up with a coding framework where each component is simple and transparent to as many users as possible.&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Note that we do not aim to develop a software library, but to come up with a coding framework where each component is simple and transparent to as many users as possible. &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -400,38 +406,105 @@ $$&lt;/p&gt;
       <link>https://graphdeeplearning.github.io/project/spatial-convnets/</link>
       <pubDate>Tue, 17 Sep 2019 22:20:35 +0800</pubDate>
       <guid>https://graphdeeplearning.github.io/project/spatial-convnets/</guid>
-      <description>&lt;h2 id=&#34;noneuclidean-and-graphstructured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;non-euclidean-and-graph-structured-data&#34;&gt;Non-Euclidean and Graph-structured Data&lt;/h2&gt;
 &lt;p&gt;Classic deep learning architectures such as &lt;a href=&#34;http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf&#34;&gt;Convolutional Neural Networks (CNNs)&lt;/a&gt; and &lt;a href=&#34;https://www.bioinf.jku.at/publications/older/2604.pdf&#34;&gt;Recurrent Neural Networks (RNNs)&lt;/a&gt; require the input data domain to be regular, such as 2D or 3D Euclidean grids for Computer Vision and 1D lines for Natural Language Processing.&lt;/p&gt;
-&lt;p&gt;However, most real-world data beyond images and language has an underlying structure that is &lt;strong&gt;non-Euclidean&lt;/strong&gt;.
-Such complex data commonly occurs in science and engineering, and can be modelled by heterogeneous graphs.
-Examples include chemical graphs, computer graphics, social networks, genetics, neuroscience, and sensor networks.&lt;/p&gt;
+&lt;p&gt;However, real-world data beyond images and language tends to an underlying structure that is &lt;strong&gt;non-Euclidean&lt;/strong&gt;.
+Such complex data commonly occurs in science and engineering, and can be modelled intuitively by &lt;strong&gt;heterogeneous graphs&lt;/strong&gt;.
+Prominent examples include graphs of molecules, 3D meshes in computer graphics, social networks and biological networks.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;graph-data.png&#34; alt=&#34;Graph structured data&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;graph-neural-networks&#34;&gt;Graph Neural Networks&lt;/h2&gt;
-&lt;p&gt;Graph-structured data can be large and complex (in the case of social networks, on the scale of billions), and is a natural target for machine learning applications.
-However, designing models for learning from non-Euclidean data is challenging as there are no familiar properties such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].
-We are interested to designing neural networks for graphs of arbitrary topologies and structures in order to solve &lt;em&gt;generic&lt;/em&gt; graph problems, such as vertex classification, graph classification, graph regression, and graph generation.&lt;/p&gt;
-&lt;p&gt;These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in a myriad of domains, including chemistry, social networks, recommendations and computer graphics.&lt;/p&gt;
+&lt;p&gt;Obtaining insights from large and complex graph-structured datasets leads to an interesting challenge for machine learning architectures:
+The popular CNN and RNN models need to be redesigned for handling non-Euclidean data, as they cannot leverage familiar regularities such as coordinate systems, vector space structure, or shift invariance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graph/Geometric Deep Learning&lt;/strong&gt; is an umbrella term for emerging techniques attempting to generalize deep neural networks to non-Euclidean domains such as graphs and manifolds [&lt;a href=&#34;https://arxiv.org/abs/1611.08097&#34;&gt;Bronstein &lt;em&gt;et al.&lt;/em&gt;, 2017&lt;/a&gt;].&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    We are interested to designing neural networks for arbitrary graphs in order to solve &lt;em&gt;generic&lt;/em&gt; graph problems, such as vertex classification, graph classification and graph generation.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;These Graph Neural Network (GNN) architectures are used as backbones for challenging domain-specific applications in a myriad of domains, including &lt;a href=&#34;https://arxiv.org/abs/1704.01212&#34;&gt;chemistry&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1902.06673&#34;&gt;social networks&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1806.01973&#34;&gt;recommendations&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;computer graphics&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;basic-formalism&#34;&gt;Basic Formalism&lt;/h2&gt;
-&lt;p&gt;Each GNN layer computes $d$-dimensional representations for the nodes/edges of the graph through recursive neighborhood diffusion (or message passing), where each graph node gathers features from its neighbors to represent local graph structure.
+&lt;p&gt;Each GNN layer computes $d$-dimensional representations for the nodes/edges of the graph through recursive neighborhood diffusion (&lt;em&gt;a.k.a.&lt;/em&gt; message passing), where each graph node gathers features from its neighbors to represent local graph structure.
 Stacking $L$ GNN layers allows the network to build node representations from the &lt;strong&gt;$L$-hop neighborhood&lt;/strong&gt; of each node.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;gnn-layer.png&#34; alt=&#34;GNN Layer&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Let $h_i^{\ell}$ denote the feature vector at layer $\ell$ associated with node $i$.
 The updated features $h_i^{\ell+1}$ at the next layer $\ell+1$ are obtained by applying non-linear transformations to the central feature vector $h_i^{\ell}$ and the feature vectors $h_{j}^{\ell}$ for all nodes $j$ in the neighborhood of node $i$ (defined by the graph structure).
 This guarantees the transformation to build local reception fields, such as in standard ConvNets for computer vision, and be invariant to both graph size and vertex re-indexing.&lt;/p&gt;
-&lt;p&gt;Thus, the most generic version of a feature vector $h_i^{\ell+1}$ at vertex $i$ at the next layer in the graph network is:
+&lt;p&gt;Thus, the most generic version of a feature vector $h_i^{\ell+1}$ at vertex $i$ at the next layer in the GNN is:
 \begin{equation}
 h_{i}^{\ell+1} =  f \left( \ h_i^{\ell} \  , \ { h_{j}^{\ell}: j \rightarrow i }  \ \right) ,
 \end{equation}
-where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected. In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$ (the feature vector of the center vertex) as well as an un-ordered set of vectors ${ h_{j}^{\ell}}$ (the feature vectors of all neighboring vertices).&lt;/p&gt;
-&lt;p&gt;The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, &lt;em&gt;e.g.&lt;/em&gt;, &lt;a href=&#34;https://arxiv.org/abs/1706.02216&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;GAT&lt;/a&gt;, etc.
-For an illustration, here&#39;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
+where ${ j \rightarrow i }$ denotes the set of neighboring nodes $j$ pointed to node $i$, which can be replaced by ${ j \in \mathcal{N}_i }$, the set of neighbors of node $i$, if the graph is undirected.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;classes-of-gnn-architectures&#34;&gt;Classes of GNN Architectures&lt;/h2&gt;
+&lt;p&gt;In other words, a GNN is defined by a mapping $f$ taking as input a vector $h_i^{\ell}$&amp;ndash;the feature vector of the center vertex&amp;ndash;as well as an un-ordered set of vectors {${ h_{j}^{\ell}}$}&amp;ndash;the feature vectors of all neighboring vertices.
+The arbitrary choice of the mapping $f$ defines an instantiation of a class of GNNs, &lt;i&gt;e.g.&lt;/i&gt;, &lt;a href=&#34;https://arxiv.org/abs/1609.02907&#34;&gt;GCN&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1706.02216&#34;&gt;GraphSage&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1810.00826&#34;&gt;GIN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As an illustration, here&amp;rsquo;s a simple-yet-effective Graph ConvNet from &lt;a href=&#34;https://arxiv.org/abs/1605.07736&#34;&gt;Sukhbaatar &lt;em&gt;et al.&lt;/em&gt;, 2016&lt;/a&gt;:
 \begin{equation}
 h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} V^{\ell} h_{j}^{\ell} \Big),
 \end{equation}
 where $U^{\ell}, V^{\ell} \in \mathbb{R}^{d \times d}$ are the learnable parameters.&lt;/p&gt;
+&lt;p&gt;In a &lt;a href=&#34;https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/&#34;&gt;recent paper&lt;/a&gt; on benchmarking GNN architectures, we introduced &lt;strong&gt;block diagrams&lt;/strong&gt; to intuitively describe feature update equations such as the one above:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;gcn-block.png&#34; &gt;
+&lt;img data-src=&#34;gcn-block.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;45%&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;anisotropic-gnns&#34;&gt;Anisotropic GNNs&lt;/h2&gt;
+&lt;p&gt;As graphs have no specific orientations (like up, down, left, right directions in images), message-passing layers such as Sukhbaatar&amp;rsquo;s Graph ConvNet are &lt;strong&gt;isotropic&lt;/strong&gt;, treating all neighbors as equally important.
+However, this may not be true in general, &lt;em&gt;e.g.&lt;/em&gt;, in social network graphs, neighbors in the same community share different relationships and information compared to neighbors from separate communities.&lt;/p&gt;
+&lt;p&gt;Isotropic GNNs can be upgraded to make the diffusion process &lt;strong&gt;anisotropic&lt;/strong&gt; through mechanisms which learn to weigh neighbors based on their relative importance.
+For example, &lt;a href=&#34;https://arxiv.org/abs/1703.04826&#34;&gt;Marchegiani and Titov, 2017&lt;/a&gt; upgrade Graph ConvNets by introducing &lt;strong&gt;edge gating&lt;/strong&gt; for learning information flow on the graph structure for the task at hand:
+\begin{equation}
+h_{i}^{\ell+1} = \text{ReLU} \Big( U^{\ell} h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} \eta_{ij} \odot V^{\ell} h_{j}^{\ell} \Big),
+\quad \text{where } \eta_{ij} = \sigma \big( A^{\ell} h_i^{\ell} + B^{\ell} h_j^{\ell} \big),
+\end{equation}
+$U^{\ell}, V^{\ell}, A^{\ell}, B^{\ell} \in \mathbb{R}^{d \times d}$ are the learnable parameters, $\sigma$ is the sigmoid function, $\odot$ is the element-wise product, and $\eta_{ij}$ act as edge gates.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;gated-gcn-block.png&#34; &gt;
+&lt;img data-src=&#34;gated-gcn-block.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;60%&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Other prominent approaches to introduce anisotropy into GNNs include &lt;a href=&#34;https://arxiv.org/abs/1710.10903&#34;&gt;GAT&lt;/a&gt;, which uses the &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34;&gt;attention mechanism&lt;/a&gt; from NLP, as well as &lt;a href=&#34;https://arxiv.org/abs/1611.08402&#34;&gt;MoNet&lt;/a&gt;, which relies on gaussian mixture models of graph connectivity.
+&lt;strong&gt;Through &lt;a href=&#34;(https://graphdeeplearning.github.io/publication/dwivedi-2020-benchmark/)&#34;&gt;our benchmark&lt;/a&gt;, we found anisotropic aggregation to be a key property of powerful GNNs.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
