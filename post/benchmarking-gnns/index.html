@@ -982,7 +982,7 @@ The <strong>quality</strong> of these datasets also leads one to question if you
 <blockquote>
 <p>MLP node update equation at layer $\ell$ is:
 $$
-h^{\ell+1}<em>{i} =  \sigma \left( W^{\ell} \ h^{\ell}</em>{i} \right)
+h_{i}^{\ell+1} =  \sigma \left( W^{\ell} \ h_{i}^{\ell} \right)
 $$</p>
 </blockquote>
 <p>MLP evaluates to consistently low scores on each of the datasets which shows the necessity to consider graph structure for these tasks. This result is also indicative of how appropriate these datasets are for GNN research as they statistically separate model’s performance.</p>
@@ -995,13 +995,13 @@ $$</p>
 <blockquote>
 <p>Isotropic layer update equation:
 $$
-h^{\ell+1}<em>{i} =  \sigma\Big(W_1^{\ell} \ h^{\ell}</em>{i} + \sum_{j\in\mathcal{N}_i} W_2^{\ell} \ h^{\ell}_{j} \Big)
+h_{i}^{\ell+1} =  \sigma \Big( W_1^{\ell} \ h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} W_2^{\ell} \ h_{j}^{\ell} \Big)
 $$</p>
 </blockquote>
 <blockquote>
 <p>Anisotropic layer update equation:
 $$
-h^{\ell+1}<em>{i} =  \sigma\Big(W_1^{\ell} \ h^{\ell}</em>{i} + \sum_{j\in\mathcal{N}_i} <span style="color:red">\eta_{ij}</span> W_2 h^{\ell}_{j} \Big)
+h_{i}^{\ell+1} =  \sigma \Big( W_1^{\ell} \ h_{i}^{\ell} + \sum_{j \in \mathcal{N}_i} \eta_{ij} W_2 h_{j}^{\ell} \Big)
 $$</p>
 </blockquote>
 <p>As per the above equations, GCN, GraphSage and GIN are isotropic GCNs whereas GAT, MoNet and GatedGCN are anisotropic GCNs.</p>
