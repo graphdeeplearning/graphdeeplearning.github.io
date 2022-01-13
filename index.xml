@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NTU Graph Deep Learning Lab</title>
+    <title>Graph Deep Learning Lab</title>
     <link>https://graphdeeplearning.github.io/</link>
       <atom:link href="https://graphdeeplearning.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>NTU Graph Deep Learning Lab</description>
+    <description>Graph Deep Learning Lab</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Xavier Bresson © 2020 · Made with &amp;hearts; by [Chaitanya Joshi](https://chaitjo.github.io/)</copyright><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_512x512_fill_lanczos_center_2.png</url>
-      <title>NTU Graph Deep Learning Lab</title>
+      <title>Graph Deep Learning Lab</title>
       <link>https://graphdeeplearning.github.io/</link>
     </image>
     
@@ -1062,7 +1062,7 @@ $U^{\ell}, V^{\ell}, A^{\ell}, B^{\ell} \in \mathbb{R}^{d \times d}$ are the lea
       <description>&lt;blockquote&gt;
 &lt;p&gt;&amp;quot;Being able to articulate and explain ideas is the true test of having learned something.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Starting 2020, the NTU Graph Deep Learning Lab will host a weekly/bi-weekly paper discussion and reading group.
+&lt;p&gt;Starting 2020, the Graph Deep Learning Lab will host a weekly/bi-weekly paper discussion and reading group.
 We&amp;rsquo;ll cover the latest and greatest papers from the Graph Neural Networks community as well as general machine learning.
 We plan to keep things simple: talk about the key contributions and results, followed by discussions; no need for beautiful slides or long talks.&lt;/p&gt;
 &lt;p&gt;The primary aim of this reading group is to share ideas, blabber about your favorite papers, and get to know others with common interests.
